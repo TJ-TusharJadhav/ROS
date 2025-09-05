@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.AddProjectLeadTest" time="417.327" tests="30" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="24"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/tusharjadhav/eclipse-workspace/playwright/target/test-classes:/Users/tusharjadhav/eclipse-workspace/playwright/target/classes:/Users/tusharjadhav/.m2/repository/com/microsoft/playwright/playwright/1.53.0/playwright-1.53.0.jar:/Users/tusharjadhav/.m2/repository/com/google/code/gson/gson/2.12.1/gson-2.12.1.jar:/Users/tusharjadhav/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/Users/tusharjadhav/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/tusharjadhav/.m2/repository/com/microsoft/playwright/driver/1.53.0/driver-1.53.0.jar:/Users/tusharjadhav/.m2/repository/com/microsoft/playwright/driver-bundle/1.53.0/driver-bundle-1.53.0.jar:/Users/tusharjadhav/.m2/repository/org/testng/testng/7.9.0/testng-7.9.0.jar:/Users/tusharjadhav/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/tusharjadhav/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/tusharjadhav/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/tusharjadhav/.m2/repository/org/apache/poi/poi/5.2.5/poi-5.2.5.jar:/Users/tusharjadhav/.m2/repository/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/Users/tusharjadhav/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/tusharjadhav/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/tusharjadhav/.m2/repository/commons-io/commons-io/2.15.0/commons-io-2.15.0.jar:/Users/tusharjadhav/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/Users/tusharjadhav/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/tusharjadhav/.m2/repository/io/qameta/allure/allure-testng/2.24.0/allure-testng-2.24.0.jar:/Users/tusharjadhav/.m2/repository/io/qameta/allure/allure-java-commons/2.24.0/allure-java-commons-2.24.0.jar:/Users/tusharjadhav/.m2/repository/io/qameta/allure/allure-model/2.24.0/allure-model-2.24.0.jar:/Users/tusharjadhav/.m2/repository/io/qameta/allure/allure-test-filter/2.24.0/allure-test-filter-2.24.0.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="24"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/24.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/tusharjadhav/eclipse-workspace/playwright/target/surefire/surefirebooter-20250904113306617_3.jar /Users/tusharjadhav/eclipse-workspace/playwright/target/surefire 2025-09-04T11-33-06_588-jvmRun1 surefire-20250904113306617_1tmp surefire_0-20250904113306617_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="AddProjectLeadTest"/>
+    <property name="surefire.test.class.path" value="/Users/tusharjadhav/eclipse-workspace/playwright/target/test-classes:/Users/tusharjadhav/eclipse-workspace/playwright/target/classes:/Users/tusharjadhav/.m2/repository/com/microsoft/playwright/playwright/1.53.0/playwright-1.53.0.jar:/Users/tusharjadhav/.m2/repository/com/google/code/gson/gson/2.12.1/gson-2.12.1.jar:/Users/tusharjadhav/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/Users/tusharjadhav/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/tusharjadhav/.m2/repository/com/microsoft/playwright/driver/1.53.0/driver-1.53.0.jar:/Users/tusharjadhav/.m2/repository/com/microsoft/playwright/driver-bundle/1.53.0/driver-bundle-1.53.0.jar:/Users/tusharjadhav/.m2/repository/org/testng/testng/7.9.0/testng-7.9.0.jar:/Users/tusharjadhav/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/tusharjadhav/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/tusharjadhav/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/tusharjadhav/.m2/repository/org/apache/poi/poi/5.2.5/poi-5.2.5.jar:/Users/tusharjadhav/.m2/repository/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/Users/tusharjadhav/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/tusharjadhav/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/tusharjadhav/.m2/repository/commons-io/commons-io/2.15.0/commons-io-2.15.0.jar:/Users/tusharjadhav/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/Users/tusharjadhav/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/tusharjadhav/.m2/repository/io/qameta/allure/allure-testng/2.24.0/allure-testng-2.24.0.jar:/Users/tusharjadhav/.m2/repository/io/qameta/allure/allure-java-commons/2.24.0/allure-java-commons-2.24.0.jar:/Users/tusharjadhav/.m2/repository/io/qameta/allure/allure-model/2.24.0/allure-model-2.24.0.jar:/Users/tusharjadhav/.m2/repository/io/qameta/allure/allure-test-filter/2.24.0/allure-test-filter-2.24.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/tusharjadhav"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-07-15"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/24.0.2/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/tusharjadhav/eclipse-workspace/playwright"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/tusharjadhav/eclipse-workspace/playwright/target/surefire/surefirebooter-20250904113306617_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="24.0.2"/>
+    <property name="user.name" value="tusharjadhav"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.6.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/tusharjadhav/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/1b/cqmvqvbd4sg1xvl1gc93cfyh0000gn/T/"/>
+    <property name="java.version" value="24.0.2"/>
+    <property name="user.dir" value="/Users/tusharjadhav/eclipse-workspace/playwright"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/tusharjadhav/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="24.0.2"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="68.0"/>
+  </properties>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Arjun, Mehta, +234, Event, GIHED, Interested in real estate, New Project 65, +33, CP, Tushar Bhai, Mumbai, Immediate, Hot, Below 50 Lakh, 500 Sq.Ft, Residential, 2 Bhk, Buy](1)" classname="tests.AddProjectLeadTest" time="11.659">
+    <system-out><![CDATA[Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Aarav, Sharma, +93, Event, GIHED, Interested in real estate, New Project 65, +36, CP, Tushar Bhai, Delhi, In 3 Months, Cold, 50 Lakh to 1 Cr, 750 Sq.Ft, Residential, 3 Bhk, Invest](2)" classname="tests.AddProjectLeadTest" time="12.63">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Priya, Khan, +20, Event, Property Event, Looking for investment, New Project 65, +40, CP, Tushar Bhai, Bangalore, In 6 Months, Warm, 1 Cr to 2 Cr, 1000 Sq.Ft, Residential, 4 Bhk, Lease](3)" classname="tests.AddProjectLeadTest" time="11.859">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback, New Project 65, +41, CP, Tushar Bhai, Hyderabad, In 1 Year +, Hot, 2 Cr to 5 Cr, 1200 Sq.Ft, Residential, 5 Bhk, Pre-Lease](4)" classname="tests.AddProjectLeadTest" time="11.688">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure, New Project 65, +43, CP, Tushar Bhai, Pune, Immediate, Cold, 5 Cr to 10 Cr, 1500 Sq.Ft, Residential, Weekend Villa, Buy](5)" classname="tests.AddProjectLeadTest" time="11.485">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Karan, Mehta, +31, Digital, Website, Prefers email communication, New Project 65, +45, CP, Tushar Bhai, Chennai, In 3 Months, Warm, 10 Cr to 15 Cr, 1800 Sq.Ft, Commercial, Office, Invest](6)" classname="tests.AddProjectLeadTest" time="12.026">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Neha, Desai, +32, Digital, Facebook, Requested site visit, New Project 65, +46, CP, Tushar Bhai, Ahmedabad, In 6 Months, Hot, Below 50 Lakh, 2000 Sq.Ft, Commercial, Showroom, Lease](7)" classname="tests.AddProjectLeadTest" time="11.355">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Raj, Verma, +33, Digital, Instagram, Interested in 2BHK, New Project 65, +420, CP, Tushar Bhai, Kolkata, In 1 Year +, Cold, 1 Cr to 2 Cr, 2200 Sq.Ft, Commercial, Shop, Pre-Lease](8)" classname="tests.AddProjectLeadTest" time="12.408">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Isha, Gupta, +34, Digital, LinkedIn, Budget under 50L, New Project 65, +48, CP, Tushar Bhai, Dubai, Immediate, Warm, 2 Cr to 5 Cr, 2500 Sq.Ft, Residential, 2 Bhk, Buy](9)" classname="tests.AddProjectLeadTest" time="11.892">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Arjun, Mehta, +49, Digital, SMS, Asked for EMI options, New Project 65, +51, CP, Tushar Bhai, Abu Dhabi, In 3 Months, Hot, 5 Cr to 10 Cr, 3000 Sq.Ft, Residential, 3 Bhk, Invest](10)" classname="tests.AddProjectLeadTest" time="11.444">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Priya, Sharma, +52, Digital, YouTube, Wants luxury property, New Project 65, +53, CP, Tushar Bhai, Sharjah, In 6 Months, Cold, 10 Cr to 15 Cr, 3500 Sq.Ft, Residential, 4 Bhk, Lease](11)" classname="tests.AddProjectLeadTest" time="11.954">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Rohan, Desai, +55, Digital, IVRS, Interested in office space, New Project 65, +54, CP, Tushar Bhai, Singapore, In 1 Year +, Warm, Below 50 Lakh, 4000 Sq.Ft, Residential, 5 Bhk, Pre-Lease](12)" classname="tests.AddProjectLeadTest" time="12.009">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Kavita, Iyer, +62, Digital, Google, Student housing required, New Project 65, +56, CP, Tushar Bhai, Kuala Lumpur, Immediate, Hot, 1 Cr to 2 Cr, 4500 Sq.Ft, Residential, Weekend Villa, Invest](13)" classname="tests.AddProjectLeadTest" time="11.911">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Sameer, Khan, +63, Digital, Email, Prefers WhatsApp updates, New Project 65, +57, CP, Tushar Bhai, Bangkok, In 3 Months, Cold, 2 Cr to 5 Cr, 5000 Sq.Ft, Commercial, Office, Lease](14)" classname="tests.AddProjectLeadTest" time="11.892">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Neha, Kulkarni, +64, Digital, WhatsApp, Wants loan assistance, New Project 65, +58, CP, Tushar Bhai, Jakarta, In 6 Months, Warm, 5 Cr to 10 Cr, 5500 Sq.Ft, Commercial, Showroom, Pre-Lease](15)" classname="tests.AddProjectLeadTest" time="11.413">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Amit, Gupta, +66, Walkin, Website, Interested in resale, New Project 65, +81, CP, Tushar Bhai, Bali, In 1 Year +, Hot, 10 Cr to 15 Cr, 6000 Sq.Ft, Commercial, Shop, Buy](16)" classname="tests.AddProjectLeadTest" time="11.404">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Sneha, Reddy, +81, Walkin, Facebook, Family shifting soon, New Project 65, +82, CP, Tushar Bhai, London, Immediate, Cold, Below 50 Lakh, 6500 Sq.Ft, Residential, 2 Bhk, Invest](17)" classname="tests.AddProjectLeadTest" time="11.363">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Vikram, Joshi, +82, Walkin, Instagram, Needs 3BHK apartment, New Project 65, +94, CP, Tushar Bhai, Manchester, In 3 Months, Warm, 50 Lakh to 1 Cr, 7000 Sq.Ft, Residential, 3 Bhk, Lease](18)" classname="tests.AddProjectLeadTest" time="11.387">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Pooja, Nair, +86, Walkin, LinkedIn, Asked for price list, New Project 65, +351, CP, Tushar Bhai, Paris, In 6 Months, Hot, 1 Cr to 2 Cr, 7500 Sq.Ft, Residential, 4 Bhk, Pre-Lease](19)" classname="tests.AddProjectLeadTest" time="11.376">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Ankit, Verma, +90, Walkin, SMS, Looking for villa, New Project 65, +352, CP, Tushar Bhai, Berlin, In 1 Year +, Cold, 2 Cr to 5 Cr, 8000 Sq.Ft, Residential, 5 Bhk, Buy](20)" classname="tests.AddProjectLeadTest" time="11.92">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Deepika, Rao, +91, Walkin, YouTube, Wants rental options, New Project 65, +353, CP, Tushar Bhai, Frankfurt, Immediate, Warm, 5 Cr to 10 Cr, 8500 Sq.Ft, Residential, Weekend Villa, Invest](21)" classname="tests.AddProjectLeadTest" time="11.39">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Raj, Bansal, +92, Walkin, IVRS, Needs property documents, New Project 65, +354, CP, Tushar Bhai, Zurich, In 3 Months, Hot, 10 Cr to 15 Cr, 9000 Sq.Ft, Commercial, Office, Lease](22)" classname="tests.AddProjectLeadTest" time="11.832">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Ayesha, Siddiqui, +93, Walkin, Google, Interested in duplex, New Project 65, +355, CP, Tushar Bhai, Geneva, In 6 Months, Cold, Below 50 Lakh, 9500 Sq.Ft, Commercial, Showroom, Pre-Lease](23)" classname="tests.AddProjectLeadTest" time="11.928">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Karan, Malhotra, +94, Walkin, Email, Wants farmhouse, New Project 65, +356, CP, Tushar Bhai, New York, In 1 Year +, Warm, 50 Lakh to 1 Cr, 10000 Sq.Ft, Commercial, Shop, Buy](24)" classname="tests.AddProjectLeadTest" time="11.876">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Meera, Chawla, +95, Walkin, WhatsApp, Looking for commercial plot, New Project 65, +357, CP, Tushar Bhai, Los Angeles, Immediate, Hot, 1 Cr to 2 Cr, 120 Sq.Ft, Residential, 2 Bhk, Invest](25)" classname="tests.AddProjectLeadTest" time="11.359">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForAdditionalProjectLeadTest[New Project 60, Neha, Desai, +98, Walkin, Direct-Walkin, Requires site visit, New Project 65, +421, CP, Tushar Bhai, San Francisco, In 3 Months, Cold, 2 Cr to 5 Cr, 150 Sq.Ft, Residential, 3 Bhk, Lease](26)" classname="tests.AddProjectLeadTest" time="11.475">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForBasicProjectLead[New Project 60, Aarav, Sharma, +93, Event, GIHED, Interested in real estate](1)" classname="tests.AddProjectLeadTest" time="8.587">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForBasicProjectLead[New Project 60, Priya, Khan, +20, Event, Property Event, Looking for investment](2)" classname="tests.AddProjectLeadTest" time="8.641">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForBasicProjectLead[New Project 60, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback](3)" classname="tests.AddProjectLeadTest" time="8.653">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+  <testcase name="addLeadForBasicProjectLead[New Project 60, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure](4)" classname="tests.AddProjectLeadTest" time="9.138">
+    <system-out><![CDATA[Modal close button clicked!
+Lead saved successfully with Name, Project, and Source validated!
+Verify button not found, reloading page...
+Verify button clicked after reload!
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
+              <span class="suite-name border-passed">Surefire suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Surefire_suite" class="navigator-link ">
+                    <span>[unset file name]</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Surefire_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Surefire_suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Surefire_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Surefire_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Surefire_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Surefire_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">30 methods,   30 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Sneha, Reddy, +81, Walkin, Facebook, Family shifting soon, New Project 65, +82, CP, ...)">addLeadForAdditionalProjectLeadTest(New Project 60, Sneha, Reddy, +81, Walkin, Facebook, Family shifting soon, New Project 65, +82, CP, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Karan, Mehta, +31, Digital, Website, Prefers email communication, New Project 65, +4...)">addLeadForAdditionalProjectLeadTest(New Project 60, Karan, Mehta, +31, Digital, Website, Prefers email communication, New Project 65, +4...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback, New Project 65, +41, ...)">addLeadForAdditionalProjectLeadTest(New Project 60, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback, New Project 65, +41, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Amit, Gupta, +66, Walkin, Website, Interested in resale, New Project 65, +81, CP, Tu...)">addLeadForAdditionalProjectLeadTest(New Project 60, Amit, Gupta, +66, Walkin, Website, Interested in resale, New Project 65, +81, CP, Tu...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Arjun, Mehta, +234, Event, GIHED, Interested in real estate, New Project 65, +33, CP...)">addLeadForAdditionalProjectLeadTest(New Project 60, Arjun, Mehta, +234, Event, GIHED, Interested in real estate, New Project 65, +33, CP...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Desai, +32, Digital, Facebook, Requested site visit, New Project 65, +46, CP, ...)">addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Desai, +32, Digital, Facebook, Requested site visit, New Project 65, +46, CP, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Kavita, Iyer, +62, Digital, Google, Student housing required, New Project 65, +56, C...)">addLeadForAdditionalProjectLeadTest(New Project 60, Kavita, Iyer, +62, Digital, Google, Student housing required, New Project 65, +56, C...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure, New Project 65, +4...)">addLeadForAdditionalProjectLeadTest(New Project 60, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure, New Project 65, +4...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Meera, Chawla, +95, Walkin, WhatsApp, Looking for commercial plot, New Project 65, +...)">addLeadForAdditionalProjectLeadTest(New Project 60, Meera, Chawla, +95, Walkin, WhatsApp, Looking for commercial plot, New Project 65, +...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Raj, Verma, +33, Digital, Instagram, Interested in 2BHK, New Project 65, +420, CP, T...)">addLeadForAdditionalProjectLeadTest(New Project 60, Raj, Verma, +33, Digital, Instagram, Interested in 2BHK, New Project 65, +420, CP, T...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Arjun, Mehta, +49, Digital, SMS, Asked for EMI options, New Project 65, +51, CP, Tus...)">addLeadForAdditionalProjectLeadTest(New Project 60, Arjun, Mehta, +49, Digital, SMS, Asked for EMI options, New Project 65, +51, CP, Tus...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Rohan, Desai, +55, Digital, IVRS, Interested in office space, New Project 65, +54, C...)">addLeadForAdditionalProjectLeadTest(New Project 60, Rohan, Desai, +55, Digital, IVRS, Interested in office space, New Project 65, +54, C...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Sameer, Khan, +63, Digital, Email, Prefers WhatsApp updates, New Project 65, +57, CP...)">addLeadForAdditionalProjectLeadTest(New Project 60, Sameer, Khan, +63, Digital, Email, Prefers WhatsApp updates, New Project 65, +57, CP...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Raj, Bansal, +92, Walkin, IVRS, Needs property documents, New Project 65, +354, CP, ...)">addLeadForAdditionalProjectLeadTest(New Project 60, Raj, Bansal, +92, Walkin, IVRS, Needs property documents, New Project 65, +354, CP, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Priya, Sharma, +52, Digital, YouTube, Wants luxury property, New Project 65, +53, CP...)">addLeadForAdditionalProjectLeadTest(New Project 60, Priya, Sharma, +52, Digital, YouTube, Wants luxury property, New Project 65, +53, CP...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Isha, Gupta, +34, Digital, LinkedIn, Budget under 50L, New Project 65, +48, CP, Tush...)">addLeadForAdditionalProjectLeadTest(New Project 60, Isha, Gupta, +34, Digital, LinkedIn, Budget under 50L, New Project 65, +48, CP, Tush...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Aarav, Sharma, +93, Event, GIHED, Interested in real estate, New Project 65, +36, CP...)">addLeadForAdditionalProjectLeadTest(New Project 60, Aarav, Sharma, +93, Event, GIHED, Interested in real estate, New Project 65, +36, CP...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Pooja, Nair, +86, Walkin, LinkedIn, Asked for price list, New Project 65, +351, CP, ...)">addLeadForAdditionalProjectLeadTest(New Project 60, Pooja, Nair, +86, Walkin, LinkedIn, Asked for price list, New Project 65, +351, CP, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Kulkarni, +64, Digital, WhatsApp, Wants loan assistance, New Project 65, +58, ...)">addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Kulkarni, +64, Digital, WhatsApp, Wants loan assistance, New Project 65, +58, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Karan, Malhotra, +94, Walkin, Email, Wants farmhouse, New Project 65, +356, CP, Tush...)">addLeadForAdditionalProjectLeadTest(New Project 60, Karan, Malhotra, +94, Walkin, Email, Wants farmhouse, New Project 65, +356, CP, Tush...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Deepika, Rao, +91, Walkin, YouTube, Wants rental options, New Project 65, +353, CP, ...)">addLeadForAdditionalProjectLeadTest(New Project 60, Deepika, Rao, +91, Walkin, YouTube, Wants rental options, New Project 65, +353, CP, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Ankit, Verma, +90, Walkin, SMS, Looking for villa, New Project 65, +352, CP, Tushar ...)">addLeadForAdditionalProjectLeadTest(New Project 60, Ankit, Verma, +90, Walkin, SMS, Looking for villa, New Project 65, +352, CP, Tushar ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Ayesha, Siddiqui, +93, Walkin, Google, Interested in duplex, New Project 65, +355, C...)">addLeadForAdditionalProjectLeadTest(New Project 60, Ayesha, Siddiqui, +93, Walkin, Google, Interested in duplex, New Project 65, +355, C...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Priya, Khan, +20, Event, Property Event, Looking for investment, New Project 65, +40...)">addLeadForAdditionalProjectLeadTest(New Project 60, Priya, Khan, +20, Event, Property Event, Looking for investment, New Project 65, +40...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Vikram, Joshi, +82, Walkin, Instagram, Needs 3BHK apartment, New Project 65, +94, CP...)">addLeadForAdditionalProjectLeadTest(New Project 60, Vikram, Joshi, +82, Walkin, Instagram, Needs 3BHK apartment, New Project 65, +94, CP...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Desai, +98, Walkin, Direct-Walkin, Requires site visit, New Project 65, +421, ...)">addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Desai, +98, Walkin, Direct-Walkin, Requires site visit, New Project 65, +421, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForBasicProjectLead(New Project 60, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure)">addLeadForBasicProjectLead(New Project 60, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForBasicProjectLead(New Project 60, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback)">addLeadForBasicProjectLead(New Project 60, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForBasicProjectLead(New Project 60, Aarav, Sharma, +93, Event, GIHED, Interested in real estate)">addLeadForBasicProjectLead(New Project 60, Aarav, Sharma, +93, Event, GIHED, Interested in real estate)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.AddProjectLeadTest" class="method navigator-link" hash-for-method="addLeadForBasicProjectLead(New Project 60, Priya, Khan, +20, Event, Property Event, Looking for investment)">addLeadForBasicProjectLead(New Project 60, Priya, Khan, +20, Event, Property Event, Looking for investment)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.AddProjectLeadTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Sneha, Reddy, +81, Walkin, Facebook, Family shifting soon, New Project 65, +82, CP, ...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Sneha, Reddy, +81, Walkin, Facebook, Family shifting soon, New Project 65, +82, CP, ...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Sneha,Reddy,+81,Walkin,Facebook,Family shifting soon,New Project 65,+82,CP,Tushar Bhai,London,Immediate,Cold,Below 50 Lakh,6500 Sq.Ft,Residential,2 Bhk,Invest)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Karan, Mehta, +31, Digital, Website, Prefers email communication, New Project 65, +4...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Karan, Mehta, +31, Digital, Website, Prefers email communication, New Project 65, +4...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Karan,Mehta,+31,Digital,Website,Prefers email communication,New Project 65,+45,CP,Tushar Bhai,Chennai,In 3 Months,Warm,10 Cr to 15 Cr,1800 Sq.Ft,Commercial,Office,Invest)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback, New Project 65, +41, ...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback, New Project 65, +41, ...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Rohan,Patel,+27,Event,Investor Meet,Wants quick callback,New Project 65,+41,CP,Tushar Bhai,Hyderabad,In 1 Year +,Hot,2 Cr to 5 Cr,1200 Sq.Ft,Residential,5 Bhk,Pre-Lease)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Amit, Gupta, +66, Walkin, Website, Interested in resale, New Project 65, +81, CP, Tu...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Amit, Gupta, +66, Walkin, Website, Interested in resale, New Project 65, +81, CP, Tu...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Amit,Gupta,+66,Walkin,Website,Interested in resale,New Project 65,+81,CP,Tushar Bhai,Bali,In 1 Year +,Hot,10 Cr to 15 Cr,6000 Sq.Ft,Commercial,Shop,Buy)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Arjun, Mehta, +234, Event, GIHED, Interested in real estate, New Project 65, +33, CP...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Arjun, Mehta, +234, Event, GIHED, Interested in real estate, New Project 65, +33, CP...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Arjun,Mehta,+234,Event,GIHED,Interested in real estate,New Project 65,+33,CP,Tushar Bhai,Mumbai,Immediate,Hot,Below 50 Lakh,500 Sq.Ft,Residential,2 Bhk,Buy)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Desai, +32, Digital, Facebook, Requested site visit, New Project 65, +46, CP, ...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Desai, +32, Digital, Facebook, Requested site visit, New Project 65, +46, CP, ...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Neha,Desai,+32,Digital,Facebook,Requested site visit,New Project 65,+46,CP,Tushar Bhai,Ahmedabad,In 6 Months,Hot,Below 50 Lakh,2000 Sq.Ft,Commercial,Showroom,Lease)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Kavita, Iyer, +62, Digital, Google, Student housing required, New Project 65, +56, C...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Kavita, Iyer, +62, Digital, Google, Student housing required, New Project 65, +56, C...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Kavita,Iyer,+62,Digital,Google,Student housing required,New Project 65,+56,CP,Tushar Bhai,Kuala Lumpur,Immediate,Hot,1 Cr to 2 Cr,4500 Sq.Ft,Residential,Weekend Villa,Invest)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure, New Project 65, +4...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure, New Project 65, +4...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Simran,Joshi,+30,Event,Channel Partner Event,Needs brochure,New Project 65,+43,CP,Tushar Bhai,Pune,Immediate,Cold,5 Cr to 10 Cr,1500 Sq.Ft,Residential,Weekend Villa,Buy)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Meera, Chawla, +95, Walkin, WhatsApp, Looking for commercial plot, New Project 65, +...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Meera, Chawla, +95, Walkin, WhatsApp, Looking for commercial plot, New Project 65, +...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Meera,Chawla,+95,Walkin,WhatsApp,Looking for commercial plot,New Project 65,+357,CP,Tushar Bhai,Los Angeles,Immediate,Hot,1 Cr to 2 Cr,120 Sq.Ft,Residential,2 Bhk,Invest)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Raj, Verma, +33, Digital, Instagram, Interested in 2BHK, New Project 65, +420, CP, T...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Raj, Verma, +33, Digital, Instagram, Interested in 2BHK, New Project 65, +420, CP, T...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Raj,Verma,+33,Digital,Instagram,Interested in 2BHK,New Project 65,+420,CP,Tushar Bhai,Kolkata,In 1 Year +,Cold,1 Cr to 2 Cr,2200 Sq.Ft,Commercial,Shop,Pre-Lease)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Arjun, Mehta, +49, Digital, SMS, Asked for EMI options, New Project 65, +51, CP, Tus...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Arjun, Mehta, +49, Digital, SMS, Asked for EMI options, New Project 65, +51, CP, Tus...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Arjun,Mehta,+49,Digital,SMS,Asked for EMI options,New Project 65,+51,CP,Tushar Bhai,Abu Dhabi,In 3 Months,Hot,5 Cr to 10 Cr,3000 Sq.Ft,Residential,3 Bhk,Invest)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Rohan, Desai, +55, Digital, IVRS, Interested in office space, New Project 65, +54, C...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Rohan, Desai, +55, Digital, IVRS, Interested in office space, New Project 65, +54, C...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Rohan,Desai,+55,Digital,IVRS,Interested in office space,New Project 65,+54,CP,Tushar Bhai,Singapore,In 1 Year +,Warm,Below 50 Lakh,4000 Sq.Ft,Residential,5 Bhk,Pre-Lease)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Sameer, Khan, +63, Digital, Email, Prefers WhatsApp updates, New Project 65, +57, CP...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Sameer, Khan, +63, Digital, Email, Prefers WhatsApp updates, New Project 65, +57, CP...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Sameer,Khan,+63,Digital,Email,Prefers WhatsApp updates,New Project 65,+57,CP,Tushar Bhai,Bangkok,In 3 Months,Cold,2 Cr to 5 Cr,5000 Sq.Ft,Commercial,Office,Lease)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Raj, Bansal, +92, Walkin, IVRS, Needs property documents, New Project 65, +354, CP, ...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Raj, Bansal, +92, Walkin, IVRS, Needs property documents, New Project 65, +354, CP, ...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Raj,Bansal,+92,Walkin,IVRS,Needs property documents,New Project 65,+354,CP,Tushar Bhai,Zurich,In 3 Months,Hot,10 Cr to 15 Cr,9000 Sq.Ft,Commercial,Office,Lease)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Priya, Sharma, +52, Digital, YouTube, Wants luxury property, New Project 65, +53, CP...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Priya, Sharma, +52, Digital, YouTube, Wants luxury property, New Project 65, +53, CP...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Priya,Sharma,+52,Digital,YouTube,Wants luxury property,New Project 65,+53,CP,Tushar Bhai,Sharjah,In 6 Months,Cold,10 Cr to 15 Cr,3500 Sq.Ft,Residential,4 Bhk,Lease)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Isha, Gupta, +34, Digital, LinkedIn, Budget under 50L, New Project 65, +48, CP, Tush...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Isha, Gupta, +34, Digital, LinkedIn, Budget under 50L, New Project 65, +48, CP, Tush...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Isha,Gupta,+34,Digital,LinkedIn,Budget under 50L,New Project 65,+48,CP,Tushar Bhai,Dubai,Immediate,Warm,2 Cr to 5 Cr,2500 Sq.Ft,Residential,2 Bhk,Buy)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Aarav, Sharma, +93, Event, GIHED, Interested in real estate, New Project 65, +36, CP...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Aarav, Sharma, +93, Event, GIHED, Interested in real estate, New Project 65, +36, CP...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Aarav,Sharma,+93,Event,GIHED,Interested in real estate,New Project 65,+36,CP,Tushar Bhai,Delhi,In 3 Months,Cold,50 Lakh to 1 Cr,750 Sq.Ft,Residential,3 Bhk,Invest)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Pooja, Nair, +86, Walkin, LinkedIn, Asked for price list, New Project 65, +351, CP, ...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Pooja, Nair, +86, Walkin, LinkedIn, Asked for price list, New Project 65, +351, CP, ...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Pooja,Nair,+86,Walkin,LinkedIn,Asked for price list,New Project 65,+351,CP,Tushar Bhai,Paris,In 6 Months,Hot,1 Cr to 2 Cr,7500 Sq.Ft,Residential,4 Bhk,Pre-Lease)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Kulkarni, +64, Digital, WhatsApp, Wants loan assistance, New Project 65, +58, ...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Kulkarni, +64, Digital, WhatsApp, Wants loan assistance, New Project 65, +58, ...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Neha,Kulkarni,+64,Digital,WhatsApp,Wants loan assistance,New Project 65,+58,CP,Tushar Bhai,Jakarta,In 6 Months,Warm,5 Cr to 10 Cr,5500 Sq.Ft,Commercial,Showroom,Pre-Lease)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Karan, Malhotra, +94, Walkin, Email, Wants farmhouse, New Project 65, +356, CP, Tush...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Karan, Malhotra, +94, Walkin, Email, Wants farmhouse, New Project 65, +356, CP, Tush...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Karan,Malhotra,+94,Walkin,Email,Wants farmhouse,New Project 65,+356,CP,Tushar Bhai,New York,In 1 Year +,Warm,50 Lakh to 1 Cr,10000 Sq.Ft,Commercial,Shop,Buy)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Deepika, Rao, +91, Walkin, YouTube, Wants rental options, New Project 65, +353, CP, ...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Deepika, Rao, +91, Walkin, YouTube, Wants rental options, New Project 65, +353, CP, ...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Deepika,Rao,+91,Walkin,YouTube,Wants rental options,New Project 65,+353,CP,Tushar Bhai,Frankfurt,Immediate,Warm,5 Cr to 10 Cr,8500 Sq.Ft,Residential,Weekend Villa,Invest)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Ankit, Verma, +90, Walkin, SMS, Looking for villa, New Project 65, +352, CP, Tushar ...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Ankit, Verma, +90, Walkin, SMS, Looking for villa, New Project 65, +352, CP, Tushar ...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Ankit,Verma,+90,Walkin,SMS,Looking for villa,New Project 65,+352,CP,Tushar Bhai,Berlin,In 1 Year +,Cold,2 Cr to 5 Cr,8000 Sq.Ft,Residential,5 Bhk,Buy)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Ayesha, Siddiqui, +93, Walkin, Google, Interested in duplex, New Project 65, +355, C...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Ayesha, Siddiqui, +93, Walkin, Google, Interested in duplex, New Project 65, +355, C...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Ayesha,Siddiqui,+93,Walkin,Google,Interested in duplex,New Project 65,+355,CP,Tushar Bhai,Geneva,In 6 Months,Cold,Below 50 Lakh,9500 Sq.Ft,Commercial,Showroom,Pre-Lease)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Priya, Khan, +20, Event, Property Event, Looking for investment, New Project 65, +40...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Priya, Khan, +20, Event, Property Event, Looking for investment, New Project 65, +40...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Priya,Khan,+20,Event,Property Event,Looking for investment,New Project 65,+40,CP,Tushar Bhai,Bangalore,In 6 Months,Warm,1 Cr to 2 Cr,1000 Sq.Ft,Residential,4 Bhk,Lease)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Vikram, Joshi, +82, Walkin, Instagram, Needs 3BHK apartment, New Project 65, +94, CP...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Vikram, Joshi, +82, Walkin, Instagram, Needs 3BHK apartment, New Project 65, +94, CP...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Vikram,Joshi,+82,Walkin,Instagram,Needs 3BHK apartment,New Project 65,+94,CP,Tushar Bhai,Manchester,In 3 Months,Warm,50 Lakh to 1 Cr,7000 Sq.Ft,Residential,3 Bhk,Lease)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Desai, +98, Walkin, Direct-Walkin, Requires site visit, New Project 65, +421, ...)">
+                  </a> <!-- addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Desai, +98, Walkin, Direct-Walkin, Requires site visit, New Project 65, +421, ...) -->
+                  <span class="method-name">addLeadForAdditionalProjectLeadTest</span>
+                  <span class="parameters">(New Project 60,Neha,Desai,+98,Walkin,Direct-Walkin,Requires site visit,New Project 65,+421,CP,Tushar Bhai,San Francisco,In 3 Months,Cold,2 Cr to 5 Cr,150 Sq.Ft,Residential,3 Bhk,Lease)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForBasicProjectLead(New Project 60, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure)">
+                  </a> <!-- addLeadForBasicProjectLead(New Project 60, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure) -->
+                  <span class="method-name">addLeadForBasicProjectLead</span>
+                  <span class="parameters">(New Project 60,Simran,Joshi,+30,Event,Channel Partner Event,Needs brochure)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForBasicProjectLead(New Project 60, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback)">
+                  </a> <!-- addLeadForBasicProjectLead(New Project 60, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback) -->
+                  <span class="method-name">addLeadForBasicProjectLead</span>
+                  <span class="parameters">(New Project 60,Rohan,Patel,+27,Event,Investor Meet,Wants quick callback)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForBasicProjectLead(New Project 60, Aarav, Sharma, +93, Event, GIHED, Interested in real estate)">
+                  </a> <!-- addLeadForBasicProjectLead(New Project 60, Aarav, Sharma, +93, Event, GIHED, Interested in real estate) -->
+                  <span class="method-name">addLeadForBasicProjectLead</span>
+                  <span class="parameters">(New Project 60,Aarav,Sharma,+93,Event,GIHED,Interested in real estate)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addLeadForBasicProjectLead(New Project 60, Priya, Khan, +20, Event, Property Event, Looking for investment)">
+                  </a> <!-- addLeadForBasicProjectLead(New Project 60, Priya, Khan, +20, Event, Property Event, Looking for investment) -->
+                  <span class="method-name">addLeadForBasicProjectLead</span>
+                  <span class="parameters">(New Project 60,Priya,Khan,+20,Event,Property Event,Looking for investment)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+        </div> <!-- panel Surefire_suite -->
+        <div panel-name="test-xml-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tests.AddProjectLeadTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Surefire test --&gt;
+&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Surefire test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Surefire_suite');
+function tableData_Surefire_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(30);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(0, 2, 'tests.AddProjectLeadTest')
+data.setCell(0, 3, 12629);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(1, 2, 'tests.AddProjectLeadTest')
+data.setCell(1, 3, 12408);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(2, 2, 'tests.AddProjectLeadTest')
+data.setCell(2, 3, 12026);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(3, 2, 'tests.AddProjectLeadTest')
+data.setCell(3, 3, 12009);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(4, 2, 'tests.AddProjectLeadTest')
+data.setCell(4, 3, 11953);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(5, 2, 'tests.AddProjectLeadTest')
+data.setCell(5, 3, 11927);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(6, 2, 'tests.AddProjectLeadTest')
+data.setCell(6, 3, 11919);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(7, 2, 'tests.AddProjectLeadTest')
+data.setCell(7, 3, 11910);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(8, 2, 'tests.AddProjectLeadTest')
+data.setCell(8, 3, 11892);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(9, 2, 'tests.AddProjectLeadTest')
+data.setCell(9, 3, 11892);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(10, 2, 'tests.AddProjectLeadTest')
+data.setCell(10, 3, 11876);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(11, 2, 'tests.AddProjectLeadTest')
+data.setCell(11, 3, 11858);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(12, 2, 'tests.AddProjectLeadTest')
+data.setCell(12, 3, 11832);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(13, 2, 'tests.AddProjectLeadTest')
+data.setCell(13, 3, 11688);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(14, 2, 'tests.AddProjectLeadTest')
+data.setCell(14, 3, 11636);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(15, 2, 'tests.AddProjectLeadTest')
+data.setCell(15, 3, 11484);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(16, 2, 'tests.AddProjectLeadTest')
+data.setCell(16, 3, 11475);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(17, 2, 'tests.AddProjectLeadTest')
+data.setCell(17, 3, 11444);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(18, 2, 'tests.AddProjectLeadTest')
+data.setCell(18, 3, 11413);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(19, 2, 'tests.AddProjectLeadTest')
+data.setCell(19, 3, 11404);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(20, 2, 'tests.AddProjectLeadTest')
+data.setCell(20, 3, 11390);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(21, 2, 'tests.AddProjectLeadTest')
+data.setCell(21, 3, 11387);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(22, 2, 'tests.AddProjectLeadTest')
+data.setCell(22, 3, 11376);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(23, 2, 'tests.AddProjectLeadTest')
+data.setCell(23, 3, 11361);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(24, 2, 'tests.AddProjectLeadTest')
+data.setCell(24, 3, 11360);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'addLeadForAdditionalProjectLeadTest')
+data.setCell(25, 2, 'tests.AddProjectLeadTest')
+data.setCell(25, 3, 11354);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'addLeadForBasicProjectLead')
+data.setCell(26, 2, 'tests.AddProjectLeadTest')
+data.setCell(26, 3, 9138);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'addLeadForBasicProjectLead')
+data.setCell(27, 2, 'tests.AddProjectLeadTest')
+data.setCell(27, 3, 8652);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'addLeadForBasicProjectLead')
+data.setCell(28, 2, 'tests.AddProjectLeadTest')
+data.setCell(28, 3, 8641);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'addLeadForBasicProjectLead')
+data.setCell(29, 2, 'tests.AddProjectLeadTest')
+data.setCell(29, 3, 8587);
+window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <div id="times-div-Surefire_suite">
+              </div> <!-- times-div-Surefire_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.AddProjectLeadTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Arjun, Mehta, +234, Event, GIHED, Interested in real estate, New Project 65, +33, CP...)</span>
+                <span class="method-start">10690 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">22351 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Aarav, Sharma, +93, Event, GIHED, Interested in real estate, New Project 65, +36, CP...)</span>
+                <span class="method-start">24567 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">37198 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Priya, Khan, +20, Event, Property Event, Looking for investment, New Project 65, +40...)</span>
+                <span class="method-start">39421 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">51281 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback, New Project 65, +41, ...)</span>
+                <span class="method-start">53475 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">65164 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure, New Project 65, +4...)</span>
+                <span class="method-start">67372 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">78858 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Karan, Mehta, +31, Digital, Website, Prefers email communication, New Project 65, +4...)</span>
+                <span class="method-start">81054 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">93081 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Desai, +32, Digital, Facebook, Requested site visit, New Project 65, +46, CP, ...)</span>
+                <span class="method-start">95310 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">106666 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Raj, Verma, +33, Digital, Instagram, Interested in 2BHK, New Project 65, +420, CP, T...)</span>
+                <span class="method-start">108894 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">121303 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Isha, Gupta, +34, Digital, LinkedIn, Budget under 50L, New Project 65, +48, CP, Tush...)</span>
+                <span class="method-start">123506 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">135399 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Arjun, Mehta, +49, Digital, SMS, Asked for EMI options, New Project 65, +51, CP, Tus...)</span>
+                <span class="method-start">137626 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">149071 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Priya, Sharma, +52, Digital, YouTube, Wants luxury property, New Project 65, +53, CP...)</span>
+                <span class="method-start">151294 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">163249 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Rohan, Desai, +55, Digital, IVRS, Interested in office space, New Project 65, +54, C...)</span>
+                <span class="method-start">165473 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">177482 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Kavita, Iyer, +62, Digital, Google, Student housing required, New Project 65, +56, C...)</span>
+                <span class="method-start">179706 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">191618 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Sameer, Khan, +63, Digital, Email, Prefers WhatsApp updates, New Project 65, +57, CP...)</span>
+                <span class="method-start">193841 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">205734 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Kulkarni, +64, Digital, WhatsApp, Wants loan assistance, New Project 65, +58, ...)</span>
+                <span class="method-start">207956 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">219370 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Amit, Gupta, +66, Walkin, Website, Interested in resale, New Project 65, +81, CP, Tu...)</span>
+                <span class="method-start">221593 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">232998 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Sneha, Reddy, +81, Walkin, Facebook, Family shifting soon, New Project 65, +82, CP, ...)</span>
+                <span class="method-start">235207 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">246570 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Vikram, Joshi, +82, Walkin, Instagram, Needs 3BHK apartment, New Project 65, +94, CP...)</span>
+                <span class="method-start">248795 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">260183 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Pooja, Nair, +86, Walkin, LinkedIn, Asked for price list, New Project 65, +351, CP, ...)</span>
+                <span class="method-start">262388 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">273765 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Ankit, Verma, +90, Walkin, SMS, Looking for villa, New Project 65, +352, CP, Tushar ...)</span>
+                <span class="method-start">275982 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">287902 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Deepika, Rao, +91, Walkin, YouTube, Wants rental options, New Project 65, +353, CP, ...)</span>
+                <span class="method-start">290125 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">301516 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Raj, Bansal, +92, Walkin, IVRS, Needs property documents, New Project 65, +354, CP, ...)</span>
+                <span class="method-start">303700 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">315533 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Ayesha, Siddiqui, +93, Walkin, Google, Interested in duplex, New Project 65, +355, C...)</span>
+                <span class="method-start">317740 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">329668 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Karan, Malhotra, +94, Walkin, Email, Wants farmhouse, New Project 65, +356, CP, Tush...)</span>
+                <span class="method-start">331891 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">343768 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Meera, Chawla, +95, Walkin, WhatsApp, Looking for commercial plot, New Project 65, +...)</span>
+                <span class="method-start">345958 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">357318 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForAdditionalProjectLeadTest(New Project 60, Neha, Desai, +98, Walkin, Direct-Walkin, Requires site visit, New Project 65, +421, ...)</span>
+                <span class="method-start">359541 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForAdditionalProjectLeadTest status=SUCCESS method=AddProjectLeadTest.addLea...)</span>
+                <span class="method-start">371017 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForBasicProjectLead(New Project 60, Aarav, Sharma, +93, Event, GIHED, Interested in real estate)</span>
+                <span class="method-start">373192 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasic...)</span>
+                <span class="method-start">381780 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForBasicProjectLead(New Project 60, Priya, Khan, +20, Event, Property Event, Looking for investment)</span>
+                <span class="method-start">383973 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasic...)</span>
+                <span class="method-start">392615 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForBasicProjectLead(New Project 60, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback)</span>
+                <span class="method-start">394829 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasic...)</span>
+                <span class="method-start">403482 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">addLeadForBasicProjectLead(New Project 60, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure)</span>
+                <span class="method-start">405674 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasic...)</span>
+                <span class="method-start">414813 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">417027 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

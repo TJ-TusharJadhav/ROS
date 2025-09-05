@@ -1,0 +1,2090 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/28</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Sep 01 16:49:09 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>40 seconds (40596 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest<br>Parameters: [TestResult name=addLeadForFund status=FAILURE method=AddFundLeadTest.addLeadForFund(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6ad82709] output={null}]</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1160850402", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1160850402'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.tearDown()'><b>tearDown</b><br>Test class: tests.AddFundLeadTest</td>
+<td></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Priya, Khan, +20, Event, Property Event, Looking for investment</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:241)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:680)
+	at com.microsoft.playwright.Page.click(Page.java:3931)
+	at pages.AddLeadPage.addLead(AddLeadPage.java:49)
+	at tests.AddFundLeadTest.addLeadForFund(AddFundLeadTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1997548433", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1997548433'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:241)
+	at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:680)
+	at com.microsoft.playwright.Page.click(Page.java:3931)
+	at pages.AddLeadPage.addLead(AddLeadPage.java:49)
+	at tests.AddFundLeadTest.addLeadForFund(AddFundLeadTest.java:57)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Aarav, Sharma, +93, Event, GIHED, Interested in real estate</td>
+<td></td>
+<td>9</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Ayesha, Siddiqui, +93, Walkin, Google, Interested in duplex</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace43650267", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace43650267'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Pooja, Nair, +86, Walkin, LinkedIn, Asked for price list</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1070157899", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1070157899'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Ritu, Jain, +213, Print Media, Hoardings, Interested in joint venture</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace393996856", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace393996856'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Shruti, Deshmukh, +65, Channel Sales, Channel Partner, Needs farmhouse land</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace816798571", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace816798571'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Neha, Desai, +32, Digital, Facebook, Requested site visit</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace950698351", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace950698351'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Sneha, Reddy, +81, Walkin, Facebook, Family shifting soon</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1839962989", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1839962989'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Priya, Sharma, +52, Digital, YouTube, Wants luxury property</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace89448984", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace89448984'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Manish, Thakur, +91, Channel Sales, ACP, Wants studio apartment</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace198112003", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace198112003'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Rohan, Desai, +55, Digital, IVRS, Interested in office space</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace701119748", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace701119748'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Kavita, Iyer, +62, Digital, Google, Student housing required</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1143390193", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1143390193'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Vikram, Joshi, +82, Walkin, Instagram, Needs 3BHK apartment</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1415630650", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1415630650'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Neha, Desai, +98, Walkin, Direct-Walkin, Requires site visit</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2121199924", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2121199924'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Meera, Chawla, +95, Walkin, WhatsApp, Looking for commercial plot</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace836427078", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace836427078'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Arjun, Mehta, +49, Digital, SMS, Asked for EMI options</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace147022238", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace147022238'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Isha, Gupta, +34, Digital, LinkedIn, Budget under 50L</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace87674905", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace87674905'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Ankit, Verma, +90, Walkin, SMS, Looking for villa</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2118255842", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2118255842'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Neha, Kulkarni, +64, Digital, WhatsApp, Wants loan assistance</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace790021811", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace790021811'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Aditya, Patil, +211, Print Media, News Paper, Wants ready-to-move flat</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace282003944", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace282003944'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Karan, Mehta, +31, Digital, Website, Prefers email communication</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2048013503", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2048013503'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Sameer, Khan, +63, Digital, Email, Prefers WhatsApp updates</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace438314766", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace438314766'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Raj, Verma, +33, Digital, Instagram, Interested in 2BHK</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace461698165", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace461698165'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Amit, Gupta, +66, Walkin, Website, Interested in resale</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1388563249", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1388563249'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Deepika, Rao, +91, Walkin, YouTube, Wants rental options</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace474488818", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace474488818'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1180858072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1180858072'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Karan, Malhotra, +94, Walkin, Email, Wants farmhouse</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1857173583", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1857173583'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Farhan, Ansari, +216, Print Media, Leaflets, Wants coastal property</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace640808588", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace640808588'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Raj, Bansal, +92, Walkin, IVRS, Needs property documents</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace108449608", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace108449608'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+<tr>
+<td title='tests.AddFundLeadTest.addLeadForFund()'><b>addLeadForFund</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Fund, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1690713209", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1690713209'><pre>com.microsoft.playwright.PlaywrightException: Playwright connection closed
+	at com.microsoft.playwright.impl.PipeTransport.send(PipeTransport.java:50)
+	at com.microsoft.playwright.impl.Connection.internalSendMessage(Connection.java:171)
+	at com.microsoft.playwright.impl.Connection.sendMessageAsync(Connection.java:135)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1181)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1126)
+	at base.BaseTest.takeScreenshot(BaseTest.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.AddFundLeadTest@6ad82709</td></tr>
+</table><p>
+</body>
+</html>
