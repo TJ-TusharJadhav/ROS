@@ -3,14 +3,13 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="base.BaseTest"/>
-      <class name="playwright.addProjectFollowUp"/>
-      <class name="playwright.AddFundLead"/>
-      <class name="playwright.EventRegistrationTest"/>
-      <class name="playwright.SampleTest"/>
-      <class name="playwright.AddProjectLead"/>
-      <class name="playwright.Add100leadForProject"/>
+      <class name="tests.AddFurnitureLeadTest"/>
+      <class name="tests.EditProjectLeadTest"/>
+      <class name="tests.AddLandLeadTest"/>
+      <class name="tests.AddProjectLeadTest"/>
       <class name="tests.AddFundLeadTest"/>
+      <class name="tests.EditFundLeadTest"/>
+      <class name="tests.AddFollowUpTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

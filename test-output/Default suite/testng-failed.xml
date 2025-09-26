@@ -3,11 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="playwright.AddFollowUP">
+      <class name="tests.AddProjectLeadTest">
         <methods>
-          <include name="verifyNonRegisterMobileNumberErrorMessageOnMobile"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="addLeadForBasicProjectLead" invocation-numbers="23"/>
+          <include name="takeScreenshot"/>
         </methods>
-      </class> <!-- playwright.AddFollowUP -->
+      </class> <!-- tests.AddProjectLeadTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
