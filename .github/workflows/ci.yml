@@ -1,10 +1,10 @@
-name: Daily Test Run with Report Email
+name: Daily Test Run
 
 on:
   schedule:
-    # Runs daily at 5:00 AM IST (11:30 PM UTC)
+    # 5:00 AM IST = 11:30 PM UTC (previous day)
     - cron: "30 23 * * *"
-  workflow_dispatch:
+  workflow_dispatch:  # Allows manual run from Actions tab
 
 jobs:
   test:
@@ -46,25 +46,3 @@ jobs:
         with:
           name: extent-reports
           path: test-output/
-
-      # 📧 Send Email with ExtentReport
-      - name: Send report via email
-        if: always()
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "ROS Automation Test Report"
-          to: ${{ secrets.EMAIL_TO }}
-          from: ${{ secrets.EMAIL_USERNAME }}
-          secure: true
-          body: |
-            Hello Team,
-
-            The daily automation run has completed. Please find the ExtentReport attached.
-
-            Regards,
-            GitHub Actions
-          attachments: test-output/index.html
