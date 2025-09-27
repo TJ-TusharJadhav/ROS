@@ -89,7 +89,7 @@ public class AddFurnitureLeadPage {
     	
     	addLeadBasic(projectName, fname, lname, country, phone, mail, source, subSource, Category, subCategory, note);
         page.click(submitBtn);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
     public void validateLeadWithGeneratedData(
             String expectedFirstName, String expectedLastName, String expectedProject,
@@ -97,7 +97,7 @@ public class AddFurnitureLeadPage {
             String expectedPhonenumber, String expectedRemark, String expectedSubSource,
             String expectedProductSubCategory, String expectedSubCategory) throws InterruptedException {
 
-        Thread.sleep(1000);
+        
         Locator checkNewLeadCard = page.locator("(//div[@aria-label='View details for " + expectedFirstName + "'])[1]");
         
         if (checkNewLeadCard.count() > 0) {

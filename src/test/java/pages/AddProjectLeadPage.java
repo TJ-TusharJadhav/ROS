@@ -294,7 +294,17 @@ public class AddProjectLeadPage {
     		String expectedFirstName, String expectedLastName, String expectedProject, 
     		String expectedSource,String expectedEmail, String expectedCountryCode, 
     		String expectedPhonenumber, String expectedRemark,String expectedSubSource) throws InterruptedException {
-    	
+         Locator checkNewLeadCard = page.locator("(//div[@aria-label='View details for " + expectedFirstName + "'])[1]");
+        
+        if (checkNewLeadCard.count() > 0) {
+            checkNewLeadCard.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+            checkNewLeadCard.click();
+        } else {
+            page.click("//div[contains(text(),'Re-Inquiry')]");
+            page.click("//div[contains(text(),'New Lead')]");
+            checkNewLeadCard.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+            checkNewLeadCard.click();
+        }
     	String ExpectedLeadOwner = page.textContent(SigIn_Name).trim();
     	
     	String status = "(//div[@role='button' and contains(@aria-label,'View details for "+expectedFirstName+"')]//span[contains(@class,'rounded-full')])[1]";
@@ -357,6 +367,8 @@ public class AddProjectLeadPage {
             verifyButton.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
             verifyButton.click();
         }
+        Thread.sleep(500);
+        
         String actualProjectNameinHistory =page.textContent(projectnameinhirstory).trim();
         String actualFirstName =page.textContent(FirstName).trim();
         String actualLastName =page.textContent(LastName).trim();

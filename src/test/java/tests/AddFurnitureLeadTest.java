@@ -1,77 +1,29 @@
 package tests;
 
-import org.testng.annotations.Test;
-import java.nio.file.Paths;
+import java.io.InputStreamReader;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import com.microsoft.playwright.Locator;
-import com.microsoft.playwright.Page;
 import com.opencsv.CSVReader;
-
 import base.BaseTest;
-import utils.TestUtils;
-import java.io.InputStreamReader;
-import java.net.URL;
+import listeners.ExtentTestNGListener;
+import utils.ScreenshotUtil;
+import utils.PhoneNumber;
 
-
+@Listeners(ExtentTestNGListener.class)
 public class AddFurnitureLeadTest extends BaseTest {
 	
+	public String phone;
 	@AfterMethod
-//	ITestResult result
-    public void takeScreenshot() throws InterruptedException {
-//        if (ITestResult.FAILURE == result.getStatus()) {
-//            Object[] parameters = result.getParameters();
-//            String testData = "";
-//            if (parameters != null && parameters.length > 0) {
-//                testData = "_" + String.join("_", 
-//                    Arrays.stream(parameters)
-//                          .map(Object::toString)
-//                          .toArray(String[]::new)
-//                );
-//            }
-//            page.screenshot(new Page.ScreenshotOptions()
-//                    .setPath(Paths.get("screenshots/" + result.getName() + testData + "_failed.png"))
-//                    .setFullPage(true));
-//
-//            System.out.println("❌ Screenshot saved for failed test with data: " + Arrays.toString(parameters));
-//            Locator closeBtn = page.locator("//button[contains(@class,'mantine-Modal-close')]");
-//            if (closeBtn.count() > 0 && closeBtn.isVisible()) {
-//                closeBtn.click();
-//                System.out.println("Fail: Modal close button clicked!");
-//            } else {
-//                System.out.println("Fail: Modal close button not found, skipping...");
-//            }
-//
-//            String closeicon = "//div[@class='cursor-pointer flex justify-end px-4']";
-//            if (page.locator(closeicon).count() > 0) {
-//                page.waitForSelector(closeicon);
-//                page.click(closeicon);
-//                Thread.sleep(1000);
-//            }
-//        } else {
-            Locator closeBtn = page.locator("//button[contains(@class,'mantine-Modal-close')]");
-            if (closeBtn.count() > 0 && closeBtn.isVisible()) {
-                closeBtn.click();
-                System.out.println("Pass: Modal close button clicked!");
-            } else {
-                System.out.println("Pass: Modal close button not found, skipping...");
-            }
-
-            String closeicon = "//div[@class='cursor-pointer flex justify-end px-4']";
-            if (page.locator(closeicon).count() > 0) {
-                page.waitForSelector(closeicon);
-                page.click(closeicon);
-                Thread.sleep(1000);
-            }
-        }
-//    }
+		public void takeScreenshot(ITestResult result) throws InterruptedException {
+			ScreenshotUtil.capture(page, result, phone);
+		}
 
     // ---------------- Google Sheet DataProvider ----------------
 	public Object[][] getLeadAdditionalDataFromGoogleSheet() throws Exception {
@@ -138,8 +90,8 @@ public class AddFurnitureLeadTest extends BaseTest {
                 String project, String fname, String lname, String country, 
                 String source, String subSource, String category, String subCategory, String remarks) throws InterruptedException {
 
-            String phone = TestUtils.generateUniquePhoneNumber();
-            String email = fname + lname + "@yopmail.com";
+            phone = PhoneNumber.generateUniquePhoneNumber();
+            String email = fname + lname + "@shivalikgroup.com";
             
             System.out.println(phone);
 
@@ -160,7 +112,7 @@ public class AddFurnitureLeadTest extends BaseTest {
         String area, String CompanyName, String EstimatedQuantity, String ProjectTimeline
     ) throws InterruptedException {
        
-        String phone = TestUtils.generateUniquePhoneNumber(); 
+        phone = PhoneNumber.generateUniquePhoneNumber(); 
         String email = fname + lname + "@shivalikgroup.com"; 
         
         System.out.println(phone);

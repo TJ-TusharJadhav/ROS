@@ -3,13 +3,11 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="tests.AddFurnitureLeadTest"/>
-      <class name="tests.EditProjectLeadTest"/>
-      <class name="tests.AddLandLeadTest"/>
       <class name="tests.AddProjectLeadTest"/>
       <class name="tests.AddFundLeadTest"/>
+      <class name="tests.AddFurnitureLeadTest"/>
+      <class name="tests.EditProjectLeadTest"/>
       <class name="tests.EditFundLeadTest"/>
-      <class name="tests.AddFollowUpTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

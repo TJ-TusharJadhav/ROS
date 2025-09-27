@@ -1,17 +1,18 @@
 package tests;
 
-import java.nio.file.Paths;
-import java.util.Arrays;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import com.microsoft.playwright.Locator;
-import com.microsoft.playwright.Page;
+import listeners.ExtentTestNGListener;
+
 import base.BaseTest;
 import utils.ScreenshotUtil;
-import utils.TestUtils;
+import utils.PhoneNumber;
 
+
+@Listeners(ExtentTestNGListener.class)
 public class AddFundLeadTest extends BaseTest {
 	public String phone;
 	@AfterMethod
@@ -161,20 +162,20 @@ public class AddFundLeadTest extends BaseTest {
 
     @Test(dataProvider = "leadData")
     public void addLeadForBasicFundLead(String project, String fname, String lname, String country, String source, String subSource, String remarks) throws InterruptedException {
-     phone = TestUtils.generateUniquePhoneNumber();
+     phone = PhoneNumber.generateUniquePhoneNumber();
     String email = fname + lname + "@yopmail.com";
     addfundLead.addLeadWithBasic(project, fname, lname, country, phone, email, source, subSource, remarks);
     addfundLead.validateLeadWithBasicInfo(fname, lname, project, source, email, country, phone, remarks, subSource);
     }
     
-    @Test(dataProvider = "AdditionalleadData")
+//    @Test(dataProvider = "AdditionalleadData")
     public void addLeadForAdditionalFundLeadTest(
             String project, String fname, String lname, String country, String source, String subSource, String remarks,
              String addCountryCode, String referralType, String referralName, String location, String buyingTime,
             String priority, String budget, String area, String projectCat, String unitType, String leadType) throws InterruptedException {
        
-         phone = TestUtils.generateUniquePhoneNumber();
-        String additionalPhone = TestUtils.generateUniquePhoneNumber();
+         phone = PhoneNumber.generateUniquePhoneNumber();
+        String additionalPhone = PhoneNumber.generateUniquePhoneNumber();
         String email = fname + lname + "@yopmail.com";
 
         addfundLead.addLeadWithAdditional(

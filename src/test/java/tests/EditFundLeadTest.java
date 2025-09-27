@@ -1,20 +1,21 @@
 package tests;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 import java.nio.file.Paths;
 import java.util.Arrays;
 
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 
 import base.BaseTest;
-import utils.TestUtils;
-
+import listeners.ExtentTestNGListener;
+import utils.PhoneNumber;
+@Listeners(ExtentTestNGListener.class)
 public class EditFundLeadTest extends BaseTest {
 	
 	@AfterMethod
@@ -78,7 +79,7 @@ public class EditFundLeadTest extends BaseTest {
              String addCountryCode, String referralType, String referralName, String location, String buyingTime,
             String priority, String budget, String area, String projectCat, String unitType, String leadType) throws InterruptedException {
        
-        String additionalPhone = TestUtils.generateUniquePhoneNumber();
+        String additionalPhone = PhoneNumber.generateUniquePhoneNumber();
         String email = fname + lname + "@yopmail.com";
 
         editfundLead.editLeadWithAdditional(

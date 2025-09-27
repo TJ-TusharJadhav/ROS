@@ -1,21 +1,17 @@
 package base;
 
-import org.testng.annotations.AfterMethod;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Listeners;
-
 import com.github.javafaker.Faker;
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
-
+import listeners.ExtentTestNGListener;
 import pages.AddFundLeadPage;
 import pages.AddFurnitureLeadPage;
 import pages.AddLandLeadPage;
@@ -24,8 +20,6 @@ import pages.EditFundLeadPage;
 import pages.EditProjectLeadPage;
 import pages.LoginPage;
 import pages.ProjectFollowUpPage;
-import utils.AllureListener;
-import utils.RetryListener;
 
 //@Listeners(RetryListener.class)
 public class BaseTest {
@@ -43,6 +37,7 @@ public class BaseTest {
     protected AddLandLeadPage addLandLead;
     protected AddFurnitureLeadPage addFurnitureLead;
     protected Faker faker;
+    
 
     private final String storagePath = "auth.json";
     private final String devUrl = "https://admin-core-staging.realestateos.io/login";
@@ -95,8 +90,8 @@ public class BaseTest {
         projectFollowUp = new ProjectFollowUpPage(page);
         addLandLead = new AddLandLeadPage(page);
         addFurnitureLead= new AddFurnitureLeadPage(page);
-        AllureListener.setPage(page);
         faker = new Faker();
+        ExtentTestNGListener.page = page;
     }
 
 	@AfterSuite

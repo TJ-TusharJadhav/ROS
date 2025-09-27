@@ -1,12 +1,13 @@
 package tests;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
+import listeners.ExtentTestNGListener;
+@Listeners(ExtentTestNGListener.class)
 
 public class AddFollowUpTest extends BaseTest {
 	@BeforeClass

@@ -2,13 +2,16 @@ package tests;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.options.WaitForSelectorState;
 
 import base.BaseTest;
-import utils.TestUtils;
+import listeners.ExtentTestNGListener;
+import utils.PhoneNumber;
+@Listeners(ExtentTestNGListener.class)
 
 public class AddLandLeadTest extends BaseTest{
 	public String phone;
@@ -17,7 +20,7 @@ public class AddLandLeadTest extends BaseTest{
 	@BeforeMethod
 	public void beforemethod() throws InterruptedException {
 		addLandLead.OpenAddLandLeadForm();
-		phone = TestUtils.generateUniquePhoneNumber();
+		phone = PhoneNumber.generateUniquePhoneNumber();
 		firstName = faker.name().firstName();
 	    LastName = faker.name().lastName();
 		

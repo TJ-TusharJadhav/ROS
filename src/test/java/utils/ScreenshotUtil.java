@@ -35,17 +35,24 @@ public class ScreenshotUtil {
     	        } catch (Exception e) {
     	            System.err.println("⚠️ Could not take screenshot: " + e.getMessage());
     	        }
+    	        Locator closeBtn = page.locator("//button[contains(@class,'mantine-Modal-close')]");
+    	        if (closeBtn.isVisible()) {
+    	            closeBtn.click();
+    	            System.out.println("Fail: Modal close button clicked!");
+    	        } else {
+    	            System.out.println("Fail: Modal close button not found, skipping...");
+    	        }
     	    } else {
     	        Locator closeBtn = page.locator("//button[contains(@class,'mantine-Modal-close')]");
     	        if (closeBtn.isVisible()) {
     	            closeBtn.click();
-    	            System.out.println("Modal close button clicked!");
+    	            System.out.println("Pass: Modal close button clicked!");
     	        } else {
-    	            System.out.println("Modal close button not found, skipping...");
+    	            System.out.println("Pass: Modal close button not found, skipping...");
     	        }
-                page.waitForSelector("div.cursor-pointer.flex.items-center.justify-end");
-    	        page.click("div.cursor-pointer.flex.items-center.justify-end");
-    	        Thread.sleep(1000);
+//                page.waitForSelector("div.cursor-pointer.flex.items-center.justify-end");
+//    	        page.click("div.cursor-pointer.flex.items-center.justify-end");
+//    	        Thread.sleep(1000);
     	    }
     	
     }}

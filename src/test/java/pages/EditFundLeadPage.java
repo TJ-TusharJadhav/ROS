@@ -36,10 +36,10 @@ public class EditFundLeadPage {
     private String projectNameText = "(//span[@class='font-medium'])[2]";
     private String fullDetailsText = "(//p[@class='text-gray-500 mb-3 text-base break-words'])[1]";
  // Locators for Lead history
-    private String FirstName = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[7]";
-    private String LastName = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[8]";
-    private String Email = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[9]";
-    private String comments = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[10]";
+    private String FirstName = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[6]";
+    private String LastName = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[7]";
+    private String Email = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[8]";
+    private String comments = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[9]";
     private String alternatecountryCode = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[15]";
     private String alternatePhone = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[16]";
     private String ReferralType = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[17]";
