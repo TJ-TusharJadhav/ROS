@@ -95,7 +95,6 @@ public class BaseTest {
         ExtentTestNGListener.page = page;
     }
 
-	@AfterMethod
 	@AfterSuite
     public void tearDown() {
         browser.close();
