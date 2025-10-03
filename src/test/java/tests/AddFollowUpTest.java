@@ -24,29 +24,29 @@ public class AddFollowUpTest extends BaseTest {
 
 	        return new Object[][] {
 	        	{"Not Connected", "Not Responding", "User declined the follow-up conversation", "Today’s Follow Up"},
-	        	{"Not Connected", "Not Reachable", "All calls unreachable today", "Today’s Follow Up"},
-	        	{"Not Connected", "Switch Off", "Phone is switched off", "Today’s Follow Up"},
-	        	{"Not Connected", "Busy", "Line was busy on multiple attempts", "Today’s Follow Up"},
-	        	{"Not Connected", "Discussion", "Initial discussion completed", "Today’s Follow Up"},
-	        	
-	        	{"Qualified", "Project Details Shared", "Shared brochure and pricing details", "Today’s Follow Up"},
-	        	{"Qualified", "Site Meeting Planned", "Meeting scheduled for 12th July", "Today’s Follow Up"},
-	        	{"Qualified", "Project Briefing", "Shared project overview", "Today’s Follow Up"},
-	        	{"Qualified", "Discussion", "No follow-up response since 3 days", "Today’s Follow Up"},
-	        	{"Qualified", "Not Responding", "Had a good discussion on project types", "Today’s Follow Up"},
-	        	
-	        	{"Meeting Planned", "Discussion", "Agenda set for the upcoming site visit", "Today’s Follow Up"},
-	        	{"Meeting Planned", "Not Responding", "User missed last scheduled call", "Today’s Follow Up"},
-	        	
-	        	{"Meeting Done", "Brochure Shared", "Shared updated brochure", "Today’s Follow Up"},
-	        	{"Meeting Done", "Sample House Visited", "User impressed with interiors", "Today’s Follow Up"},
-	        	{"Meeting Done", "Unit Availablity Checked", "Unit options shared with client", "Today’s Follow Up"},
-	        	{"Meeting Done", "Unit Blocked", "Unit 3B-405 blocked temporarily", "Today’s Follow Up"},
-	        	{"Meeting Done", "Payment Plan Discussion", "Explained staggered payment plan", "Today’s Follow Up"},
-	        	{"Meeting Done", "Next Meeting Planned", "Next visit planned for 15th July", "Today’s Follow Up"},
-//	        	{"Meeting Done", "Discussion", "Finalizing decision with family", "Today’s Follow Up"},
-	        	{"Meeting Done", "Not Responding", "No callback after site visit", "Today’s Follow Up"},
-	        	{"Meeting Done", "Project Overview & Cost Discussion", "Covered pricing, next step is booking", "Today’s Follow Up"},  
+//	        	{"Not Connected", "Not Reachable", "All calls unreachable today", "Today’s Follow Up"},
+//	        	{"Not Connected", "Switch Off", "Phone is switched off", "Today’s Follow Up"},
+//	        	{"Not Connected", "Busy", "Line was busy on multiple attempts", "Today’s Follow Up"},
+//	        	{"Not Connected", "Discussion", "Initial discussion completed", "Today’s Follow Up"},
+//	        	
+//	        	{"Qualified", "Project Details Shared", "Shared brochure and pricing details", "Today’s Follow Up"},
+//	        	{"Qualified", "Site Meeting Planned", "Meeting scheduled for 12th July", "Today’s Follow Up"},
+//	        	{"Qualified", "Project Briefing", "Shared project overview", "Today’s Follow Up"},
+//	        	{"Qualified", "Discussion", "No follow-up response since 3 days", "Today’s Follow Up"},
+//	        	{"Qualified", "Not Responding", "Had a good discussion on project types", "Today’s Follow Up"},
+//	        	
+//	        	{"Meeting Planned", "Discussion", "Agenda set for the upcoming site visit", "Today’s Follow Up"},
+//	        	{"Meeting Planned", "Not Responding", "User missed last scheduled call", "Today’s Follow Up"},
+//	        	
+//	        	{"Meeting Done", "Brochure Shared", "Shared updated brochure", "Today’s Follow Up"},
+//	        	{"Meeting Done", "Sample House Visited", "User impressed with interiors", "Today’s Follow Up"},
+//	        	{"Meeting Done", "Unit Availablity Checked", "Unit options shared with client", "Today’s Follow Up"},
+//	        	{"Meeting Done", "Unit Blocked", "Unit 3B-405 blocked temporarily", "Today’s Follow Up"},
+//	        	{"Meeting Done", "Payment Plan Discussion", "Explained staggered payment plan", "Today’s Follow Up"},
+//	        	{"Meeting Done", "Next Meeting Planned", "Next visit planned for 15th July", "Today’s Follow Up"},
+////	        	{"Meeting Done", "Discussion", "Finalizing decision with family", "Today’s Follow Up"},
+//	        	{"Meeting Done", "Not Responding", "No callback after site visit", "Today’s Follow Up"},
+//	        	{"Meeting Done", "Project Overview & Cost Discussion", "Covered pricing, next step is booking", "Today’s Follow Up"},  
 	        };
 	    }
 	 

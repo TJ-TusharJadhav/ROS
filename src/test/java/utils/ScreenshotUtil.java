@@ -28,8 +28,8 @@ public class ScreenshotUtil {
     	            if (page != null) {
     	                page.screenshot(new Page.ScreenshotOptions()
     	                        .setPath(Paths.get("screenshots/" + fileName))
-    	                        .setFullPage(false)     // 👈 safer than true
-    	                        .setTimeout(10000));    // 👈 shorter timeout
+    	                        .setFullPage(true)     // 👈 safer than true
+    	                        .setTimeout(60000));    // 👈 shorter timeout
     	                System.out.println("❌ Screenshot saved: " + fileName);
     	            }
     	        } catch (Exception e) {

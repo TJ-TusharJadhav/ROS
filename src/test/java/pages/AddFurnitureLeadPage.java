@@ -102,6 +102,7 @@ public class AddFurnitureLeadPage {
         
         if (checkNewLeadCard.count() > 0) {
             checkNewLeadCard.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+            Thread.sleep(500);
             checkNewLeadCard.click();
         } else {
             page.click("//div[contains(text(),'Re-Inquiry')]");

@@ -161,7 +161,7 @@ public class AddProjectLeadTest extends BaseTest {
             };
     }
 
-    @Test(dataProvider = "leadData")
+    @Test(dataProvider = "leadData", priority = 1)
     public void addLeadForBasicProjectLead(String project, String fname, String lname, String country, String source, String subSource, String remarks) throws InterruptedException {
     phone = PhoneNumber.generateUniquePhoneNumber();
     String email = fname + lname + "@yopmail.com";
@@ -169,7 +169,7 @@ public class AddProjectLeadTest extends BaseTest {
     addprojectLead.validateLeadWithBasicInfo(fname, lname, project, source, email, country, phone, remarks, subSource);
     }
 
-    @Test(dataProvider = "AdditionalleadData")
+    @Test(dataProvider = "AdditionalleadData", priority = 2)
     public void addLeadForAdditionalProjectLeadTest(
             String project, String fname, String lname, String country, String source, String subSource, String remarks,
             String secondproject, String addCountryCode, String referralType, String referralName, String location, String buyingTime,

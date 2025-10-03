@@ -87,7 +87,8 @@ public class AddFundLeadPage {
     	Locator checkNewLeadCard = page.locator("(//div[@aria-label='View details for "+expectedFirstName+"'])[1]");
     	if (checkNewLeadCard.count() > 0) {
     		checkNewLeadCard.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
-    		checkNewLeadCard.click();
+    		Thread.sleep(500);
+            checkNewLeadCard.click();
         } else {
             page.click("//div[contains(text(),'Re-Inquiry')]");
             page.click("//div[contains(text(),'New Lead')]");

@@ -25,9 +25,7 @@ public class AddFurnitureLeadTest extends BaseTest {
 			ScreenshotUtil.capture(page, result, phone);
 		}
 
-    // ---------------- Google Sheet DataProvider ----------------
-	public Object[][] getLeadAdditionalDataFromGoogleSheet() throws Exception {
-	    // MUST use export=csv, not edit?usp=sharing
+    public Object[][] getLeadAdditionalDataFromGoogleSheet() throws Exception {
 		
 		String sheetUrl = "https://docs.google.com/spreadsheets/d/1genFxFEXIvAK3M_mdIo42FZTBBtaN3DHV6L_OKwULXA/export?format=csv&gid=601221684";
 	    List<Object[]> data = new ArrayList<>();
@@ -52,7 +50,6 @@ public class AddFurnitureLeadTest extends BaseTest {
 	}
 	
 	public Object[][] getLeadBasicDataFromGoogleSheet() throws Exception {
-	    // MUST use export=csv, not edit?usp=sharing
 		String sheetUrl = "https://docs.google.com/spreadsheets/d/1genFxFEXIvAK3M_mdIo42FZTBBtaN3DHV6L_OKwULXA/export?format=csv&gid=1355100398";
 	    List<Object[]> data = new ArrayList<>();
 
@@ -85,7 +82,7 @@ public class AddFurnitureLeadTest extends BaseTest {
         return getLeadAdditionalDataFromGoogleSheet();
     }
 
-        @Test(dataProvider = "leadData")
+        @Test(dataProvider = "leadData", priority = 1)
         public void addLeadForBasicFurnitureLead(
                 String project, String fname, String lname, String country, 
                 String source, String subSource, String category, String subCategory, String remarks) throws InterruptedException {
@@ -103,7 +100,7 @@ public class AddFurnitureLeadTest extends BaseTest {
             );
         }
     
-    @Test(dataProvider = "AdditionalleadData")
+    @Test(dataProvider = "AdditionalleadData", priority = 2)
     public void addLeadForAdditionalFurnitureLeadTest(
         String project, String fname, String lname, String country, String source,
         String subSource, String category, String subCategory, String remarks,

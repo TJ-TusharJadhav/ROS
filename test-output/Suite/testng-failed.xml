@@ -3,80 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="tests.AddLandLeadTest">
-        <methods>
-          <include name="Shela"/>
-          <include name="setup"/>
-          <include name="Sachana"/>
-          <include name="Satellite"/>
-          <include name="GiftCity"/>
-          <include name="Shilaj"/>
-          <include name="beforemethod"/>
-          <include name="tearDown"/>
-          <include name="Bodakdev"/>
-          <include name="Aftermethod"/>
-          <include name="Panjrapole"/>
-          <include name="VaishnoDevi"/>
-          <include name="Ognaj"/>
-          <include name="Ambli"/>
-        </methods>
-      </class> <!-- tests.AddLandLeadTest -->
-      <class name="tests.EditProjectLeadTest">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="addLeadForBasicProjectLead"/>
-          <include name="addLeadForAdditionalProjectLeadTest" invocation-numbers="0"/>
-          <include name="takeScreenshot"/>
-        </methods>
-      </class> <!-- tests.EditProjectLeadTest -->
       <class name="tests.AddProjectLeadTest">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="addLeadForAdditionalProjectLeadTest" invocation-numbers="0"/>
-          <include name="addLeadForBasicProjectLead"/>
+          <include name="addLeadForBasicProjectLead" invocation-numbers="0"/>
           <include name="takeScreenshot"/>
         </methods>
       </class> <!-- tests.AddProjectLeadTest -->
-      <class name="tests.AddFollowUpTest">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="addFollowUpTestforBookStagewithUnitNumber"/>
-          <include name="beforemethod"/>
-          <include name="addFollowUpTest"/>
-          <include name="addFollowUpTestforLostStageWithoutChieldstage"/>
-          <include name="addFollowUpTestforBlockStage"/>
-        </methods>
-      </class> <!-- tests.AddFollowUpTest -->
-      <class name="tests.EditFundLeadTest">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="addLeadForAdditionalFundLeadTest" invocation-numbers="0"/>
-          <include name="addLeadForBasicFundLead"/>
-          <include name="takeScreenshot"/>
-        </methods>
-      </class> <!-- tests.EditFundLeadTest -->
-      <class name="tests.AddFurnitureLeadTest">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="takeScreenshot"/>
-          <include name="addLeadForAdditionalFurnitureLeadTest" invocation-numbers="1"/>
-          <include name="addLeadForBasicFurnitureLead"/>
-        </methods>
-      </class> <!-- tests.AddFurnitureLeadTest -->
-      <class name="tests.AddFundLeadTest">
-        <methods>
-          <include name="addLeadForAdditionalFundLeadTest" invocation-numbers="0"/>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="addLeadForBasicFundLead"/>
-          <include name="takeScreenshot"/>
-        </methods>
-      </class> <!-- tests.AddFundLeadTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

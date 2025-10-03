@@ -85,6 +85,18 @@ public class AddProjectLeadPage {
     		String expectedbudget, String expectedarea,String expectedprojectCategory, String expectedunitType, 
     		String expectedleadType, String expectedlocation, String expectedecondaryProject) throws InterruptedException {
     	
+    	Thread.sleep(1000);
+    	Locator checkNewLeadCard = page.locator("(//div[@aria-label='View details for "+expectedFirstName+"'])[1]");
+    	if (checkNewLeadCard.count() > 0) {
+    		checkNewLeadCard.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+    		Thread.sleep(500);
+            checkNewLeadCard.click();
+        } else {
+            page.click("//div[contains(text(),'Re-Inquiry')]");
+            page.click("//div[contains(text(),'New Lead')]");
+            checkNewLeadCard.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+    		checkNewLeadCard.click();
+        }
     	
     	String ExpectedLeadOwner = page.textContent(SigIn_Name).trim();
     	
@@ -276,8 +288,7 @@ public class AddProjectLeadPage {
         Thread.sleep(1000);
         page.reload();
         page.click(followupMenu);
-        Thread.sleep(1000);
-        Thread.sleep(500);
+        Thread.sleep(1500);
         
     }
 
@@ -286,7 +297,6 @@ public class AddProjectLeadPage {
     	
     	addLeadBasic(projectName, fname, lname, country, phone, source, subSource, mail, note);
         page.click(submitBtn);
-        Thread.sleep(2000);
         
     }
     // --- Validation method ---
@@ -294,10 +304,12 @@ public class AddProjectLeadPage {
     		String expectedFirstName, String expectedLastName, String expectedProject, 
     		String expectedSource,String expectedEmail, String expectedCountryCode, 
     		String expectedPhonenumber, String expectedRemark,String expectedSubSource) throws InterruptedException {
-         Locator checkNewLeadCard = page.locator("(//div[@aria-label='View details for " + expectedFirstName + "'])[1]");
+    	Thread.sleep(3000); 
+    	Locator checkNewLeadCard = page.locator("(//div[@aria-label='View details for " + expectedFirstName + "'])[1]");
         
         if (checkNewLeadCard.count() > 0) {
             checkNewLeadCard.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+            Thread.sleep(500);
             checkNewLeadCard.click();
         } else {
             page.click("//div[contains(text(),'Re-Inquiry')]");
