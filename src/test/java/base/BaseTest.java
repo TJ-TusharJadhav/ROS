@@ -1,17 +1,19 @@
 package base;
 
-import org.testng.annotations.AfterMethod;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
 import com.github.javafaker.Faker;
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+
 import listeners.ExtentTestNGListener;
 import pages.AddFundLeadPage;
 import pages.AddFurnitureLeadPage;
@@ -94,7 +96,6 @@ public class BaseTest {
         faker = new Faker();
         ExtentTestNGListener.page = page;
     }
-
 	@AfterSuite
     public void tearDown() {
         browser.close();
