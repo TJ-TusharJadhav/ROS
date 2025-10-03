@@ -1,5 +1,6 @@
 package base;
 
+import org.testng.annotations.AfterMethod;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -94,6 +95,7 @@ public class BaseTest {
         ExtentTestNGListener.page = page;
     }
 
+	@AfterMethod
 	@AfterSuite
     public void tearDown() {
         browser.close();

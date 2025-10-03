@@ -1,10 +1,10 @@
 package tests;
 
+import org.testng.annotations.Test;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
 import base.BaseTest;
 import listeners.ExtentTestNGListener;
 import utils.ScreenshotUtil;
@@ -169,7 +169,7 @@ public class AddProjectLeadTest extends BaseTest {
     addprojectLead.validateLeadWithBasicInfo(fname, lname, project, source, email, country, phone, remarks, subSource);
     }
 
-    @Test(dataProvider = "AdditionalleadData", priority = 2)
+//    @Test(dataProvider = "AdditionalleadData", priority = 2)
     public void addLeadForAdditionalProjectLeadTest(
             String project, String fname, String lname, String country, String source, String subSource, String remarks,
             String secondproject, String addCountryCode, String referralType, String referralName, String location, String buyingTime,

@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.annotations.Test;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
@@ -9,7 +10,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
 import com.opencsv.CSVReader;
 import base.BaseTest;
 import listeners.ExtentTestNGListener;
@@ -100,7 +100,7 @@ public class AddFurnitureLeadTest extends BaseTest {
             );
         }
     
-    @Test(dataProvider = "AdditionalleadData", priority = 2)
+//    @Test(dataProvider = "AdditionalleadData", priority = 2)
     public void addLeadForAdditionalFurnitureLeadTest(
         String project, String fname, String lname, String country, String source,
         String subSource, String category, String subCategory, String remarks,

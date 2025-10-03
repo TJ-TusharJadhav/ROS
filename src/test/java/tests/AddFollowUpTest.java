@@ -1,5 +1,7 @@
 package tests;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;

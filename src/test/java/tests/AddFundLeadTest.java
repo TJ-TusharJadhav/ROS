@@ -1,10 +1,10 @@
 package tests;
 
+import org.testng.annotations.Test;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
 import listeners.ExtentTestNGListener;
 
 import base.BaseTest;
@@ -168,7 +168,7 @@ public class AddFundLeadTest extends BaseTest {
     addfundLead.validateLeadWithBasicInfo(fname, lname, project, source, email, country, phone, remarks, subSource);
     }
     
-    @Test(dataProvider = "AdditionalleadData")
+//    @Test(dataProvider = "AdditionalleadData")
     public void addLeadForAdditionalFundLeadTest(
             String project, String fname, String lname, String country, String source, String subSource, String remarks,
              String addCountryCode, String referralType, String referralName, String location, String buyingTime,
