@@ -49,7 +49,7 @@ public class BaseTest {
     @BeforeSuite
     public void setup() throws InterruptedException, IOException {
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(true));
 
         BrowserContext context;
 
