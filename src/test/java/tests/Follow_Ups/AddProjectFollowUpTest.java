@@ -1,7 +1,9 @@
-package tests;
+package tests.Follow_Ups;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import java.text.ParseException;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -11,7 +13,7 @@ import base.BaseTest;
 import listeners.ExtentTestNGListener;
 @Listeners(ExtentTestNGListener.class)
 
-public class AddFollowUpTest extends BaseTest {
+public class AddProjectFollowUpTest extends BaseTest {
 	@BeforeClass
 	public void beforemethod() throws InterruptedException {
 		page.click("(//p[@data-size='sm'])[4]");
@@ -82,38 +84,37 @@ public class AddFollowUpTest extends BaseTest {
 	    public Object[][] lostfollowup() {
 
 	        return new Object[][] {
-	        	{"Lost", "Budget", "Bellow 50 Lakhs", "Remark: Budget too low", "Today’s Follow Up"},
-	            {"Lost", "Budget", "50 Lakh 10 1Cr", "Remark: Limited budget range", "Today’s Follow Up"},
-	            {"Lost", "Budget", "1 Cr to 2 Cr", "Remark: Mid-budget preference", "Today’s Follow Up"},
-	            {"Lost", "Budget", "2 Cr to 5 Cr", "Remark: High budget category", "Today’s Follow Up"},
-	            {"Lost", "Budget", "5 Cr to 10 Cr", "Remark: Very high budget", "Today’s Follow Up"},
-	            {"Lost", "Budget", "10 Cr to 15 Cr", "Remark: Luxury budget segment", "Today’s Follow Up"},
-	            
-	            {"Lost", "Property Type", "Apartment", "Remark: Looking for apartment", "Today’s Follow Up"},
-	            {"Lost", "Property Type", "Studio", "Remark: Interested in studio", "Today’s Follow Up"},
-	            {"Lost", "Property Type", "Penthouse", "Remark: Penthouse preference", "Today’s Follow Up"},
-	            {"Lost", "Property Type", "Tenement", "Remark: Tenement option required", "Today’s Follow Up"},
-	            {"Lost", "Property Type", "Villa", "Remark: Villa requirement", "Today’s Follow Up"},
-	            {"Lost", "Property Type", "Plot", "Remark: Plot needed", "Today’s Follow Up"},
-	            {"Lost", "Property Type", "Office", "Remark: Office space requirement", "Today’s Follow Up"},
-	            {"Lost", "Property Type", "Showroom", "Remark: Looking for showroom", "Today’s Follow Up"},
-	            
-	            {"Lost", "BHK", "2 BHK", "Remark: Preferred 2 BHK", "Today’s Follow Up"},
-	            {"Lost", "BHK", "3 BHK", "Remark: Preferred 3 BHK", "Today’s Follow Up"},
-	            {"Lost", "BHK", "4 BHK", "Remark: Preferred 4 BHK", "Today’s Follow Up"},
-	            {"Lost", "BHK", "5 BHK", "Remark: Preferred 5 BHK", "Today’s Follow Up"},
-	            
-	            {"Lost", "Property Requirement", "Ready to Move", "Remark: Wants ready-to-move property", "Today’s Follow Up"},
-	            {"Lost", "Property Requirement", "Under Construction", "Remark: Open to under-construction", "Today’s Follow Up"},
-	            {"Lost", "Property Requirement", "Pre Launch", "Remark: Interested in pre-launch", "Today’s Follow Up"},
-	            {"Lost", "Property Requirement", "Nearby Possession", "Remark: Looking for near possession", "Today’s Follow Up"}
-	        
+	        	{"Lost", "Budget", "Bellow 50 Lakhs", "Remark: Budget too low", "Lost Lead"},
+	        	 {"Lost", "Budget", "50 Lakh 10 1Cr", "Remark: Limited budget range", "Lost Lead"},
+	        	 {"Lost", "Budget", "1 Cr to 2 Cr", "Remark: Mid-budget preference", "Lost Lead"},
+	        	 {"Lost", "Budget", "2 Cr to 5 Cr", "Remark: High budget category", "Lost Lead"},
+	        	 {"Lost", "Budget", "5 Cr to 10 Cr", "Remark: Very high budget", "Lost Lead"},
+	        	 {"Lost", "Budget", "10 Cr to 15 Cr", "Remark: Luxury budget segment", "Lost Lead"},
+	        	
+	        	 {"Lost", "Property Type", "Apartment", "Remark: Looking for apartment", "Lost Lead"},
+	        	 {"Lost", "Property Type", "Studio", "Remark: Interested in studio", "Lost Lead"},
+	        	 {"Lost", "Property Type", "Penthouse", "Remark: Penthouse preference", "Lost Lead"},
+	        	 {"Lost", "Property Type", "Tenement", "Remark: Tenement option required", "Lost Lead"},
+	        	 {"Lost", "Property Type", "Villa", "Remark: Villa requirement", "Lost Lead"},
+	        	 {"Lost", "Property Type", "Plot", "Remark: Plot needed", "Lost Lead"},
+	        	 {"Lost", "Property Type", "Office", "Remark: Office space requirement", "Lost Lead"},
+	        	 {"Lost", "Property Type", "Showroom", "Remark: Looking for showroom", "Lost Lead"},
+	        	
+	        	 {"Lost", "BHK", "2 BHK", "Remark: Preferred 2 BHK", "Lost Lead"},
+	        	 {"Lost", "BHK", "3 BHK", "Remark: Preferred 3 BHK", "Lost Lead"},
+	        	 {"Lost", "BHK", "4 BHK", "Remark: Preferred 4 BHK", "Lost Lead"},
+	        	 {"Lost", "BHK", "5 BHK", "Remark: Preferred 5 BHK", "Lost Lead"},
+	        	
+	        	 {"Lost", "Property Requirement", "Ready to Move", "Remark: Wants ready-to-move property", "Lost Lead"},
+	        	 {"Lost", "Property Requirement", "Under Construction", "Remark: Open to under-construction", "Lost Lead"},
+	        	 {"Lost", "Property Requirement", "Pre Launch", "Remark: Interested in pre-launch", "Lost Lead"},
+	        	 {"Lost", "Property Requirement", "Nearby Possession", "Remark: Looking for near possession", "Lost Lead"}
 	        	
 	        };
 	 }
 
 	    @Test(dataProvider = "followUpData", priority = 1)
-	    public void addFollowUpTest(String stage, String subStage, String remark, String expectedFilter) throws InterruptedException {
+	    public void addFollowUpTest(String stage, String subStage, String remark, String expectedFilter) throws InterruptedException, ParseException {
 	    	projectFollowUp.addfollowUP(stage, subStage, remark, expectedFilter);
 	    }
 
@@ -132,12 +133,12 @@ public class AddFollowUpTest extends BaseTest {
 	    }
 	    
 //	    this is not test because selected child stage option is not displayed in history 
-//	    @Test(dataProvider = "lostfollowup")
+	    @Test(dataProvider = "lostfollowup")
 	    public void addFollowUpforLOstStage(String stage, String subStage, String childStage, String remark, String expectedFilter) throws InterruptedException {
 	    	projectFollowUp.addFollowUpForLostStage(stage, subStage, childStage, remark, expectedFilter);
 	    }
-//	    this is not test because Entered Unit number is not displayed in history 
-//	    @Test
+	    
+	    @Test
 	    public void addFollowUpTestforBlockStagewithUnitNumber() throws InterruptedException {
 	    	projectFollowUp.addFollowUpForunitnumber("Block", "Select Unit Number", "123", "Remark Test", "Active Lead");
 	    }

@@ -21,6 +21,7 @@ import pages.AddLandLeadPage;
 import pages.AddProjectLeadPage;
 import pages.EditFundLeadPage;
 import pages.EditProjectLeadPage;
+import pages.FurnitureFollowUpsPage;
 import pages.LoginPage;
 import pages.ProjectFollowUpPage;
 
@@ -37,6 +38,7 @@ public class BaseTest {
     protected EditProjectLeadPage editProjectLead;
     protected EditFundLeadPage editfundLead;
     protected ProjectFollowUpPage projectFollowUp;
+    protected FurnitureFollowUpsPage FurnitureFollowUps;
     protected AddLandLeadPage addLandLead;
     protected AddFurnitureLeadPage addFurnitureLead;
     protected Faker faker;
@@ -49,7 +51,8 @@ public class BaseTest {
     @BeforeSuite
     public void setup() throws InterruptedException, IOException {
         playwright = Playwright.create();
-        browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(true));
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
+        		.setHeadless(false));
 
         BrowserContext context;
 
@@ -91,6 +94,7 @@ public class BaseTest {
         editProjectLead = new EditProjectLeadPage(page);
         editfundLead = new EditFundLeadPage(page);
         projectFollowUp = new ProjectFollowUpPage(page);
+        FurnitureFollowUps = new FurnitureFollowUpsPage(page);
         addLandLead = new AddLandLeadPage(page);
         addFurnitureLead= new AddFurnitureLeadPage(page);
         faker = new Faker();

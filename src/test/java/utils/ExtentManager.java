@@ -21,8 +21,10 @@ public class ExtentManager {
     public static ExtentReports createInstance(String suiteName) {
         // Timestamped file name (unique per run)
         String timestamp = new SimpleDateFormat("yyyy.MM.dd_HH.mm.ss").format(new Date());
-        String reportName = "ExtentReport_" + suiteName + "_" + timestamp + ".html";
-        String reportPath = System.getProperty("user.dir") + "/reports/" + reportName;
+        String today = java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+
+        String reportName = suiteName + "_" + timestamp + ".html";
+        String reportPath = System.getProperty("user.dir") + "/reports/" +today+"/"+ reportName;
 
         ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
         spark.config().setTheme(Theme.STANDARD);

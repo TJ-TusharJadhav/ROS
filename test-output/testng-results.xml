@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="26" passed="25" failed="0" skipped="0">
+<testng-results ignored="0" total="30" passed="25" failed="5" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-03T17:01:58 IST" name="Default suite" finished-at="2025-10-03T17:05:41 IST" duration-ms="223748">
+  <suite started-at="2025-10-06T17:05:31 IST" name="Suite" finished-at="2025-10-06T17:09:48 IST" duration-ms="257562">
     <groups>
     </groups>
-    <test started-at="2025-10-03T17:01:58 IST" name="Default test" finished-at="2025-10-03T17:05:41 IST" duration-ms="223748">
-      <class name="tests.AddFundLeadTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:01:45 IST" name="setup" finished-at="2025-10-03T17:01:57 IST" duration-ms="12890" status="PASS">
+    <test started-at="2025-10-06T17:05:31 IST" name="Test" finished-at="2025-10-06T17:09:48 IST" duration-ms="257562">
+      <class name="tests.Add_Lead.AddProjectLeadTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:05:18 IST" name="setup" finished-at="2025-10-06T17:05:31 IST" duration-ms="12827" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:01:58 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:02:06 IST" duration-ms="8825" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:05:31 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:05:39 IST" duration-ms="8693" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[The Pre-Launch Fund]]>
+                <![CDATA[Gift 4]]>
               </value>
             </param>
             <param index="1">
@@ -51,23 +51,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:02:06 IST" name="takeScreenshot" finished-at="2025-10-03T17:02:07 IST" duration-ms="253" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:05:39 IST" name="takeScreenshot" finished-at="2025-10-06T17:05:39 IST" duration-ms="24" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:02:07 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:02:15 IST" duration-ms="8729" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:05:39 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:05:48 IST" duration-ms="8790" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Universal]]>
+                <![CDATA[Farmland]]>
               </value>
             </param>
             <param index="1">
@@ -103,23 +103,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:02:15 IST" name="takeScreenshot" finished-at="2025-10-03T17:02:16 IST" duration-ms="260" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:05:48 IST" name="takeScreenshot" finished-at="2025-10-06T17:05:48 IST" duration-ms="23" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:02:16 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:02:24 IST" duration-ms="8681" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:05:48 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:05:57 IST" duration-ms="8825" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[The Pre-Launch Fund]]>
+                <![CDATA[Universal]]>
               </value>
             </param>
             <param index="1">
@@ -155,23 +155,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:02:24 IST" name="takeScreenshot" finished-at="2025-10-03T17:02:25 IST" duration-ms="267" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:05:57 IST" name="takeScreenshot" finished-at="2025-10-06T17:05:57 IST" duration-ms="17" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:02:25 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:02:33 IST" duration-ms="8693" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:05:57 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:06:06 IST" duration-ms="8774" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Universal]]>
+                <![CDATA[The Circle]]>
               </value>
             </param>
             <param index="1">
@@ -207,23 +207,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:02:33 IST" name="takeScreenshot" finished-at="2025-10-03T17:02:34 IST" duration-ms="265" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:06:06 IST" name="takeScreenshot" finished-at="2025-10-06T17:06:06 IST" duration-ms="36" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:02:34 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:02:42 IST" duration-ms="8716" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:06:06 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:06:15 IST" duration-ms="8751" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[The Pre-Launch Fund]]>
+                <![CDATA[SPlus]]>
               </value>
             </param>
             <param index="1">
@@ -259,23 +259,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:02:42 IST" name="takeScreenshot" finished-at="2025-10-03T17:02:43 IST" duration-ms="264" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:06:15 IST" name="takeScreenshot" finished-at="2025-10-06T17:06:15 IST" duration-ms="11" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:02:43 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:02:51 IST" duration-ms="8686" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:06:15 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:06:23 IST" duration-ms="8761" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Universal]]>
+                <![CDATA[Curv]]>
               </value>
             </param>
             <param index="1">
@@ -311,23 +311,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:02:51 IST" name="takeScreenshot" finished-at="2025-10-03T17:02:51 IST" duration-ms="259" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:06:23 IST" name="takeScreenshot" finished-at="2025-10-06T17:06:24 IST" duration-ms="38" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:02:51 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:03:00 IST" duration-ms="8663" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:06:24 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:06:32 IST" duration-ms="8745" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[The Pre-Launch Fund]]>
+                <![CDATA[Skyview]]>
               </value>
             </param>
             <param index="1">
@@ -363,23 +363,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:03:00 IST" name="takeScreenshot" finished-at="2025-10-03T17:03:00 IST" duration-ms="266" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:06:32 IST" name="takeScreenshot" finished-at="2025-10-06T17:06:32 IST" duration-ms="30" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:03:00 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:03:09 IST" duration-ms="8693" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:06:32 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:06:41 IST" duration-ms="8753" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Universal]]>
+                <![CDATA[Greenview]]>
               </value>
             </param>
             <param index="1">
@@ -415,23 +415,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:03:09 IST" name="takeScreenshot" finished-at="2025-10-03T17:03:09 IST" duration-ms="271" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:06:41 IST" name="takeScreenshot" finished-at="2025-10-06T17:06:41 IST" duration-ms="22" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:03:09 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:03:18 IST" duration-ms="8675" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:06:41 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:06:50 IST" duration-ms="8724" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[The Pre-Launch Fund]]>
+                <![CDATA[Harmony]]>
               </value>
             </param>
             <param index="1">
@@ -467,23 +467,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:03:18 IST" name="takeScreenshot" finished-at="2025-10-03T17:03:18 IST" duration-ms="266" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:06:50 IST" name="takeScreenshot" finished-at="2025-10-06T17:06:50 IST" duration-ms="17" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:03:18 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:03:27 IST" duration-ms="8678" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:06:50 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:06:59 IST" duration-ms="8739" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Universal]]>
+                <![CDATA[Edge]]>
               </value>
             </param>
             <param index="1">
@@ -519,23 +519,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:03:27 IST" name="takeScreenshot" finished-at="2025-10-03T17:03:27 IST" duration-ms="268" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:06:59 IST" name="takeScreenshot" finished-at="2025-10-06T17:06:59 IST" duration-ms="20" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:03:27 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:03:36 IST" duration-ms="8695" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:06:59 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:07:07 IST" duration-ms="8722" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[The Pre-Launch Fund]]>
+                <![CDATA[Parkview 2]]>
               </value>
             </param>
             <param index="1">
@@ -571,23 +571,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:03:36 IST" name="takeScreenshot" finished-at="2025-10-03T17:03:36 IST" duration-ms="264" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:07:07 IST" name="takeScreenshot" finished-at="2025-10-06T17:07:07 IST" duration-ms="42" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:03:36 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:03:45 IST" duration-ms="8678" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:07:07 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:07:16 IST" duration-ms="8701" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Universal]]>
+                <![CDATA[Trophy]]>
               </value>
             </param>
             <param index="1">
@@ -623,23 +623,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:03:45 IST" name="takeScreenshot" finished-at="2025-10-03T17:03:45 IST" duration-ms="249" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:07:16 IST" name="takeScreenshot" finished-at="2025-10-06T17:07:16 IST" duration-ms="27" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:03:45 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:03:54 IST" duration-ms="8694" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:07:16 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:07:25 IST" duration-ms="8745" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[The Pre-Launch Fund]]>
+                <![CDATA[Park Lane]]>
               </value>
             </param>
             <param index="1">
@@ -675,23 +675,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:03:54 IST" name="takeScreenshot" finished-at="2025-10-03T17:03:54 IST" duration-ms="251" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:07:25 IST" name="takeScreenshot" finished-at="2025-10-06T17:07:25 IST" duration-ms="24" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:03:54 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:04:03 IST" duration-ms="8679" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:07:25 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:07:34 IST" duration-ms="8754" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Universal]]>
+                <![CDATA[Crown]]>
               </value>
             </param>
             <param index="1">
@@ -727,23 +727,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:04:03 IST" name="takeScreenshot" finished-at="2025-10-03T17:04:03 IST" duration-ms="264" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:07:34 IST" name="takeScreenshot" finished-at="2025-10-06T17:07:34 IST" duration-ms="22" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:04:03 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:04:12 IST" duration-ms="8664" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:07:34 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:07:42 IST" duration-ms="8724" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[The Pre-Launch Fund]]>
+                <![CDATA[Wave]]>
               </value>
             </param>
             <param index="1">
@@ -779,23 +779,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:04:12 IST" name="takeScreenshot" finished-at="2025-10-03T17:04:12 IST" duration-ms="267" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:07:42 IST" name="takeScreenshot" finished-at="2025-10-06T17:07:42 IST" duration-ms="47" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:04:12 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:04:21 IST" duration-ms="8662" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:07:42 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:07:51 IST" duration-ms="8740" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Universal]]>
+                <![CDATA[Greenfield]]>
               </value>
             </param>
             <param index="1">
@@ -831,23 +831,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:04:21 IST" name="takeScreenshot" finished-at="2025-10-03T17:04:21 IST" duration-ms="267" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:07:51 IST" name="takeScreenshot" finished-at="2025-10-06T17:07:51 IST" duration-ms="31" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:04:21 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:04:30 IST" duration-ms="8665" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:07:51 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:08:00 IST" duration-ms="8721" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[The Pre-Launch Fund]]>
+                <![CDATA[SPlus]]>
               </value>
             </param>
             <param index="1">
@@ -883,23 +883,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:04:30 IST" name="takeScreenshot" finished-at="2025-10-03T17:04:30 IST" duration-ms="264" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:08:00 IST" name="takeScreenshot" finished-at="2025-10-06T17:08:00 IST" duration-ms="24" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:04:30 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:04:39 IST" duration-ms="8659" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:08:00 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:08:09 IST" duration-ms="8716" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Universal]]>
+                <![CDATA[Curv]]>
               </value>
             </param>
             <param index="1">
@@ -935,23 +935,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:04:39 IST" name="takeScreenshot" finished-at="2025-10-03T17:04:39 IST" duration-ms="264" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:08:09 IST" name="takeScreenshot" finished-at="2025-10-06T17:08:09 IST" duration-ms="51" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:04:39 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:04:47 IST" duration-ms="8652" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:08:09 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:08:17 IST" duration-ms="8696" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[The Pre-Launch Fund]]>
+                <![CDATA[Skyview]]>
               </value>
             </param>
             <param index="1">
@@ -987,23 +987,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:04:47 IST" name="takeScreenshot" finished-at="2025-10-03T17:04:48 IST" duration-ms="253" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:08:17 IST" name="takeScreenshot" finished-at="2025-10-06T17:08:17 IST" duration-ms="44" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:04:48 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:04:56 IST" duration-ms="8660" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:08:17 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:08:26 IST" duration-ms="8756" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Universal]]>
+                <![CDATA[Greenview]]>
               </value>
             </param>
             <param index="1">
@@ -1039,23 +1039,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:04:56 IST" name="takeScreenshot" finished-at="2025-10-03T17:04:57 IST" duration-ms="277" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:08:26 IST" name="takeScreenshot" finished-at="2025-10-06T17:08:26 IST" duration-ms="38" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:04:57 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:05:05 IST" duration-ms="8668" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:08:26 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:08:35 IST" duration-ms="8735" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[The Pre-Launch Fund]]>
+                <![CDATA[Harmony]]>
               </value>
             </param>
             <param index="1">
@@ -1091,23 +1091,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:05:05 IST" name="takeScreenshot" finished-at="2025-10-03T17:05:06 IST" duration-ms="274" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:08:35 IST" name="takeScreenshot" finished-at="2025-10-06T17:08:35 IST" duration-ms="24" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:05:06 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:05:14 IST" duration-ms="8636" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:08:35 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:08:44 IST" duration-ms="8703" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Universal]]>
+                <![CDATA[Edge]]>
               </value>
             </param>
             <param index="1">
@@ -1143,23 +1143,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:05:14 IST" name="takeScreenshot" finished-at="2025-10-03T17:05:15 IST" duration-ms="268" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:08:44 IST" name="takeScreenshot" finished-at="2025-10-06T17:08:44 IST" duration-ms="23" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:05:15 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:05:23 IST" duration-ms="8644" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:08:44 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:08:53 IST" duration-ms="8721" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[The Pre-Launch Fund]]>
+                <![CDATA[Trophy]]>
               </value>
             </param>
             <param index="1">
@@ -1195,23 +1195,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:05:23 IST" name="takeScreenshot" finished-at="2025-10-03T17:05:23 IST" duration-ms="251" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:08:53 IST" name="takeScreenshot" finished-at="2025-10-06T17:08:53 IST" duration-ms="46" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:05:23 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:05:32 IST" duration-ms="8648" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:08:53 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:09:01 IST" duration-ms="8719" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Universal]]>
+                <![CDATA[Crown]]>
               </value>
             </param>
             <param index="1">
@@ -1247,23 +1247,23 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:05:32 IST" name="takeScreenshot" finished-at="2025-10-03T17:05:32 IST" duration-ms="264" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:09:01 IST" name="takeScreenshot" finished-at="2025-10-06T17:09:01 IST" duration-ms="45" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method signature="addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:05:32 IST" name="addLeadForBasicFundLead" data-provider="leadData" finished-at="2025-10-03T17:05:41 IST" duration-ms="8630" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:09:01 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:09:10 IST" duration-ms="8735" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[The Pre-Launch Fund]]>
+                <![CDATA[Trophy]]>
               </value>
             </param>
             <param index="1">
@@ -1299,23 +1299,468 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addLeadForBasicFundLead -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:05:41 IST" name="takeScreenshot" finished-at="2025-10-03T17:05:41 IST" duration-ms="251" status="PASS">
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:09:10 IST" name="takeScreenshot" finished-at="2025-10-06T17:09:10 IST" duration-ms="28" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addLeadForBasicFundLead status=SUCCESS method=AddFundLeadTest.addLeadForBasicFundLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddFundLeadTest@6771beb3] output={null}]]]>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=SUCCESS method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AddFundLeadTest@6771beb3]" started-at="2025-10-03T17:05:41 IST" name="tearDown" finished-at="2025-10-03T17:05:41 IST" duration-ms="146" status="PASS">
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:09:10 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:09:18 IST" duration-ms="7650" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Harmony]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Aditya]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Patil]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[+211]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Print Media]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[News Paper]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Wants ready-to-move flat]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Source mismatch. Expected: Print Media, Got: Print media]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:09:18 IST" name="takeScreenshot" finished-at="2025-10-06T17:09:18 IST" duration-ms="54" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=FAILURE method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:09:18 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:09:25 IST" duration-ms="7396" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ritu]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Jain]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[+213]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Print Media]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Hoardings]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Interested in joint venture]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Source mismatch. Expected: Print Media, Got: Print media]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:09:25 IST" name="takeScreenshot" finished-at="2025-10-06T17:09:26 IST" duration-ms="82" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=FAILURE method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:09:26 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:09:33 IST" duration-ms="7398" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Trophy]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Farhan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ansari]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[+216]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Print Media]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Leaflets]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Wants coastal property]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Source mismatch. Expected: Print Media, Got: Print media]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:09:33 IST" name="takeScreenshot" finished-at="2025-10-06T17:09:33 IST" duration-ms="78" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=FAILURE method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:09:33 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:09:40 IST" duration-ms="7399" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Crown]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Shruti]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Deshmukh]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[+65]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Channel Sales]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Channel Partner]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Needs farmhouse land]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Source mismatch. Expected: Channel Sales, Got: Channel sales]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Source mismatch. Expected: Channel Sales, Got: Channel sales
+at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:09:41 IST" name="takeScreenshot" finished-at="2025-10-06T17:09:41 IST" duration-ms="67" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=FAILURE method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method signature="addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:09:41 IST" name="addLeadForBasicProjectLead" data-provider="leadData" finished-at="2025-10-06T17:09:48 IST" duration-ms="7419" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Curv]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Manish]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Thakur]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[+91]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Channel Sales]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[ACP]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Wants studio apartment]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Source mismatch. Expected: Channel Sales, Got: Channel sales]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Source mismatch. Expected: Channel Sales, Got: Channel sales
+at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLeadForBasicProjectLead -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:09:48 IST" name="takeScreenshot" finished-at="2025-10-06T17:09:48 IST" duration-ms="68" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addLeadForBasicProjectLead status=FAILURE method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Add_Lead.AddProjectLeadTest@4afcd809]" started-at="2025-10-06T17:09:48 IST" name="tearDown" finished-at="2025-10-06T17:09:48 IST" duration-ms="170" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.AddFundLeadTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- tests.Add_Lead.AddProjectLeadTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/1/3</td>
+<td>Tests passed/Failed/Skipped:</td><td>25/5/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Sep 30 11:01:04 IST 2025</td>
+<td>Started on:</td><td>Mon Oct 06 17:05:31 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>34 seconds (34172 ms)</td>
+<tr><td>Total time:</td><td>257 seconds (257562 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,83 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='tests.AddProjectLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddProjectLeadTest<br>Parameters: [TestResult name=addLeadForBasicProjectLead status=FAILURE method=AddProjectLeadTest.addLeadForBasicProjectLead(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AddProjectLeadTest@36fc695d] output={null}]</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.locator(String)&quot; because &quot;page&quot; is null
-	at utils.ScreenshotUtil.capture(ScreenshotUtil.java:38)
-	at tests.AddProjectLeadTest.takeScreenshot(AddProjectLeadTest.java:20)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1220759559", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1220759559'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.locator(String)&quot; because &quot;page&quot; is null
-	at utils.ScreenshotUtil.capture(ScreenshotUtil.java:38)
-	at tests.AddProjectLeadTest.takeScreenshot(AddProjectLeadTest.java:20)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>tests.AddProjectLeadTest@36fc695d</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='tests.AddProjectLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddProjectLeadTest</td>
-<td></td>
-<td>0</td>
-<td>tests.AddProjectLeadTest@36fc695d</td></tr>
-<tr>
-<td title='tests.AddProjectLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddProjectLeadTest</td>
-<td></td>
-<td>0</td>
-<td>tests.AddProjectLeadTest@36fc695d</td></tr>
-<tr>
-<td title='tests.AddProjectLeadTest.takeScreenshot()'><b>takeScreenshot</b><br>Test class: tests.AddProjectLeadTest</td>
-<td></td>
-<td>0</td>
-<td>tests.AddProjectLeadTest@36fc695d</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -153,13 +76,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.AddProjectLeadTest<br>Parameters: Gift 4, Aarav, Sharma, +93, Event, GIHED, Interested in real estate</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pages.AddProjectLeadPage.addLeadWithBasic(String, String, String, String, String, String, String, String, String)&quot; because &quot;this.addprojectLead&quot; is null
-	at tests.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:168)
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Crown, Shruti, Deshmukh, +65, Channel Sales, Channel Partner, Needs farmhouse land</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Channel Sales, Got: Channel sales
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace620456576", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace620456576'><pre>java.lang.NullPointerException: Cannot invoke &quot;pages.AddProjectLeadPage.addLeadWithBasic(String, String, String, String, String, String, String, String, String)&quot; because &quot;this.addprojectLead&quot; is null
-	at tests.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:168)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace708443754", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace708443754'><pre>java.lang.AssertionError: Source mismatch. Expected: Channel Sales, Got: Channel sales
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -187,8 +112,164 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>0</td>
-<td>tests.AddProjectLeadTest@36fc695d</td></tr>
+<td>7</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Curv, Manish, Thakur, +91, Channel Sales, ACP, Wants studio apartment</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Channel Sales, Got: Channel sales
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace224060798", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace224060798'><pre>java.lang.AssertionError: Source mismatch. Expected: Channel Sales, Got: Channel sales
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>7</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Edge, Ritu, Jain, +213, Print Media, Hoardings, Interested in joint venture</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace124494140", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace124494140'><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>7</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Trophy, Farhan, Ansari, +216, Print Media, Leaflets, Wants coastal property</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace403598020", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace403598020'><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>7</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Harmony, Aditya, Patil, +211, Print Media, News Paper, Wants ready-to-move flat</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace179808568", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace179808568'><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:347)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>7</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -199,166 +280,130 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.AddFundLeadTest.addLeadForBasicFundLead()'><b>addLeadForBasicFundLead</b><br>Test class: tests.AddFundLeadTest<br>Parameters: The Pre-Launch Fund, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback</td>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Skyview, Raj, Verma, +33, Digital, Instagram, Interested in 2BHK</td>
 <td></td>
 <td>8</td>
-<td>tests.AddFundLeadTest@5e0e82ae</td></tr>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
 <tr>
-<td title='tests.AddFundLeadTest.addLeadForBasicFundLead()'><b>addLeadForBasicFundLead</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Universal, Priya, Khan, +20, Event, Property Event, Looking for investment</td>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Greenfield, Sneha, Reddy, +81, Walkin, Facebook, Family shifting soon</td>
 <td></td>
 <td>8</td>
-<td>tests.AddFundLeadTest@5e0e82ae</td></tr>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
 <tr>
-<td title='tests.AddFundLeadTest.addLeadForBasicFundLead()'><b>addLeadForBasicFundLead</b><br>Test class: tests.AddFundLeadTest<br>Parameters: The Pre-Launch Fund, Aarav, Sharma, +93, Event, GIHED, Interested in real estate</td>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: SPlus, Karan, Mehta, +31, Digital, Website, Prefers email communication</td>
 <td></td>
 <td>8</td>
-<td>tests.AddFundLeadTest@5e0e82ae</td></tr>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
 <tr>
-<td title='tests.AddFundLeadTest.addLeadForBasicFundLead()'><b>addLeadForBasicFundLead</b><br>Test class: tests.AddFundLeadTest<br>Parameters: Universal, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure</td>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Trophy, Karan, Malhotra, +94, Walkin, Email, Wants farmhouse</td>
 <td></td>
 <td>8</td>
-<td>tests.AddFundLeadTest@5e0e82ae</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
 <tr>
-<td title='tests.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.AddProjectLeadTest<br>Parameters: The Circle, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.locator(String)&quot; because &quot;page&quot; is null
-	at utils.ScreenshotUtil.capture(ScreenshotUtil.java:38)
-	at tests.AddProjectLeadTest.takeScreenshot(AddProjectLeadTest.java:20)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace276748028", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace276748028'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.locator(String)&quot; because &quot;page&quot; is null
-	at utils.ScreenshotUtil.capture(ScreenshotUtil.java:38)
-	at tests.AddProjectLeadTest.takeScreenshot(AddProjectLeadTest.java:20)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>tests.AddProjectLeadTest@36fc695d</td></tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Harmony, Arjun, Mehta, +49, Digital, SMS, Asked for EMI options</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
 <tr>
-<td title='tests.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.AddProjectLeadTest<br>Parameters: Farmland, Priya, Khan, +20, Event, Property Event, Looking for investment</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.locator(String)&quot; because &quot;page&quot; is null
-	at utils.ScreenshotUtil.capture(ScreenshotUtil.java:38)
-	at tests.AddProjectLeadTest.takeScreenshot(AddProjectLeadTest.java:20)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1829460911", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1829460911'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.locator(String)&quot; because &quot;page&quot; is null
-	at utils.ScreenshotUtil.capture(ScreenshotUtil.java:38)
-	at tests.AddProjectLeadTest.takeScreenshot(AddProjectLeadTest.java:20)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>tests.AddProjectLeadTest@36fc695d</td></tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Wave, Amit, Gupta, +66, Walkin, Website, Interested in resale</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
 <tr>
-<td title='tests.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.AddProjectLeadTest<br>Parameters: Universal, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.locator(String)&quot; because &quot;page&quot; is null
-	at utils.ScreenshotUtil.capture(ScreenshotUtil.java:38)
-	at tests.AddProjectLeadTest.takeScreenshot(AddProjectLeadTest.java:20)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace883380345", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace883380345'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.locator(String)&quot; because &quot;page&quot; is null
-	at utils.ScreenshotUtil.capture(ScreenshotUtil.java:38)
-	at tests.AddProjectLeadTest.takeScreenshot(AddProjectLeadTest.java:20)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
-	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>tests.AddProjectLeadTest@36fc695d</td></tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Harmony, Raj, Bansal, +92, Walkin, IVRS, Needs property documents</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Park Lane, Sameer, Khan, +63, Digital, Email, Prefers WhatsApp updates</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Greenview, Deepika, Rao, +91, Walkin, YouTube, Wants rental options</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Parkview 2, Rohan, Desai, +55, Digital, IVRS, Interested in office space</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Curv, Neha, Desai, +32, Digital, Facebook, Requested site visit</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Crown, Neha, Kulkarni, +64, Digital, WhatsApp, Wants loan assistance</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Crown, Meera, Chawla, +95, Walkin, WhatsApp, Looking for commercial plot</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Farmland, Priya, Khan, +20, Event, Property Event, Looking for investment</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Trophy, Kavita, Iyer, +62, Digital, Google, Student housing required</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Edge, Ayesha, Siddiqui, +93, Walkin, Google, Interested in duplex</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: The Circle, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Trophy, Neha, Desai, +98, Walkin, Direct-Walkin, Requires site visit</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Universal, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Greenview, Isha, Gupta, +34, Digital, LinkedIn, Budget under 50L</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Edge, Priya, Sharma, +52, Digital, YouTube, Wants luxury property</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Gift 4, Aarav, Sharma, +93, Event, GIHED, Interested in real estate</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Curv, Pooja, Nair, +86, Walkin, LinkedIn, Asked for price list</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Skyview, Ankit, Verma, +90, Walkin, SMS, Looking for villa</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: SPlus, Vikram, Joshi, +82, Walkin, Instagram, Needs 3BHK apartment</td>
+<td></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
 </table><p>
 </body>
 </html>

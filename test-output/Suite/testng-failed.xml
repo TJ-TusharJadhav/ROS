@@ -3,14 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="tests.AddProjectLeadTest">
+      <class name="tests.Add_Lead.AddProjectLeadTest">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="addLeadForBasicProjectLead" invocation-numbers="0"/>
           <include name="takeScreenshot"/>
+          <include name="addLeadForBasicProjectLead" invocation-numbers="25 26 27 28 29"/>
         </methods>
-      </class> <!-- tests.AddProjectLeadTest -->
+      </class> <!-- tests.Add_Lead.AddProjectLeadTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

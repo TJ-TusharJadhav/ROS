@@ -1,5 +1,6 @@
-package tests;
+package tests.Add_Lead;
 
+import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import java.io.InputStreamReader;
 import java.net.URL;

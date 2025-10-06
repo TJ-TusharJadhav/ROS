@@ -23,11 +23,12 @@ public class ScreenshotUtil {
     	        }
 
     	        String fileName = phone +"_"+result.getName() + testData + "_" +  ".png";
+    	        String today = java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ofPattern("dd-MM-yyyy"));
 
     	        try {
     	            if (page != null) {
     	                page.screenshot(new Page.ScreenshotOptions()
-    	                        .setPath(Paths.get("screenshots/" + fileName))
+    	                        .setPath(Paths.get("screenshots/"+today+"/" + fileName))
     	                        .setFullPage(true)     // 👈 safer than true
     	                        .setTimeout(60000));    // 👈 shorter timeout
     	                System.out.println("❌ Screenshot saved: " + fileName);

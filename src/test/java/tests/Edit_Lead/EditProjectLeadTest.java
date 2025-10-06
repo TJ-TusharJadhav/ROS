@@ -1,5 +1,6 @@
-package tests;
+package tests.Edit_Lead;
 
+import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import java.nio.file.Paths;
 import java.util.Arrays;
