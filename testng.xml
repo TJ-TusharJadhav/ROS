@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="AddProjectSuite" parallel="tests" thread-count="5">
+<suite name="ROSSuite" parallel="tests" thread-count="5">
     
-    <!-- Test for Add Project Lead -->
-    <test name="AddProjectLeadTest" preserve-order="true">
+    <test name="ROSTest" preserve-order="true">
         <classes>
+        <!-- Add Lead -->
             <class name="tests.Add_Lead.AddProjectLeadTest"/>
+            <class name="tests.Add_Lead.AddFundLeadTest"/>
+            <class name="tests.Add_Lead.AddFurnitureLeadTest"/>
+            
+            <!-- Add Follow Up -->
+            <class name="tests.Follow_Ups.AddProjectFollowUpTest"/>
+            <class name="tests.Follow_Ups.AddFurnitureFollowUpsForTest"/>
+            
+            <!-- Edit Lead -->
+            <class name="tests.Edit_Lead.EditProjectLeadTest"/>
+            <class name="tests.Edit_Lead.EditFundLeadTest"/>
         </classes>
     </test>
 </suite>
