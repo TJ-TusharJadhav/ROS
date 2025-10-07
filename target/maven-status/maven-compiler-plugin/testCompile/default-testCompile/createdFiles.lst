@@ -13,6 +13,7 @@ utils/PhoneNumber.class
 tests/Add_Lead/AddFundLeadTest.class
 tests/Add_Lead/AddLandLeadTest.class
 tests/Follow_Ups/AddProjectFollowUpTest.class
+playwright/AddLeadFromGoogleSheet.class
 base/BaseTest.class
 pages/EditProjectLeadPage.class
 saveOTP/UseAuthState.class

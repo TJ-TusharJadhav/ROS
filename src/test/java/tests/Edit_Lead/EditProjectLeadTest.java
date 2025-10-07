@@ -1,61 +1,24 @@
 package tests.Edit_Lead;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import java.nio.file.Paths;
-import java.util.Arrays;
-
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.microsoft.playwright.Locator;
-import com.microsoft.playwright.Page;
-
 import base.BaseTest;
 import listeners.ExtentTestNGListener;
 import utils.PhoneNumber;
+import utils.ScreenshotUtil;
 @Listeners(ExtentTestNGListener.class)
 public class EditProjectLeadTest extends BaseTest {
 	
 	
+	public String phone;
 	@AfterMethod
-	public void takeScreenshot(ITestResult result) throws InterruptedException {
-	    if (ITestResult.FAILURE == result.getStatus()) {
-	        // Get test data parameters from DataProvider
-	        Object[] parameters = result.getParameters();
-	        String testData = "";
-	        if (parameters != null && parameters.length > 0) {
-	            testData = "_" + String.join("_", 
-	                Arrays.stream(parameters)
-	                      .map(Object::toString)
-	                      .toArray(String[]::new)
-	            );
-	        }
-
-	        // Save screenshot with test data in filename
-	        page.screenshot(new Page.ScreenshotOptions()
-	                .setPath(Paths.get("screenshots/" + result.getName() + testData + "_failed.png"))
-	                .setFullPage(true));
-
-	        System.out.println("❌ Screenshot saved for failed test with data: " + Arrays.toString(parameters));
-	    } else {
-	        // Your existing modal close logic
-	        Locator closeBtn = page.locator("//button[contains(@class,'mantine-Modal-close')]");
-	        if (closeBtn.isVisible()) {
-	            closeBtn.click();
-	            System.out.println("Modal close button clicked!");
-	        } else {
-	            System.out.println("Modal close button not found, skipping...");
-	        }
-
-	        page.waitForSelector("div.cursor-pointer.flex.items-center.justify-end");
-	        page.click("div.cursor-pointer.flex.items-center.justify-end");
-	        Thread.sleep(1000);
-	    }
-	}
+		public void takeScreenshot(ITestResult result) throws InterruptedException {
+			ScreenshotUtil.capture(page, result, phone);
+		}
 
 
     @DataProvider(name = "leadData")

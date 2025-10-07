@@ -10,6 +10,7 @@
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/pages/LoginPage.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/pages/ProjectFollowUpPage.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/playwright/Add100leadForProject.java
+/Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/playwright/AddLeadFromGoogleSheet.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/playwright/EventRegistrationTest.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/playwright/Login.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/playwright/SampleTest.java

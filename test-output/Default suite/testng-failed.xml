@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.AddProjectLeadTest">
+      <class name="tests.Edit_Lead.EditFundLeadTest">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="addLeadForBasicProjectLead" invocation-numbers="25 26 27 28 29"/>
+          <include name="addLeadForAdditionalFundLeadTest" invocation-numbers="0"/>
           <include name="takeScreenshot"/>
         </methods>
-      </class> <!-- tests.AddProjectLeadTest -->
+      </class> <!-- tests.Edit_Lead.EditFundLeadTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

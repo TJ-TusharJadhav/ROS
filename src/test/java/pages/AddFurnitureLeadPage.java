@@ -63,14 +63,12 @@ public class AddFurnitureLeadPage {
     private String referralName = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[16]";
     private String productCategory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[19]";
     private String SubCategory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[20]";
-    private String referralCountryCodeName = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[21]";    
     private String ProjectType = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[22]";
     private String sourceOfFinanceInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[23]";
     private String dobInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[24]";
     private String companyNameInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[25]";    
     private String estimatedQuantityInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[26]";
-    private String countryCodeName = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[27]";
-    private String projectTimelineInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[28]";
+    private String projectTimelineInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[27]";
     
     
     private String followupMenu = "(//p[@data-size='sm'])[4]";
@@ -237,7 +235,9 @@ page.click(submitBtn);
     		String expectedReferralType, String expectedreferralName,String expectedbuyingTime,String expectedArea,String expectedProjectType, 
     		String expectedbudget,String expectedpriority,  String expectedFinance, String expectedDOB,String expectedCompanyName, 
     		String expectedEstimatedQuantity,String expectedprojectTimeline, String expectedProductCategory, String expectedProductSubCategory) throws InterruptedException {
-    	 Thread.sleep(1000);    	 
+    	 Thread.sleep(1000);  
+    	 page.fill("//input[@placeholder='Search Leads by Name or Mobile No.']", expectedPhonenumber);
+         Thread.sleep(1000);
          Locator checkNewLeadCard = page.locator("(//div[@aria-label='View details for " + expectedFirstName + "'])[1]");
          
          if (checkNewLeadCard.count() > 0) {
@@ -266,7 +266,8 @@ page.click(submitBtn);
 
          String actualStatus = page.textContent(statusLocator).trim();
          String actualLeadOwner = page.textContent(leadOwnerLocator).trim();
-
+         Thread.sleep(500);
+         
          // Assertions
          assert actualFullName.equals(expectedFirstName + " " + expectedLastName) : "Full name mismatch. Expected: " + expectedFirstName + " " + expectedLastName + ", Got: " + actualFullName;
          assert actualProject.equals(expectedProject) : "Project mismatch. Expected: " + expectedProject + ", Got: " + actualProject;

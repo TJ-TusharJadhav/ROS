@@ -1,9 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-06T17:29:14 IST" name="AddProjectSuite" finished-at="2025-10-06T17:29:14 IST" duration-ms="0">
+  <suite started-at="2025-10-07T18:31:43 IST" name="Default suite" finished-at="2025-10-07T18:32:02 IST" duration-ms="18942">
     <groups>
     </groups>
-  </suite> <!-- AddProjectSuite -->
+    <test started-at="2025-10-07T18:31:43 IST" name="Default test" finished-at="2025-10-07T18:32:02 IST" duration-ms="18942">
+      <class name="tests.Edit_Lead.EditFundLeadTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Edit_Lead.EditFundLeadTest@7c7a06ec]" started-at="2025-10-07T18:31:30 IST" name="setup" finished-at="2025-10-07T18:31:43 IST" duration-ms="13510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addLeadForAdditionalFundLeadTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.Edit_Lead.EditFundLeadTest@7c7a06ec]" started-at="2025-10-07T18:31:45 IST" name="addLeadForAdditionalFundLeadTest" data-provider="AdditionalleadData" finished-at="2025-10-07T18:32:02 IST" duration-ms="16764" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[The Pre-Launch Fund]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Arjun]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Mehta]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Interested in real estate]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[+33]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[CP]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Tushar Bhai]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Mumbai]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Immediate]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Hot]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Below 50 Lakh]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[500 Sq.Ft]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Residential]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[2 Bhk]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Buy]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLeadForAdditionalFundLeadTest -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.Edit_Lead.EditFundLeadTest@7c7a06ec]" started-at="2025-10-07T18:32:02 IST" name="takeScreenshot" finished-at="2025-10-07T18:32:02 IST" duration-ms="332" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addLeadForAdditionalFundLeadTest status=SUCCESS method=EditFundLeadTest.addLeadForAdditionalFundLeadTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.Edit_Lead.EditFundLeadTest@7c7a06ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Edit_Lead.EditFundLeadTest@7c7a06ec]" started-at="2025-10-07T18:32:02 IST" name="tearDown" finished-at="2025-10-07T18:32:02 IST" duration-ms="132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.Edit_Lead.EditFundLeadTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

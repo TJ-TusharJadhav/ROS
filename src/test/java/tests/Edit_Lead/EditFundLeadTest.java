@@ -1,9 +1,10 @@
 package tests.Edit_Lead;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import java.nio.file.Paths;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -11,62 +12,79 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.microsoft.playwright.Locator;
-import com.microsoft.playwright.Page;
+import com.opencsv.CSVReader;
 
 import base.BaseTest;
 import listeners.ExtentTestNGListener;
 import utils.PhoneNumber;
+import utils.ScreenshotUtil;
 @Listeners(ExtentTestNGListener.class)
 public class EditFundLeadTest extends BaseTest {
 	
+	public String phone;
 	@AfterMethod
-	public void takeScreenshot(ITestResult result) throws InterruptedException {
-	    if (ITestResult.FAILURE == result.getStatus()) {
-	        Object[] parameters = result.getParameters();
-	        String testData = "";
-	        if (parameters != null && parameters.length > 0) {
-	            testData = "_" + String.join("_", 
-	                Arrays.stream(parameters)
-	                      .map(Object::toString)
-	                      .toArray(String[]::new)
-	            );
-	        }
-	        page.screenshot(new Page.ScreenshotOptions()
-	                .setPath(Paths.get("screenshots/" + result.getName() + testData + "_failed.png"))
-	                .setFullPage(true));
+		public void takeScreenshot(ITestResult result) throws InterruptedException {
+			ScreenshotUtil.capture(page, result, phone);
+		}
+public Object[][] getLeadBasicDataFromGoogleSheet() throws Exception {
+		
+	String sheetUrl = "https://docs.google.com/spreadsheets/d/1genFxFEXIvAK3M_mdIo42FZTBBtaN3DHV6L_OKwULXA/export?format=csv&gid=614114709";
+    List<Object[]> data = new ArrayList<>();
 
-	        System.out.println("❌ Screenshot saved for failed test with data: " + Arrays.toString(parameters));
-	    } else {
-	        Locator closeBtn = page.locator("//button[contains(@class,'mantine-Modal-close')]");
-	        if (closeBtn.isVisible()) {
-	            closeBtn.click();
-	            System.out.println("Modal close button clicked!");
-	        } else {
-	            System.out.println("Modal close button not found, skipping...");
+	    try (CSVReader reader = new CSVReader(new InputStreamReader(new URL(sheetUrl).openStream()))) {
+	        String[] line;
+	        boolean firstRow = true;
+	        while ((line = reader.readNext()) != null) {
+	            if (firstRow) { // skip header row
+	                firstRow = false;
+	                continue;
+	            }
+	            if (line.length == 4) { 
+	                data.add(line);
+	            } else {
+	                System.out.println("⚠️ Skipping row because it has " + line.length + " columns: " + Arrays.toString(line));
+	            }
 	        }
-
-	        page.waitForSelector("div.cursor-pointer.flex.items-center.justify-end");
-	        page.click("div.cursor-pointer.flex.items-center.justify-end");
-	        Thread.sleep(1000);
 	    }
+
+	    return data.toArray(new Object[0][]);
+	}
+public Object[][] getLeadAdditionalDataFromGoogleSheet() throws Exception {
+	
+	
+	String sheetUrl = "https://docs.google.com/spreadsheets/d/1genFxFEXIvAK3M_mdIo42FZTBBtaN3DHV6L_OKwULXA/export?format=csv&gid=480001572";
+    List<Object[]> data = new ArrayList<>();
+
+	    try (CSVReader reader = new CSVReader(new InputStreamReader(new URL(sheetUrl).openStream()))) {
+	        String[] line;
+	        boolean firstRow = true;
+	        while ((line = reader.readNext()) != null) {
+	            if (firstRow) { // skip header row
+	                firstRow = false;
+	                continue;
+	            }
+	            if (line.length == 15) { 
+	                data.add(line);
+	            } else {
+	                System.out.println("⚠️ Skipping row because it has " + line.length + " columns: " + Arrays.toString(line));
+	            }
+	        }
+	    }
+
+	    return data.toArray(new Object[0][]);
 	}
 
 
-    @DataProvider(name = "leadData")
-    public Object[][] getLeadData() {
-        return new Object[][] {
-            {"Universal", "Aarav", "Sharma", "Interested in real estate"},
-        };
-        }
+@DataProvider(name = "leadData")
+public Object[][] leadData() throws Exception {
+    return getLeadBasicDataFromGoogleSheet();
+}
+@DataProvider(name = "AdditionalleadData")
+public Object[][] AdditionalleadData() throws Exception {
+    return getLeadAdditionalDataFromGoogleSheet();
+}
     
-        @DataProvider(name = "AdditionalleadData")
-        public Object[][] getAdditionalleadData() {
-            return new Object[][] {
-            	{"Universal", "Arjun", "Mehta", "Interested in real estate", 
-                 "+33", "CP", "Tushar Bhai", "Mumbai", "Immediate", "Hot", "Below 50 Lakh", "500 Sq.Ft", "Residential", "2 Bhk", "Buy"}, 
-                 };
-    }
+       
 
     @Test(dataProvider = "leadData")
     public void addLeadForBasicFundLead(String project, String fname, String lname, String remarks) throws InterruptedException {

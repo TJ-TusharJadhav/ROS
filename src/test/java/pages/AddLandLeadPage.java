@@ -50,33 +50,32 @@ public class AddLandLeadPage {
     private String LeadNameInCard = "(//h3[@class='font-semibold text-lg text-gray-800 break-words'])[1]";
     private String fullDetailsText = "//p[contains(text(), 'Mobile no')]";
 //    validation in history
-    private String FirstNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[1]";
-    private String LastNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[2]";
-    private String EmailinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[3]";
-    private String CountryCodeinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[4]";
-    private String PhoneinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[5]";
-    private String UserTypeinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[6]";
-    private String BrokerNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[7]";
-    private String BrokercountrycodeinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[8]";
-    private String BrokerPhoneinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[9]";
-    private String LocationinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[10]";
-    private String LandTypeinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[11]";
-    private String AreainHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[12]";
-    
-    private String AreaTypeinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[13]";
-    private String propertyCardinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[14]";
-    private String satBarinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[15]";
-    private String partPlaninHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[16]";
-    private String zoningCertificateinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[17]";
-    private String landZoneinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[18]";
-    private String landForinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[19]";
-    private String jantriValueinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[20]";
-    private String surveyNumberinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[21]";
-    private String tpNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[22]";
-    private String tpNoinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[23]";
-    private String fpNumberinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[24]";
-    private String sourceNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[25]";
-    private String subSourceNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words'])[26]";
+    private String FirstNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[1]";
+    private String LastNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[2]";
+    private String EmailinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[3]";
+    private String CountryCodeinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[4]";
+    private String PhoneinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[5]";
+    private String UserTypeinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[6]";
+    private String BrokerNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[7]";
+    private String BrokercountrycodeinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[8]";
+    private String BrokerPhoneinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[9]";
+    private String LocationinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[10]";
+    private String LandTypeinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[11]";
+    private String AreainHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[12]";
+    private String AreaTypeinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[13]";
+    private String propertyCardinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[14]";
+    private String satBarinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[15]";
+    private String partPlaninHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[16]";
+    private String zoningCertificateinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[17]";
+    private String landZoneinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[18]";
+    private String landForinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[19]";
+    private String jantriValueinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[20]";
+    private String surveyNumberinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[21]";
+    private String tpNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[22]";
+    private String tpNoinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[23]";
+    private String fpNumberinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[24]";
+    private String sourceNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[25]";
+    private String subSourceNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[26]";
     
     
     

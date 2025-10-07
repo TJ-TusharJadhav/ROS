@@ -20,7 +20,8 @@ public class ProjectFollowUpPage {
 	private String dateField = "//input[@class='MuiPickersInputBase-input MuiPickersOutlinedInput-input css-1ftw2zb']";
 	
 //	private String datetime = LocalDateTime.now().plusMinutes(10).format(DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm a"));
-	private String datetime = "06/10/2025 10:30 PM";
+	private String Enterdatetime = "07/10/2025 10:30 PM";
+	private String Verifydatetime = "Oct 7, 2025, 10:30 PM";
     public ProjectFollowUpPage(Page page) {
         this.page = page;
     }
@@ -46,7 +47,7 @@ public class ProjectFollowUpPage {
         Thread.sleep(1000);
 
         
-        page.fill(dateField, datetime);
+        page.fill(dateField, Enterdatetime);
         
         page.fill("#remarks", Remark);
         Thread.sleep(1000);
@@ -111,8 +112,8 @@ public class ProjectFollowUpPage {
              "Remark mismatch. Expected: " + Remark + ", Got: " + ActualComments);
      softAssert.assertEquals(ActualSubStage, SubStage,
              "Sub Stage mismatch. Expected: " + SubStage + ", Got: " + ActualSubStage);
-     softAssert.assertEquals(ActualDateTime, "Oct 6, 2025, 10:30 PM",
-             "FollowUp date and time mismatch. Expected: " + "Oct 6, 2025, 10:30 PM" + ", Got: " + ActualDateTime);
+     softAssert.assertEquals(ActualDateTime, Verifydatetime,
+             "FollowUp date and time mismatch. Expected: " + Verifydatetime + ", Got: " + ActualDateTime);
 
 //     softAssert.assertEquals(ActualDateTime, formatDate(datetime),
 //             "FollowUp date and time mismatch. Expected: " + formatDate(datetime) + ", Got: " + ActualDateTime);
