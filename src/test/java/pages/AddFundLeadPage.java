@@ -79,6 +79,7 @@ public class AddFundLeadPage {
     	addLeadBasic(projectName, fname, lname, country, phone, source, subSource, mail, note);
         page.click(submitBtn);
         Thread.sleep(1000);
+        page.click("//div[contains(text(), 'New Lead')]");
     }
     public void validateLeadWithBasicInfo(String expectedFirstName, String expectedLastName, String expectedProject, 
     		                              String expectedSource,String expectedEmail, String expectedCountryCode, 
@@ -223,13 +224,14 @@ page.selectOption(leadCategory, new SelectOption().setLabel(ProjectCategory));
 page.selectOption(unitType, new SelectOption().setLabel(UnitType));
 page.selectOption(leadType, new SelectOption().setLabel(LeadType));
 page.click(submitBtn);
-//Thread.sleep(1000);
+Thread.sleep(1000);
 //page.reload();
 //page.click(followupMenu);
 //Thread.sleep(1000);
 //page.click(openAddLeadOptions);
 //page.click(selectFundOption);
 //Thread.sleep(1000);
+page.click("//div[contains(text(), 'New Lead')]");
 
 }
     public void validateLeadWithAdditionalInfo(String expectedFirstName, String expectedLastName, String expectedProject, 

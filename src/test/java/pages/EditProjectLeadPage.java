@@ -7,6 +7,7 @@ import com.microsoft.playwright.options.WaitForSelectorState;
 
 public class EditProjectLeadPage {
     private Page page;
+    public String LeadPhoneNo;
 // Basic add lead Locators
     private String EditLeadBtn = "(//button[@class='flex justify-end'])[2]";
     private String projectDropDown = "#project";
@@ -37,25 +38,25 @@ public class EditProjectLeadPage {
     
     		
  // Locators for Lead history
-    private String projectnameinhirstory = "(//p[@class='font-medium text-xs sm:text-sm'])[7]";
-    private String FirstName = "(//p[@class='font-medium text-xs sm:text-sm'])[8]";
-    private String LastName = "(//p[@class='font-medium text-xs sm:text-sm'])[9]";
-    private String Email = "(//p[@class='font-medium text-xs sm:text-sm'])[10]";
-    private String comments = "(//p[@class='font-medium text-xs sm:text-sm'])[11]";
+    private String projectnameinhirstory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[6]";
+    private String FirstName = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[7]";
+    private String LastName = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[8]";
+    private String Email = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[9]";
+    private String comments = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[10]";
     
-    private String alternatecountryCode = "(//p[@class='font-medium text-xs sm:text-sm'])[14]";
-    private String alternatePhone  = "(//p[@class='font-medium text-xs sm:text-sm'])[15]";
-    private String ReferralType = "(//p[@class='font-medium text-xs sm:text-sm'])[16]";
-    private String referralName = "(//p[@class='font-medium text-xs sm:text-sm'])[17]";
-    private String buyingTime = "(//p[@class='font-medium text-xs sm:text-sm'])[20]";
-    private String Priority = "(//p[@class='font-medium text-xs sm:text-sm'])[21]";
-    private String Budget = "(//p[@class='font-medium text-xs sm:text-sm'])[22]";
-    private String area = "(//p[@class='font-medium text-xs sm:text-sm'])[23]";
-    private String projectCategory  = "(//p[@class='font-medium text-xs sm:text-sm'])[24]";
-    private String UnitType = "(//p[@class='font-medium text-xs sm:text-sm'])[25]";
-    private String LeadType = "(//p[@class='font-medium text-xs sm:text-sm'])[26]";
-    private String Location = "(//p[@class='font-medium text-xs sm:text-sm'])[27]";
-    private String secondaryProjectName = "(//p[@class='font-medium text-xs sm:text-sm'])[28]"; 
+    private String alternatecountryCode = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[13]";																									
+    private String alternatePhone = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[14]";																									
+    private String ReferralType = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[15]";																									
+    private String referralName = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[16]";
+    private String buyingTime = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[19]";	
+    private String Priority = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[20]";																									
+    private String Budget = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[21]";																									
+    private String area = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[22]";																									
+    private String projectCategory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[23]";																									
+    private String UnitType = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[24]";																									
+    private String LeadType = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[25]";																									
+    private String Location = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[26]";																									
+    private String secondaryProjectName = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[27]";																									 
     
     private String followupMenu = "(//p[@data-size='sm'])[4]";
     private String clickSearchedFirstOption = "//li[@role='option']";
@@ -76,6 +77,9 @@ public class EditProjectLeadPage {
     		String expectedbudget, String expectedarea,String expectedprojectCategory, String expectedunitType, 
     		String expectedleadType, String expectedlocation, String expectedecondaryProject) throws InterruptedException {
     	
+    	Thread.sleep(1000);
+    	System.out.println("LeadPhoneNo: "+LeadPhoneNo);
+    	page.fill("//input[@placeholder='Search Leads by Name or Mobile No.']", LeadPhoneNo);
     	
     	String ExpectedLeadOwner = page.textContent(SigIn_Name).trim();
     	
@@ -130,6 +134,7 @@ public class EditProjectLeadPage {
             verifyButton.click();
             System.out.println("Verify button clicked after reload!");
         }
+        Thread.sleep(2000);
         String actualProjectName1 =page.textContent(projectnameinhirstory).trim();
         String actualFirstName =page.textContent(FirstName).trim();
         String actualLastName =page.textContent(LastName).trim();
@@ -253,6 +258,12 @@ public class EditProjectLeadPage {
     public void validateLeadWithBasicInfo(
     		String expectedFirstName, String expectedLastName, String expectedProject, 
     		String expectedEmail, String expectedRemark) throws InterruptedException {
+    	Thread.sleep(1000);
+    	page.fill("//input[@placeholder='Search Leads by Name or Mobile No.']", LeadPhoneNo);
+    	Thread.sleep(1000);
+    	Locator verifyButton = page.locator("(//div[@aria-label='View details for "+expectedFirstName+"'])[1]");
+    	verifyButton.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+    	page.waitForCondition(() -> verifyButton.isVisible());
     	
     	String ExpectedLeadOwner = page.textContent(SigIn_Name).trim();
     	
@@ -284,16 +295,29 @@ public class EditProjectLeadPage {
         
 
         
-//        Lead details on history 
-        Thread.sleep(500);
-        page.click(fullDetailsText);
-       
-      
-        Locator verifyButton = page.locator("(//span[text()='Update'])[1]");
-        verifyButton.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+//      Lead details on history 
+      Thread.sleep(500);
+      page.click(fullDetailsText);
+      Thread.sleep(500);
+      Locator createcard = page.locator("(//span[text()='Update'])[1]");
 
-        page.waitForCondition(() -> verifyButton.isVisible());
-        verifyButton.click();
+      if (createcard.count() > 0) { 
+      	createcard.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+      	createcard.click();
+          System.out.println("Verify button clicked!");
+      } else {
+          System.out.println("Verify button not found, reloading page...");
+          page.waitForSelector("div.cursor-pointer.flex.items-center.justify-end");
+	        page.click("div.cursor-pointer.flex.items-center.justify-end");
+          page.click("//div[contains(text(),'Re-Inquiry')]");
+          page.click("//div[contains(text(),'New Lead')]");
+          page.click(fullDetailsText);
+          createcard.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+          createcard.click();
+          System.out.println("Verify button clicked after reload!");
+      }
+      Thread.sleep(2000);
+      
         String actualProjectNameinHistory =page.textContent(projectnameinhirstory).trim();
         String actualFirstName =page.textContent(FirstName).trim();
         String actualLastName =page.textContent(LastName).trim();
@@ -315,6 +339,13 @@ public class EditProjectLeadPage {
     public void editLeadWithBasic(String projectName, String fname, String lname, String mail, String note) throws InterruptedException {
         page.click(followupMenu);
         Thread.sleep(1000);
+        String getPhoneNo = page.textContent(fullDetailsText).trim();
+        String phonePart = getPhoneNo.replace("Mobile no -", "").trim();
+        String[] parts = phonePart.split(" ", 2); 
+        LeadPhoneNo = parts[1]; 
+        System.out.println("LeadPhoneNo: "+LeadPhoneNo);
+    	page.fill("//input[@placeholder='Search Leads by Name or Mobile No.']", LeadPhoneNo);
+    	Thread.sleep(500);
         page.click(fullDetailsText);
         Thread.sleep(1000);
         page.click(EditLeadBtn);

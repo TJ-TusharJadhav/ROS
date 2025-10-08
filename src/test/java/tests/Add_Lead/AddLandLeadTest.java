@@ -69,6 +69,8 @@ public void Aftermethod() throws InterruptedException {
 		addLandLead.SelectProposal(Proposal);
 		addLandLead.EnterLandJantriValue(LandJantriValue);
 		addLandLead.ClickSubmitBtn();
+		Thread.sleep(1000);
+		page.click("//div[contains(text(), 'New Lead')]");
 		addLandLead.VerifyLeadbasicDetails(Territory, firstName, LastName, email, LeadCountryCode, phone,PlotArea ,AreaType,LandZone,Proposal,LandJantriValue);
 		addLandLead.valitionLeadtype(LeadType);
 //		addLandLead.ValidationLocation(Location);
@@ -126,6 +128,8 @@ public void Aftermethod() throws InterruptedException {
 		addLandLead.SelectProposal(Proposal);
 		addLandLead.EnterLandJantriValue(LandJantriValue);
 		addLandLead.ClickSubmitBtn();
+		Thread.sleep(1000);
+		page.click("//div[contains(text(), 'New Lead')]");
 		addLandLead.VerifyLeadbasicDetails(Territory, firstName, LastName, email, LeadCountryCode, phone,PlotArea ,AreaType,LandZone,Proposal,LandJantriValue);
 		addLandLead.valitionBrokerleadtype(LeadType,BrokerName,Brokercountry,Brokerphone);
 //		addLandLead.ValidationLocation();
@@ -169,6 +173,8 @@ public void Aftermethod() throws InterruptedException {
 		addLandLead.SelectProposal(Proposal);
 		addLandLead.EnterLandJantriValue(LandJantriValue);
 		addLandLead.ClickSubmitBtn();
+		Thread.sleep(1000);
+		page.click("//div[contains(text(), 'New Lead')]");
 		addLandLead.VerifyLeadbasicDetails(Territory, firstName, LastName, email, LeadCountryCode, phone,PlotArea ,AreaType,LandZone,Proposal,LandJantriValue);
 		addLandLead.valitionLeadtype(LeadType);
 		addLandLead.ValidationAgricultureLandType(LandType);
@@ -219,6 +225,8 @@ public void Aftermethod() throws InterruptedException {
 		addLandLead.SelectProposal(Proposal);
 		addLandLead.EnterLandJantriValue(LandJantriValue);
 		addLandLead.ClickSubmitBtn();
+		Thread.sleep(1000);
+		page.click("//div[contains(text(), 'New Lead')]");
 		addLandLead.VerifyLeadbasicDetails(Territory, firstName, LastName, email, LeadCountryCode, phone,PlotArea ,AreaType,LandZone,Proposal,LandJantriValue);
 		addLandLead.valitionLeadtype(LeadType);
 //		addLandLead.ValidationLocation(Location);
@@ -267,6 +275,8 @@ public void Aftermethod() throws InterruptedException {
 		addLandLead.SelectProposal(Proposal);
 		addLandLead.EnterLandJantriValue(LandJantriValue);
 		addLandLead.ClickSubmitBtn();
+		Thread.sleep(1000);
+		page.click("//div[contains(text(), 'New Lead')]");
 		addLandLead.VerifyLeadbasicDetails(Territory, firstName, LastName, email, LeadCountryCode, phone,PlotArea ,AreaType,LandZone,Proposal,LandJantriValue);
 		addLandLead.valitionBrokerleadtype(LeadType,BrokerName,Brokercountry,Brokerphone);
 //		addLandLead.ValidationLocation(Location);
@@ -317,6 +327,8 @@ public void Aftermethod() throws InterruptedException {
 		addLandLead.SelectProposal(Proposal);
 		addLandLead.EnterLandJantriValue(LandJantriValue);
 		addLandLead.ClickSubmitBtn();
+		Thread.sleep(1000);
+		page.click("//div[contains(text(), 'New Lead')]");
 		addLandLead.VerifyLeadbasicDetails(Territory, firstName, LastName, email, LeadCountryCode, phone,PlotArea ,AreaType,LandZone,Proposal,LandJantriValue);
 		addLandLead.valitionLeadtype(LeadType);
 //		addLandLead.ValidationLocation(Location);
@@ -365,6 +377,8 @@ public void Aftermethod() throws InterruptedException {
 		addLandLead.SelectProposal(Proposal);
 		addLandLead.EnterLandJantriValue(LandJantriValue);
 		addLandLead.ClickSubmitBtn();
+		Thread.sleep(1000);
+		page.click("//div[contains(text(), 'New Lead')]");
 		addLandLead.VerifyLeadbasicDetails(Territory, firstName, LastName, email, LeadCountryCode, phone,PlotArea ,AreaType,LandZone,Proposal,LandJantriValue);
 		addLandLead.valitionBrokerleadtype(LeadType,BrokerName,Brokercountry,Brokerphone);
 //		addLandLead.ValidationLocation(Location);
@@ -415,6 +429,8 @@ public void Aftermethod() throws InterruptedException {
 		addLandLead.SelectProposal(Proposal);
 		addLandLead.EnterLandJantriValue(LandJantriValue);
 		addLandLead.ClickSubmitBtn();
+		Thread.sleep(1000);
+		page.click("//div[contains(text(), 'New Lead')]");
 		addLandLead.VerifyLeadbasicDetails(Territory, firstName, LastName, email, LeadCountryCode, phone,PlotArea ,AreaType,LandZone,Proposal,LandJantriValue);
 		addLandLead.valitionLeadtype(LeadType);
 //		addLandLead.ValidationLocation(Location);
@@ -457,6 +473,8 @@ public void Aftermethod() throws InterruptedException {
 		addLandLead.SelectProposal(Proposal);
 		addLandLead.EnterLandJantriValue(LandJantriValue);
 		addLandLead.ClickSubmitBtn();
+		Thread.sleep(1000);
+		page.click("//div[contains(text(), 'New Lead')]");
 		addLandLead.VerifyLeadbasicDetails(Territory, firstName, LastName, email, LeadCountryCode, phone,PlotArea ,AreaType,LandZone,Proposal,LandJantriValue);
 		addLandLead.valitionLeadtype(LeadType);
 //		addLandLead.ValidationLocation(Location);
@@ -507,6 +525,8 @@ public void Aftermethod() throws InterruptedException {
 		addLandLead.SelectProposal(Proposal);
 		addLandLead.EnterLandJantriValue(LandJantriValue);
 		addLandLead.ClickSubmitBtn();
+		Thread.sleep(1000);
+		page.click("//div[contains(text(), 'New Lead')]");
 		addLandLead.VerifyLeadbasicDetails(Territory, firstName, LastName, email, LeadCountryCode, phone,PlotArea ,AreaType,LandZone,Proposal,LandJantriValue);
 		addLandLead.valitionLeadtype(LeadType);
 //		addLandLead.ValidationLocation(Location);

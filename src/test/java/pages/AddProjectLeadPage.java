@@ -285,10 +285,11 @@ public class AddProjectLeadPage {
         page.selectOption(unitType, new SelectOption().setLabel(UnitType));
         page.selectOption(leadType, new SelectOption().setLabel(LeadType));
         page.click(submitBtn);
-        Thread.sleep(1000);
-        page.reload();
-        page.click(followupMenu);
-        Thread.sleep(1500);
+//        Thread.sleep(1000);
+//        page.reload();
+//        page.click(followupMenu);
+//        Thread.sleep(1500);
+        page.click("//div[contains(text(), 'New Lead')]");
         
     }
 
@@ -297,6 +298,7 @@ public class AddProjectLeadPage {
     	
     	addLeadBasic(projectName, fname, lname, country, phone, source, subSource, mail, note);
         page.click(submitBtn);
+        page.click("//div[contains(text(), 'New Lead')]");
         
     }
     // --- Validation method ---

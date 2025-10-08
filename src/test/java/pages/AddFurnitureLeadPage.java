@@ -88,6 +88,7 @@ public class AddFurnitureLeadPage {
     	addLeadBasic(projectName, fname, lname, country, phone, mail, source, subSource, Category, subCategory, note);
         page.click(submitBtn);
         Thread.sleep(2000);
+        page.click("//div[contains(text(), 'New Lead')]");
     }
     public void validateLeadWithGeneratedData(
             String expectedFirstName, String expectedLastName, String expectedProject,
@@ -228,6 +229,8 @@ page.fill(companyName, CompanyName);
 page.fill(estimatedQuantity, EstimatedQuantity);
 page.fill(projectTimeline, ProjectTimeline);
 page.click(submitBtn);
+Thread.sleep(1000);
+page.click("//div[contains(text(), 'New Lead')]");
 
 }
     public void validateLeadWithAdditionalInfo(String expectedFirstName, String expectedLastName, String expectedProject, String expectedSource,String expectedEmail, 

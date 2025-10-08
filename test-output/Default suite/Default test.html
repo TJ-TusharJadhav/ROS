@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>51/10/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Oct 07 18:31:43 IST 2025</td>
+<td>Started on:</td><td>Wed Oct 08 13:52:23 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>18 seconds (18942 ms)</td>
+<tr><td>Total time:</td><td>623 seconds (623813 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,655 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Harmony, Aditya, Patil, +211, Print Media, News Paper, Wants ready-to-move flat</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:349)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2123914473", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2123914473'><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:349)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Curv, Ritu, Jain, +213, Print Media, Hoardings, Interested in joint venture, Farmland, +380, CP, Tushar Bhai, Vancouver, In 1 Year +, Hot, 10 Cr to 15 Cr, 250 Sq.Ft, Residential, 5 Bhk, Buy</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithAdditionalInfo(AddProjectLeadPage.java:134)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest(AddProjectLeadTest.java:189)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace144699438", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace144699438'><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithAdditionalInfo(AddProjectLeadPage.java:134)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest(AddProjectLeadTest.java:189)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Curv, Manish, Thakur, +91, Channel Sales, ACP, Wants studio apartment</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Channel Sales, Got: Channel sales
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:349)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1321115948", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1321115948'><pre>java.lang.AssertionError: Source mismatch. Expected: Channel Sales, Got: Channel sales
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:349)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Edge, Ritu, Jain, +213, Print Media, Hoardings, Interested in joint venture</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:349)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2116299597", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2116299597'><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:349)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Trophy, Farhan, Ansari, +216, Print Media, Leaflets, Wants coastal property</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:349)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace488600086", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace488600086'><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:349)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Edge, Shruti, Deshmukh, +65, Channel Sales, Channel Partner, Needs farmhouse land, Harmony, +386, CP, Tushar Bhai, Melbourne, In 3 Months, Warm, 50 Lakh to 1 Cr, 350 Sq.Ft, Commercial, Office, Lease</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Channel Sales, Got: Channel sales
+	at pages.AddProjectLeadPage.validateLeadWithAdditionalInfo(AddProjectLeadPage.java:134)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest(AddProjectLeadTest.java:189)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace99770475", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace99770475'><pre>java.lang.AssertionError: Source mismatch. Expected: Channel Sales, Got: Channel sales
+	at pages.AddProjectLeadPage.validateLeadWithAdditionalInfo(AddProjectLeadPage.java:134)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest(AddProjectLeadTest.java:189)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: The Circle, Manish, Thakur, +91, Channel Sales, ACP, Wants studio apartment, Park Lane, +387, CP, Tushar Bhai, Tokyo, In 6 Months, Hot, 1 Cr to 2 Cr, 400 Sq.Ft, Commercial, Showroom, Pre-Lease</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Channel Sales, Got: Channel sales
+	at pages.AddProjectLeadPage.validateLeadWithAdditionalInfo(AddProjectLeadPage.java:134)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest(AddProjectLeadTest.java:189)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace626193099", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace626193099'><pre>java.lang.AssertionError: Source mismatch. Expected: Channel Sales, Got: Channel sales
+	at pages.AddProjectLeadPage.validateLeadWithAdditionalInfo(AddProjectLeadPage.java:134)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest(AddProjectLeadTest.java:189)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Harmony, Farhan, Ansari, +216, Print Media, Leaflets, Wants coastal property, Edge, +385, CP, Tushar Bhai, Sydney, Immediate, Cold, Below 50 Lakh, 300 Sq.Ft, Residential, Weekend Villa, Invest</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithAdditionalInfo(AddProjectLeadPage.java:134)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest(AddProjectLeadTest.java:189)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1788380050", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1788380050'><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithAdditionalInfo(AddProjectLeadPage.java:134)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest(AddProjectLeadTest.java:189)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Farmland, Aditya, Patil, +211, Print Media, News Paper, Wants ready-to-move flat, Curv, +359, CP, Tushar Bhai, Toronto, In 6 Months, Warm, 5 Cr to 10 Cr, 200 Sq.Ft, Residential, 4 Bhk, Pre-Lease</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithAdditionalInfo(AddProjectLeadPage.java:134)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest(AddProjectLeadTest.java:189)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace100445376", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace100445376'><pre>java.lang.AssertionError: Source mismatch. Expected: Print Media, Got: Print media
+	at pages.AddProjectLeadPage.validateLeadWithAdditionalInfo(AddProjectLeadPage.java:134)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest(AddProjectLeadTest.java:189)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Crown, Shruti, Deshmukh, +65, Channel Sales, Channel Partner, Needs farmhouse land</td>
+<td><div><pre>java.lang.AssertionError: Source mismatch. Expected: Channel Sales, Got: Channel sales
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:349)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1135935001", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1135935001'><pre>java.lang.AssertionError: Source mismatch. Expected: Channel Sales, Got: Channel sales
+	at pages.AddProjectLeadPage.validateLeadWithBasicInfo(AddProjectLeadPage.java:349)
+	at tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead(AddProjectLeadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>8</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,10 +725,260 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.Edit_Lead.EditFundLeadTest.addLeadForAdditionalFundLeadTest()'><b>addLeadForAdditionalFundLeadTest</b><br>Test class: tests.Edit_Lead.EditFundLeadTest<br>Parameters: The Pre-Launch Fund, Arjun, Mehta, Interested in real estate, +33, CP, Tushar Bhai, Mumbai, Immediate, Hot, Below 50 Lakh, 500 Sq.Ft, Residential, 2 Bhk, Buy</td>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Crown, Priya, Khan, +20, Event, Property Event, Looking for investment, Trophy, +40, CP, Tushar Bhai, Bangalore, In 6 Months, Warm, 1 Cr to 2 Cr, 1000 Sq.Ft, Residential, 4 Bhk, Lease</td>
 <td></td>
-<td>16</td>
-<td>tests.Edit_Lead.EditFundLeadTest@7c7a06ec</td></tr>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Greenfield, Rohan, Desai, +55, Digital, IVRS, Interested in office space, SPlus, +54, CP, Tushar Bhai, Singapore, In 1 Year +, Warm, Below 50 Lakh, 4000 Sq.Ft, Residential, 5 Bhk, Pre-Lease</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Harmony, Raj, Bansal, +92, Walkin, IVRS, Needs property documents</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Edge, Sameer, Khan, +63, Digital, Email, Prefers WhatsApp updates, Harmony, +57, CP, Tushar Bhai, Bangkok, In 3 Months, Cold, 2 Cr to 5 Cr, 5000 Sq.Ft, Commercial, Office, Lease</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Crown, Arjun, Mehta, +49, Digital, SMS, Asked for EMI options, Trophy, +51, CP, Tushar Bhai, Abu Dhabi, In 3 Months, Hot, 5 Cr to 10 Cr, 3000 Sq.Ft, Residential, 3 Bhk, Invest</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Crown, Meera, Chawla, +95, Walkin, WhatsApp, Looking for commercial plot</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: The Circle, Raj, Bansal, +92, Walkin, IVRS, Needs property documents, Universal, +354, CP, Tushar Bhai, Zurich, In 3 Months, Hot, 10 Cr to 15 Cr, 9000 Sq.Ft, Commercial, Office, Lease</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Edge, Priya, Sharma, +52, Digital, YouTube, Wants luxury property, Crown, +53, CP, Tushar Bhai, Sharjah, In 6 Months, Cold, 10 Cr to 15 Cr, 3500 Sq.Ft, Residential, 4 Bhk, Lease</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Harmony, Raj, Verma, +33, Digital, Instagram, Interested in 2BHK, SPlus, +420, CP, Tushar Bhai, Kolkata, In 1 Year +, Cold, 1 Cr to 2 Cr, 2200 Sq.Ft, Commercial, Shop, Pre-Lease</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Trophy, Neha, Desai, +98, Walkin, Direct-Walkin, Requires site visit</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Skyview, Raj, Verma, +33, Digital, Instagram, Interested in 2BHK</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Trophy, Arjun, Mehta, +234, Event, GIHED, Interested in real estate, Edge, +33, CP, Tushar Bhai, Mumbai, Immediate, Hot, Below 50 Lakh, 500 Sq.Ft, Residential, 2 Bhk, Buy</td>
+<td></td>
+<td>11</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Harmony, Arjun, Mehta, +49, Digital, SMS, Asked for EMI options</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Gift 4, Aarav, Sharma, +93, Event, GIHED, Interested in real estate</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Farmland, Deepika, Rao, +91, Walkin, YouTube, Wants rental options, Curv, +353, CP, Tushar Bhai, Frankfurt, Immediate, Warm, 5 Cr to 10 Cr, 8500 Sq.Ft, Residential, Weekend Villa, Invest</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Gift 4, Karan, Malhotra, +94, Walkin, Email, Wants farmhouse, Farmland, +356, CP, Tushar Bhai, New York, In 1 Year +, Warm, 50 Lakh to 1 Cr, 10000 Sq.Ft, Commercial, Shop, Buy</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Harmony, Pooja, Nair, +86, Walkin, LinkedIn, Asked for price list, Parkview 2, +351, CP, Tushar Bhai, Paris, In 6 Months, Hot, 1 Cr to 2 Cr, 7500 Sq.Ft, Residential, 4 Bhk, Pre-Lease</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Greenview, Isha, Gupta, +34, Digital, LinkedIn, Budget under 50L</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Park Lane, Sneha, Reddy, +81, Walkin, Facebook, Family shifting soon, Greenfield, +82, CP, Tushar Bhai, London, Immediate, Cold, Below 50 Lakh, 6500 Sq.Ft, Residential, 2 Bhk, Invest</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Crown, Neha, Desai, +32, Digital, Facebook, Requested site visit, Edge, +46, CP, Tushar Bhai, Ahmedabad, In 6 Months, Hot, Below 50 Lakh, 2000 Sq.Ft, Commercial, Showroom, Lease</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Curv, Ankit, Verma, +90, Walkin, SMS, Looking for villa, Farmland, +352, CP, Tushar Bhai, Berlin, In 1 Year +, Cold, 2 Cr to 5 Cr, 8000 Sq.Ft, Residential, 5 Bhk, Buy</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Skyview, Ankit, Verma, +90, Walkin, SMS, Looking for villa</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Crown, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure, Harmony, +43, CP, Tushar Bhai, Pune, Immediate, Cold, 5 Cr to 10 Cr, 1500 Sq.Ft, Residential, Weekend Villa, Buy</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Parkview 2, Rohan, Desai, +55, Digital, IVRS, Interested in office space</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Trophy, Kavita, Iyer, +62, Digital, Google, Student housing required</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Wave, Amit, Gupta, +66, Walkin, Website, Interested in resale</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Farmland, Priya, Khan, +20, Event, Property Event, Looking for investment</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Universal, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Trophy, Rohan, Patel, +27, Event, Investor Meet, Wants quick callback, Edge, +41, CP, Tushar Bhai, Hyderabad, In 1 Year +, Hot, 2 Cr to 5 Cr, 1200 Sq.Ft, Residential, 5 Bhk, Pre-Lease</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Greenfield, Sneha, Reddy, +81, Walkin, Facebook, Family shifting soon</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Trophy, Karan, Malhotra, +94, Walkin, Email, Wants farmhouse</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Harmony, Neha, Kulkarni, +64, Digital, WhatsApp, Wants loan assistance, Edge, +58, CP, Tushar Bhai, Jakarta, In 6 Months, Warm, 5 Cr to 10 Cr, 5500 Sq.Ft, Commercial, Showroom, Pre-Lease</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Greenfield, Amit, Gupta, +66, Walkin, Website, Interested in resale, Park Lane, +81, CP, Tushar Bhai, Bali, In 1 Year +, Hot, 10 Cr to 15 Cr, 6000 Sq.Ft, Commercial, Shop, Buy</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Edge, Priya, Sharma, +52, Digital, YouTube, Wants luxury property</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: SPlus, Isha, Gupta, +34, Digital, LinkedIn, Budget under 50L, Harmony, +48, CP, Tushar Bhai, Dubai, Immediate, Warm, 2 Cr to 5 Cr, 2500 Sq.Ft, Residential, 2 Bhk, Buy</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: SPlus, Vikram, Joshi, +82, Walkin, Instagram, Needs 3BHK apartment</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Edge, Karan, Mehta, +31, Digital, Website, Prefers email communication, SPlus, +45, CP, Tushar Bhai, Chennai, In 3 Months, Warm, 10 Cr to 15 Cr, 1800 Sq.Ft, Commercial, Office, Invest</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Edge, Ayesha, Siddiqui, +93, Walkin, Google, Interested in duplex</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: SPlus, Karan, Mehta, +31, Digital, Website, Prefers email communication</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Parkview 2, Vikram, Joshi, +82, Walkin, Instagram, Needs 3BHK apartment, Harmony, +94, CP, Tushar Bhai, Manchester, In 3 Months, Warm, 50 Lakh to 1 Cr, 7000 Sq.Ft, Residential, 3 Bhk, Lease</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: SPlus, Kavita, Iyer, +62, Digital, Google, Student housing required, Greenfield, +56, CP, Tushar Bhai, Kuala Lumpur, Immediate, Hot, 1 Cr to 2 Cr, 4500 Sq.Ft, Residential, Weekend Villa, Invest</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: The Circle, Neha, Desai, +98, Walkin, Direct-Walkin, Requires site visit, Farmland, +421, CP, Tushar Bhai, San Francisco, In 3 Months, Cold, 2 Cr to 5 Cr, 150 Sq.Ft, Residential, 3 Bhk, Lease</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Curv, Neha, Desai, +32, Digital, Facebook, Requested site visit</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Farmland, Meera, Chawla, +95, Walkin, WhatsApp, Looking for commercial plot, Gift 4, +357, CP, Tushar Bhai, Los Angeles, Immediate, Hot, 1 Cr to 2 Cr, 120 Sq.Ft, Residential, 2 Bhk, Invest</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Greenview, Deepika, Rao, +91, Walkin, YouTube, Wants rental options</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Crown, Neha, Kulkarni, +64, Digital, WhatsApp, Wants loan assistance</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Park Lane, Sameer, Khan, +63, Digital, Email, Prefers WhatsApp updates</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Curv, Pooja, Nair, +86, Walkin, LinkedIn, Asked for price list</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForBasicProjectLead()'><b>addLeadForBasicProjectLead</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: The Circle, Simran, Joshi, +30, Event, Channel Partner Event, Needs brochure</td>
+<td></td>
+<td>9</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: SPlus, Aarav, Sharma, +93, Event, GIHED, Interested in real estate, Harmony, +36, CP, Tushar Bhai, Delhi, In 3 Months, Cold, 50 Lakh to 1 Cr, 750 Sq.Ft, Residential, 3 Bhk, Invest</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
+<tr>
+<td title='tests.Add_Lead.AddProjectLeadTest.addLeadForAdditionalProjectLeadTest()'><b>addLeadForAdditionalProjectLeadTest</b><br>Test class: tests.Add_Lead.AddProjectLeadTest<br>Parameters: Universal, Ayesha, Siddiqui, +93, Walkin, Google, Interested in duplex, The Circle, +355, CP, Tushar Bhai, Geneva, In 6 Months, Cold, Below 50 Lakh, 9500 Sq.Ft, Commercial, Showroom, Pre-Lease</td>
+<td></td>
+<td>10</td>
+<td>tests.Add_Lead.AddProjectLeadTest@4afcd809</td></tr>
 </table><p>
 </body>
 </html>

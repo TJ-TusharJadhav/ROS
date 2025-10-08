@@ -6,6 +6,7 @@ import com.microsoft.playwright.options.WaitForSelectorState;
 
 public class EditFundLeadPage {
     private Page page;
+    public String LeadPhoneNo;
 
  // Basic add lead Locators
     private String EditLeadBtn = "(//button[@class='flex justify-end'])[2]";
@@ -72,7 +73,9 @@ public class EditFundLeadPage {
         Thread.sleep(2000);
     }
     public void validateLeadWithBasicInfo(String expectedFirstName, String expectedLastName, String expectedProject, String expectedEmail, String expectedRemark) throws InterruptedException {
-        
+    	Thread.sleep(1000);
+    	page.fill("//input[@placeholder='Search Leads by Name or Mobile No.']", LeadPhoneNo);
+    	Thread.sleep(1000);
     	Locator verifyButton = page.locator("(//div[@aria-label='View details for "+expectedFirstName+"'])[1]");
     	verifyButton.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
     	page.waitForCondition(() -> verifyButton.isVisible());
@@ -186,7 +189,9 @@ public void validateLeadWithAdditionalInfo(String expectedFirstName, String expe
     		                              String expectedreferralName, String expectedbuyingTime, String expectedpriority, 
     		                      		String expectedbudget, String expectedarea,String expectedprojectCategory, String expectedunitType, 
     		                      		String expectedleadType, String expectedlocation ) throws InterruptedException {
-        
+	Thread.sleep(1000);
+	page.fill("//input[@placeholder='Search Leads by Name or Mobile No.']", LeadPhoneNo);
+	Thread.sleep(1000);
     	Locator checkNewLeadCard = page.locator("(//div[@aria-label='View details for "+expectedFirstName+"'])[1]");
     	checkNewLeadCard.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
     	page.waitForCondition(() -> checkNewLeadCard.isVisible());
@@ -294,6 +299,14 @@ public void validateLeadWithAdditionalInfo(String expectedFirstName, String expe
         page.click(openAddLeadOptions);
         page.click(selectFundOption);
         Thread.sleep(2000);
+        String getPhoneNo = page.textContent(fullDetailsText).trim();
+        String phonePart = getPhoneNo.replace("Mobile no -", "").trim();
+        String[] parts = phonePart.split(" ", 2); 
+        LeadPhoneNo = parts[1]; 
+        System.out.println("LeadPhoneNo: "+LeadPhoneNo);
+    	page.fill("//input[@placeholder='Search Leads by Name or Mobile No.']", LeadPhoneNo);
+    	Thread.sleep(2000);
+        page.click(fullDetailsText);
         page.click(fullDetailsText);
         Thread.sleep(2000);
         page.click(EditLeadBtn);
