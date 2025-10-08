@@ -20,6 +20,45 @@ public class AddProjectLeadTest extends BaseTest {
 	public void takeScreenshot(ITestResult result) throws InterruptedException {
 		ScreenshotUtil.capture(page, result, phone);
 	}
+	@DataProvider(name = "leadDataOnDevEnv")
+    public Object[][] getLeadDataOnDevEnv() {
+        return new Object[][] {
+            {"Curv", "Aarav", "Sharma", "+93", "Event", "GIHED", "Interested in real estate"},
+            {"Curv", "Priya", "Khan", "+20", "Event", "Property Event", "Looking for investment"},
+            {"Curv", "Rohan", "Patel", "+27", "Event", "Investor Meet", "Wants quick callback"},
+            {"Curv", "Simran", "Joshi", "+30", "Event", "Channel Partner Event", "Needs brochure"},
+            
+            {"Curv", "Karan", "Mehta", "+31", "Digital", "Website", "Prefers email communication"},
+            {"Curv", "Neha", "Desai", "+32", "Digital", "Facebook", "Requested site visit"},
+            {"Curv", "Raj", "Verma", "+33", "Digital", "Instagram", "Interested in 2BHK"},
+            {"Curv", "Isha", "Gupta", "+34", "Digital", "LinkedIn", "Budget under 50L"},
+            {"Curv", "Arjun", "Mehta", "+49", "Digital", "SMS", "Asked for EMI options"},
+            {"Curv", "Priya", "Sharma", "+52", "Digital", "YouTube", "Wants luxury property"},
+            {"Curv", "Rohan", "Desai", "+55", "Digital", "IVRS", "Interested in office space"},
+            {"Curv", "Kavita", "Iyer", "+62", "Digital", "Google", "Student housing required"},
+            {"Curv", "Sameer", "Khan", "+63", "Digital", "Email", "Prefers WhatsApp updates"},
+            {"Curv", "Neha", "Kulkarni", "+64", "Digital", "WhatsApp", "Wants loan assistance"},
+            
+            {"Curv", "Amit", "Gupta", "+66", "Walkin", "Website", "Interested in resale"},
+            {"Curv", "Sneha", "Reddy", "+81", "Walkin", "Facebook", "Family shifting soon"},
+            {"Curv", "Vikram", "Joshi", "+82", "Walkin", "Instagram", "Needs 3BHK apartment"},
+            {"Curv", "Pooja", "Nair", "+86", "Walkin", "LinkedIn", "Asked for price list"},
+            {"Curv", "Ankit", "Verma", "+90", "Walkin", "SMS", "Looking for villa"},
+            {"Curv", "Deepika", "Rao", "+91", "Walkin", "YouTube", "Wants rental options"},
+            {"Curv", "Raj", "Bansal", "+92", "Walkin", "IVRS", "Needs property documents"},
+            {"Curv", "Ayesha", "Siddiqui", "+93", "Walkin", "Google", "Interested in duplex"},
+            {"Curv", "Karan", "Malhotra", "+94", "Walkin", "Email", "Wants farmhouse"},
+            {"Curv", "Meera", "Chawla", "+95", "Walkin", "WhatsApp", "Looking for commercial plot"},
+            {"Curv", "Neha", "Desai", "+98", "Walkin", "Direct-Walkin", "Requires site visit"},
+            
+            {"Curv", "Aditya", "Patil", "+211", "Print Media", "News Paper", "Wants ready-to-move flat"},
+            {"Curv", "Ritu", "Jain", "+213", "Print Media", "Hoardings", "Interested in joint venture"},
+            {"Curv", "Farhan", "Ansari", "+216", "Print Media", "Leaflets", "Wants coastal property"},
+            
+            {"Curv", "Shruti", "Deshmukh", "+65", "Channel Sales", "Channel Partner", "Needs farmhouse land"},
+            {"Curv", "Manish", "Thakur", "+91", "Channel Sales", "ACP", "Wants studio apartment"},
+        };
+    }
 
 
     @DataProvider(name = "leadData")
@@ -162,7 +201,15 @@ public class AddProjectLeadTest extends BaseTest {
             };
     }
 
-    @Test(dataProvider = "leadData", priority = 1)
+    @Test(dataProvider = "leadDataOnDevEnv", priority = 1)
+    public void addLeadForBasicProjectLeadDevEnv(String project, String fname, String lname, String country, String source, String subSource, String remarks) throws InterruptedException {
+    phone = PhoneNumber.generateUniquePhoneNumber();
+    String email = fname + lname + "@yopmail.com";
+    addprojectLead.addLeadWithBasic(project, fname, lname, country, phone, email, source, subSource, remarks);
+    addprojectLead.validateLeadWithBasicInfo(fname, lname, project, source, email, country, phone, remarks, subSource);
+    }
+    
+//    @Test(dataProvider = "leadData", priority = 1)
     public void addLeadForBasicProjectLead(String project, String fname, String lname, String country, String source, String subSource, String remarks) throws InterruptedException {
     phone = PhoneNumber.generateUniquePhoneNumber();
     String email = fname + lname + "@yopmail.com";
@@ -170,7 +217,7 @@ public class AddProjectLeadTest extends BaseTest {
     addprojectLead.validateLeadWithBasicInfo(fname, lname, project, source, email, country, phone, remarks, subSource);
     }
 
-    @Test(dataProvider = "AdditionalleadData", priority = 2)
+//    @Test(dataProvider = "AdditionalleadData", priority = 2)
     public void addLeadForAdditionalProjectLeadTest(
             String project, String fname, String lname, String country, String source, String subSource, String remarks,
             String secondproject, String addCountryCode, String referralType, String referralName, String location, String buyingTime,

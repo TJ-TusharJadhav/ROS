@@ -7,8 +7,8 @@ import java.util.Scanner;
 public class SaveAuthState {
   public static void main(String[] args) {
     // Replace these with your app's URLs
-    String loginUrl = "https://admin-core-staging.realestateos.io/login";
-    String afterLoginUrl = "https://admin-core-staging.realestateos.io/users";
+    String loginUrl = "https://admin-core-development.realestateos.io/login";
+    String afterLoginUrl = "https://admin-core-development.realestateos.io/users";
     String storagePath = "auth.json";
 
     try (Playwright playwright = Playwright.create()) {

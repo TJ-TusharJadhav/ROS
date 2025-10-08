@@ -21,6 +21,7 @@ import pages.AddLandLeadPage;
 import pages.AddProjectLeadPage;
 import pages.EditFundLeadPage;
 import pages.EditProjectLeadPage;
+import pages.FundFollowUpsPage;
 import pages.FurnitureFollowUpsPage;
 import pages.LoginPage;
 import pages.ProjectFollowUpPage;
@@ -39,14 +40,15 @@ public class BaseTest {
     protected EditFundLeadPage editfundLead;
     protected ProjectFollowUpPage projectFollowUp;
     protected FurnitureFollowUpsPage FurnitureFollowUps;
+    protected FundFollowUpsPage FundFollowUps;
     protected AddLandLeadPage addLandLead;
     protected AddFurnitureLeadPage addFurnitureLead;
     protected Faker faker;
     
 
     private final String storagePath = "auth.json";
-    private final String devUrl = "https://admin-core-staging.realestateos.io/login";
-    private final String protectedUrl = "https://admin-core-staging.realestateos.io/users";
+    private final String devUrl = "https://admin-core-development.realestateos.io/login";
+    private final String protectedUrl = "https://admin-core-development.realestateos.io/users";
 
     @BeforeSuite
     public void setup() throws InterruptedException, IOException {
@@ -95,6 +97,7 @@ public class BaseTest {
         editfundLead = new EditFundLeadPage(page);
         projectFollowUp = new ProjectFollowUpPage(page);
         FurnitureFollowUps = new FurnitureFollowUpsPage(page);
+        FundFollowUps = new FundFollowUpsPage(page);
         addLandLead = new AddLandLeadPage(page);
         addFurnitureLead= new AddFurnitureLeadPage(page);
         faker = new Faker();
