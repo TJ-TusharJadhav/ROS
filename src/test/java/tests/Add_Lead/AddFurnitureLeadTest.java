@@ -91,6 +91,7 @@ public class AddFurnitureLeadTest extends BaseTest {
                 String source, String subSource, String category, String subCategory, String remarks) throws InterruptedException {
 
             phone = PhoneNumber.generateUniquePhoneNumber();
+            System.out.print("Project lead Phone Number: "+phone);
             String email = fname + lname + "@shivalikgroup.com";
             
             System.out.println(phone);
@@ -113,6 +114,7 @@ public class AddFurnitureLeadTest extends BaseTest {
     ) throws InterruptedException {
        
         phone = PhoneNumber.generateUniquePhoneNumber(); 
+        System.out.print("Project lead Phone Number: "+phone);
         String email = fname + lname + "@shivalikgroup.com"; 
         
         System.out.println(phone);

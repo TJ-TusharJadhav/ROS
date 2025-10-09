@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 public class UseAuthState {
   public static void main(String[] args) throws InterruptedException {
     String storagePath = "auth.json";
-    String protectedPage = "https://admin-core-development.realestateos.io/users"; // a page that requires auth
+    String protectedPage = "https://admin-core-staging.realestateos.io/users"; // a page that requires auth
 
     try (Playwright playwright = Playwright.create()) {
       Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions()

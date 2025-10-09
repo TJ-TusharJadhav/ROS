@@ -16,7 +16,9 @@ tests/Follow_Ups/AddProjectFollowUpTest.class
 playwright/AddLeadFromGoogleSheet.class
 base/BaseTest.class
 pages/EditProjectLeadPage.class
+pages/FundFollowUpsPage.class
 saveOTP/UseAuthState.class
+tests/Follow_Ups/AddFundFollowUpsForTest.class
 utils/RetryListener.class
 tests/Edit_Lead/EditProjectLeadTest.class
 tests/Add_Lead/AddProjectLeadTest.class

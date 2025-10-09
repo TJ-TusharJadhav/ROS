@@ -8,31 +8,22 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.github.javafaker.Faker;
-import com.microsoft.playwright.Browser;
-import com.microsoft.playwright.BrowserContext;
-import com.microsoft.playwright.BrowserType;
-import com.microsoft.playwright.Page;
-import com.microsoft.playwright.Playwright;
+import com.microsoft.playwright.*;
 
 import listeners.ExtentTestNGListener;
-import pages.AddFundLeadPage;
-import pages.AddFurnitureLeadPage;
-import pages.AddLandLeadPage;
-import pages.AddProjectLeadPage;
-import pages.EditFundLeadPage;
-import pages.EditProjectLeadPage;
-import pages.FundFollowUpsPage;
-import pages.FurnitureFollowUpsPage;
-import pages.LoginPage;
-import pages.ProjectFollowUpPage;
+import pages.*;
+import utils.ConfigManager;
 
-//@Listeners(RetryListener.class)
 public class BaseTest {
     protected Playwright playwright;
     protected Browser browser;
     protected Page page;
 
-    // Page objects available to all test classes
+    private final String storagePath = "auth.json";
+    private final String loginUrl = ConfigManager.getLoginUrl();
+    private final String protectedUrl = ConfigManager.getProtectedUrl();
+    private final String environment = ConfigManager.getEnvironment();
+
     protected AddFundLeadPage addfundLead;
     protected AddProjectLeadPage addprojectLead;
     protected LoginPage login;
@@ -44,52 +35,39 @@ public class BaseTest {
     protected AddLandLeadPage addLandLead;
     protected AddFurnitureLeadPage addFurnitureLead;
     protected Faker faker;
-    
-
-    private final String storagePath = "auth.json";
-    private final String devUrl = "https://admin-core-development.realestateos.io/login";
-    private final String protectedUrl = "https://admin-core-development.realestateos.io/users";
 
     @BeforeSuite
     public void setup() throws InterruptedException, IOException {
+        System.out.println("🔧 Running tests on environment: " + environment);
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
-        		.setHeadless(false));
+        browser = playwright.chromium().launch(
+                new BrowserType.LaunchOptions().setHeadless(false));
 
         BrowserContext context;
 
-        //  Check if auth.json already exists
         if (Files.exists(Paths.get(storagePath))) {
-            // Reuse saved session
             Browser.NewContextOptions options = new Browser.NewContextOptions()
                     .setStorageStatePath(Paths.get(storagePath));
             context = browser.newContext(options);
-            System.out.println("==> Loaded saved auth state from " + storagePath);
+            System.out.println("✅ Loaded saved auth state from " + storagePath);
         } else {
-            // No storage state, perform login manually & save session
             context = browser.newContext();
             page = context.newPage();
-            page.navigate(devUrl);
-
-            System.out.println("==> Please complete login manually (with OTP).");
-            System.out.println("==> After login, you will be redirected. Press ENTER in console to continue...");
+            page.navigate(loginUrl);
+            System.out.println("Please complete login manually. Press ENTER when done...");
             System.in.read();
 
-            // Verify login works by visiting a protected page
             page.navigate(protectedUrl);
             page.waitForLoadState();
 
-            // Save storage state for future test runs
             context.storageState(new BrowserContext.StorageStateOptions()
                     .setPath(Paths.get(storagePath)));
-            System.out.println("==> Saved new auth state to " + storagePath);
+            System.out.println("✅ Saved new auth state to " + storagePath);
         }
 
-        // Open page with authenticated context
         page = context.newPage();
         page.navigate(protectedUrl);
 
-        // Instantiate Page Objects
         login = new LoginPage(page);
         addfundLead = new AddFundLeadPage(page);
         addprojectLead = new AddProjectLeadPage(page);
@@ -99,11 +77,12 @@ public class BaseTest {
         FurnitureFollowUps = new FurnitureFollowUpsPage(page);
         FundFollowUps = new FundFollowUpsPage(page);
         addLandLead = new AddLandLeadPage(page);
-        addFurnitureLead= new AddFurnitureLeadPage(page);
+        addFurnitureLead = new AddFurnitureLeadPage(page);
         faker = new Faker();
         ExtentTestNGListener.page = page;
     }
-	@AfterSuite
+
+    @AfterSuite
     public void tearDown() {
         browser.close();
         playwright.close();

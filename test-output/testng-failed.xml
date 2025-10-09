@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.Follow_Ups.AddFundFollowUpsForTest">
+      <class name="tests.Add_Lead.AddFundLeadTest">
         <methods>
           <include name="setup"/>
-          <include name="addFollowUpTestWithTextfield"/>
+          <include name="addLeadForBasicFundLead"/>
           <include name="tearDown"/>
           <include name="takeScreenshot"/>
-          <include name="beforemethod"/>
         </methods>
-      </class> <!-- tests.Follow_Ups.AddFundFollowUpsForTest -->
+      </class> <!-- tests.Add_Lead.AddFundLeadTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
