@@ -28,7 +28,7 @@ public class ScreenshotUtil {
     	        try {
     	            if (page != null) {
     	                page.screenshot(new Page.ScreenshotOptions()
-    	                        .setPath(Paths.get("screenshots/"+today+"/" + fileName))
+    	                        .setPath(Paths.get("screenshots/"+today+"/"+result.getName()+"/" + fileName))
     	                        .setFullPage(true)     // 👈 safer than true
     	                        .setTimeout(60000));    // 👈 shorter timeout
     	                System.out.println("❌ Screenshot saved: " + fileName);

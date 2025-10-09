@@ -167,7 +167,7 @@ public class AddProjectLeadTest extends BaseTest {
     @Test(dataProvider = "leadData", priority = 1)
     public void addLeadForBasicProjectLead(String project, String fname, String lname, String country, String source, String subSource, String remarks) throws InterruptedException {
     phone = PhoneNumber.generateUniquePhoneNumber();
-    System.out.print("Project lead Phone Number: "+phone);
+    System.out.println("Project lead Phone Number: "+phone);
     String email = fname + lname + "@yopmail.com";
     addprojectLead.addLeadWithBasic(project, fname, lname, country, phone, email, source, subSource, remarks);
     addprojectLead.validateLeadWithBasicInfo(fname, lname, project, source, email, country, phone, remarks, subSource);
@@ -180,7 +180,7 @@ public class AddProjectLeadTest extends BaseTest {
             String priority, String budget, String area, String projectCat, String unitType, String leadType) throws InterruptedException {
        
         phone = PhoneNumber.generateUniquePhoneNumber();
-        System.out.print("Project lead Phone Number: "+phone);
+        System.out.println("Project lead Phone Number: "+phone);
         String additionalPhone = PhoneNumber.generateUniquePhoneNumber();
         String email = fname + lname + "@yopmail.com";
 

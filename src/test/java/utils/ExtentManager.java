@@ -24,7 +24,7 @@ public class ExtentManager {
         String today = java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ofPattern("dd-MM-yyyy"));
 
         String reportName = suiteName + "_" + timestamp + ".html";
-        String reportPath = System.getProperty("user.dir") + "/reports/" +today+"/"+ reportName;
+        String reportPath = System.getProperty("user.dir") + "/reports/" +today+"/"+ suiteName+ "/"+reportName;
 
         ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
         spark.config().setTheme(Theme.STANDARD);

@@ -92,6 +92,7 @@ public class BaseTest {
         addFurnitureLead = new AddFurnitureLeadPage(page);
         faker = new Faker();
         ExtentTestNGListener.page = page;
+        
     }
 
     @AfterSuite
