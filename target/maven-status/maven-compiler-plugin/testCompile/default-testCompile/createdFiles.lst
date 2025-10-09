@@ -11,6 +11,7 @@ pages/AddFurnitureLeadPage.class
 listeners/ExtentTestNGListener.class
 utils/PhoneNumber.class
 tests/Add_Lead/AddFundLeadTest.class
+utils/ConfigManager.class
 tests/Add_Lead/AddLandLeadTest.class
 tests/Follow_Ups/AddProjectFollowUpTest.class
 playwright/AddLeadFromGoogleSheet.class

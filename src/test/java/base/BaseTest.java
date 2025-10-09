@@ -19,11 +19,14 @@ public class BaseTest {
     protected Browser browser;
     protected Page page;
 
-    private final String storagePath = "auth.json";
+    // AuthState per environment
+    private final String environment = ConfigManager.getEnvironment();
+    private final String storagePath = "auth-" + environment + ".json";
+
     private final String loginUrl = ConfigManager.getLoginUrl();
     private final String protectedUrl = ConfigManager.getProtectedUrl();
-    private final String environment = ConfigManager.getEnvironment();
 
+    // Page Objects
     protected AddFundLeadPage addfundLead;
     protected AddProjectLeadPage addprojectLead;
     protected LoginPage login;
@@ -39,6 +42,7 @@ public class BaseTest {
     @BeforeSuite
     public void setup() throws InterruptedException, IOException {
         System.out.println("🔧 Running tests on environment: " + environment);
+
         playwright = Playwright.create();
         browser = playwright.chromium().launch(
                 new BrowserType.LaunchOptions().setHeadless(false));
@@ -46,28 +50,36 @@ public class BaseTest {
         BrowserContext context;
 
         if (Files.exists(Paths.get(storagePath))) {
+            // ✅ Reuse saved auth state
             Browser.NewContextOptions options = new Browser.NewContextOptions()
                     .setStorageStatePath(Paths.get(storagePath));
             context = browser.newContext(options);
             System.out.println("✅ Loaded saved auth state from " + storagePath);
         } else {
+            // No auth state → manual login required
             context = browser.newContext();
             page = context.newPage();
             page.navigate(loginUrl);
-            System.out.println("Please complete login manually. Press ENTER when done...");
-            System.in.read();
 
+            System.out.println("Please complete login manually (enter OTP if prompted).");
+            System.out.println("Press ENTER here once login is successful...");
+            System.in.read();  // wait for user
+
+            // Navigate to protected page to confirm login
             page.navigate(protectedUrl);
             page.waitForLoadState();
 
+            // Save AuthState for future runs
             context.storageState(new BrowserContext.StorageStateOptions()
                     .setPath(Paths.get(storagePath)));
             System.out.println("✅ Saved new auth state to " + storagePath);
         }
 
+        // Open a new page in the authenticated context
         page = context.newPage();
         page.navigate(protectedUrl);
 
+        // Initialize page objects
         login = new LoginPage(page);
         addfundLead = new AddFundLeadPage(page);
         addprojectLead = new AddProjectLeadPage(page);
