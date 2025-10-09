@@ -13,6 +13,7 @@ import com.microsoft.playwright.*;
 import listeners.ExtentTestNGListener;
 import pages.*;
 import utils.ConfigManager;
+import utils.ExtentManager;
 
 public class BaseTest {
     protected Playwright playwright;
@@ -91,12 +92,12 @@ public class BaseTest {
         addLandLead = new AddLandLeadPage(page);
         addFurnitureLead = new AddFurnitureLeadPage(page);
         faker = new Faker();
-        ExtentTestNGListener.page = page;
     }
 
     @AfterSuite
     public void tearDown() {
         browser.close();
         playwright.close();
+        
     }
 }

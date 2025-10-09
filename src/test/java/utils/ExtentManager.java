@@ -4,43 +4,42 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ExtentManager {
+
     private static ExtentReports extent;
 
-    // Always returns single instance
-    public static ExtentReports getInstance(String suiteName) {
+    public static ExtentReports getInstance() {
         if (extent == null) {
-            createInstance(suiteName);
+            createInstance();
         }
         return extent;
     }
 
-    public static ExtentReports createInstance(String suiteName) {
-        // Timestamped file name (unique per run)
-        String timestamp = new SimpleDateFormat("yyyy.MM.dd_HH.mm.ss").format(new Date());
-        String today = java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+    private static synchronized ExtentReports createInstance() {
+        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        String reportDir = System.getProperty("user.dir") + "/test-output";
+        String reportPath = reportDir + "/ExtentReport_" + timeStamp + ".html";
 
-        String reportName = suiteName + "_" + timestamp + ".html";
-        String reportPath = System.getProperty("user.dir") + "/reports/" +today+"/"+ suiteName+ "/"+reportName;
+        // Ensure directory exists (important for Jenkins)
+        new File(reportDir).mkdirs();
 
         ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
+        spark.config().setDocumentTitle("Automation Test Report");
+        spark.config().setReportName("Automation Execution Report");
         spark.config().setTheme(Theme.STANDARD);
-        spark.config().setDocumentTitle("Automation Suite Report");
-        spark.config().setReportName("Test Execution Report: " + suiteName);
 
         extent = new ExtentReports();
         extent.attachReporter(spark);
 
-        // Add system info
-        extent.setSystemInfo("Company Name", "Shivalik Group");
-        extent.setSystemInfo("Project Name", "ROS");
-        extent.setSystemInfo("Tester Name", "Tushar Jadhav");
         extent.setSystemInfo("OS", System.getProperty("os.name"));
         extent.setSystemInfo("Java Version", System.getProperty("java.version"));
+        extent.setSystemInfo("User", System.getProperty("user.name"));
 
+        System.out.println("✅ Extent Report will be generated at: " + reportPath);
         return extent;
     }
 }
