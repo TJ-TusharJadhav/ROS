@@ -17,11 +17,12 @@ public class ProjectFollowUpPage {
 	private String actualPhone;
 	
 	private String fullDetailsText = "(//p[@class='text-gray-500 mb-3 text-base break-words'])[1]";
+    private String GetStatus ="(//span[@class='px-2 py-1 text-xs font-medium rounded-full bg-green-100 text-green-700'])[1]";
 	private String dateField = "//input[@class='MuiPickersInputBase-input MuiPickersOutlinedInput-input css-1ftw2zb']";
 	
 //	private String datetime = LocalDateTime.now().plusMinutes(10).format(DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm a"));
-	private String Enterdatetime = "07/10/2025 10:30 PM";
-	private String Verifydatetime = "Oct 7, 2025, 10:30 PM";
+	private String Enterdatetime = "09/10/2025 10:30 PM";
+	private String Verifydatetime = "Oct 9, 2025, 10:30 PM";
     public ProjectFollowUpPage(Page page) {
         this.page = page;
     }
@@ -36,7 +37,7 @@ public class ProjectFollowUpPage {
     
     public void addfollowUP(String Stage, String SubStage, String Remark, String ExpectedFilter) throws InterruptedException, ParseException {
     	actualPhone = page.textContent(fullDetailsText).trim();
-    	System.out.println("actualPhone: "+actualPhone);
+        System.out.println("actualPhone: "+actualPhone);
     	page.waitForSelector("button:has-text('Add Lead Follow up')", 
     			new Page.WaitForSelectorOptions().setState(WaitForSelectorState.VISIBLE));
     	page.click("button:has-text('Add Lead Follow up')");
@@ -75,7 +76,11 @@ public class ProjectFollowUpPage {
        Locator fullDetails = page.locator(fullDetailsText);
         if (!fullDetails.isVisible()) {
             fullDetails.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(5000));
+            
         }
+        String actualStatus1 = page.textContent("span:has-text('"+Stage+"')").trim();
+            System.out.println("Actual Status: " + actualStatus1);
+            assert actualStatus1.equals(Stage): "Follow Up Stage mismatch. Expected: "+ Stage + ", Got: " + actualStatus1;
         fullDetails.click();
         Thread.sleep(1000);
 
@@ -179,6 +184,9 @@ public class ProjectFollowUpPage {
         if (!fullDetails.isVisible()) {
             fullDetails.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(5000));
         }
+        String actualStatus1 = page.textContent("span:has-text('"+Stage+"')").trim();
+            System.out.println("Actual Status: " + actualStatus1);
+            assert actualStatus1.equals(Stage): "Follow Up Stage mismatch. Expected: "+ Stage + ", Got: " + actualStatus1;
         fullDetails.click();
         Thread.sleep(500);
 
@@ -285,6 +293,9 @@ public class ProjectFollowUpPage {
         if (!fullDetails.isVisible()) {
             fullDetails.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(5000));
         }
+        String actualStatus1 = page.textContent("span:has-text('"+Stage+"')").trim();
+            System.out.println("Actual Status: " + actualStatus1);
+            assert actualStatus1.equals(Stage): "Follow Up Stage mismatch. Expected: "+ Stage + ", Got: " + actualStatus1;
         fullDetails.click();
         Thread.sleep(500);
 
@@ -407,6 +418,9 @@ public class ProjectFollowUpPage {
         if (!fullDetails.isVisible()) {
             fullDetails.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(5000));
         }
+        String actualStatus1 = page.textContent("span:has-text('"+Stage+"')").trim();
+            System.out.println("Actual Status: " + actualStatus1);
+            assert actualStatus1.equals(Stage): "Follow Up Stage mismatch. Expected: "+ Stage + ", Got: " + actualStatus1;
         fullDetails.click();
         Thread.sleep(500);
 

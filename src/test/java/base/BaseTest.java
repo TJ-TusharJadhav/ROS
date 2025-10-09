@@ -41,7 +41,7 @@ public class BaseTest {
 
     @BeforeSuite
     public void setup() throws InterruptedException, IOException {
-        System.out.println("🔧 Running tests on environment: " + environment);
+        System.out.println("Running tests on environment: " + environment);
 
         playwright = Playwright.create();
         browser = playwright.chromium().launch(
@@ -50,11 +50,11 @@ public class BaseTest {
         BrowserContext context;
 
         if (Files.exists(Paths.get(storagePath))) {
-            // ✅ Reuse saved auth state
+            // Reuse saved auth state
             Browser.NewContextOptions options = new Browser.NewContextOptions()
                     .setStorageStatePath(Paths.get(storagePath));
             context = browser.newContext(options);
-            System.out.println("✅ Loaded saved auth state from " + storagePath);
+            System.out.println("Loaded saved auth state from " + storagePath);
         } else {
             // No auth state → manual login required
             context = browser.newContext();
@@ -92,7 +92,6 @@ public class BaseTest {
         addFurnitureLead = new AddFurnitureLeadPage(page);
         faker = new Faker();
         ExtentTestNGListener.page = page;
-        
     }
 
     @AfterSuite

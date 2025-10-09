@@ -26,7 +26,8 @@ public class FurnitureFollowUpsPage {
     private String ChildStageInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[5]";
 
 //    private String datetime = LocalDateTime.now().plusMinutes(10).format(DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm a"));
-    private String datetime = "06/10/2025 10:30 PM";
+    private String Enterdatetime = "09/10/2025 10:30 PM";
+    private String Verifydatetime = "Oct 6, 2025, 10:30 PM";
     
     public FurnitureFollowUpsPage(Page page) {
         this.page = page;
@@ -67,7 +68,7 @@ public class FurnitureFollowUpsPage {
         Thread.sleep(1000);
 
         
-        page.fill(dateField, datetime);
+        page.fill(dateField, Enterdatetime);
         
         page.fill(remark, Remark);
 
@@ -114,8 +115,8 @@ public class FurnitureFollowUpsPage {
         softAssert.assertEquals(actualComments, Remark, "Remark mismatch");
         softAssert.assertEquals(actualSubStage, SubStage, "SubStage mismatch");
         
-        softAssert.assertEquals(actualDateTime, "Oct 6, 2025, 10:30 PM",
-                "FollowUp date and time mismatch. Expected: " + "Oct 6, 2025, 10:30 PM" + ", Got: " + actualDateTime);
+        softAssert.assertEquals(actualDateTime, Verifydatetime,
+                "FollowUp date and time mismatch. Expected: " + Verifydatetime + ", Got: " + actualDateTime);
 
         
 //        softAssert.assertEquals(actualDateTime, formatDate(datetime), "DateTime mismatch");
