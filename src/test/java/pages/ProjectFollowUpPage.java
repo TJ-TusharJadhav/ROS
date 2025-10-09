@@ -17,7 +17,6 @@ public class ProjectFollowUpPage {
 	private String actualPhone;
 	
 	private String fullDetailsText = "(//p[@class='text-gray-500 mb-3 text-base break-words'])[1]";
-    private String GetStatus ="(//span[@class='px-2 py-1 text-xs font-medium rounded-full bg-green-100 text-green-700'])[1]";
 	private String dateField = "//input[@class='MuiPickersInputBase-input MuiPickersOutlinedInput-input css-1ftw2zb']";
 	
 //	private String datetime = LocalDateTime.now().plusMinutes(10).format(DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm a"));

@@ -1,6 +1,6 @@
 # Ignore reports and screenshots
-reports/
-screenshots/
+# reports/
+# screenshots/
 
 # Common build/output folders
 target/
