@@ -13,7 +13,8 @@ public class ExtentManager {
         String today = java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ofPattern("dd-MM-yyyy"));
 
         String reportName = className + "_" + methodName + "_" + timeStamp + ".html";
-        String reportPath = System.getProperty("user.dir") + "/reports/" + today + "/" + suiteName + "/" + className + "/" + reportName;
+        String localPath = "/Users/tusharjadhav/eclipse-workspace/playwright";
+        String reportPath = localPath + "/reports/" + today + "/" + suiteName + "/" + className + "/" + reportName;
 
         ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
         spark.config().setDocumentTitle("Automation Test Report");
