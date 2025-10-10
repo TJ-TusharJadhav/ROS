@@ -16,15 +16,15 @@ public class ExtentTestNGListener implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-        // String suiteName = result.getTestContext().getSuite().getName();
+        String suiteName = result.getTestContext().getSuite().getName();
         String className = result.getTestClass().getRealClass().getSimpleName();
         String methodName = result.getMethod().getMethodName();
 
         // Unique key for each test method
-        String key = className + "_" + methodName;
+        String key = suiteName + "_" + className + "_" + methodName;
 
         // Create report only once per method
-        reportMap.putIfAbsent(key, ExtentManager.createInstance( className, methodName));
+        reportMap.putIfAbsent(key, ExtentManager.createInstance(suiteName, className, methodName));
 
         ExtentReports extent = reportMap.get(key);
         ExtentTest test = extent.createTest(methodName + " - DataSet: " + getDataSetLabel(result));
