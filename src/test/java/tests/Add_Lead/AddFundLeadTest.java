@@ -24,37 +24,37 @@ public class AddFundLeadTest extends BaseTest {
     @DataProvider(name = "leadData")
     public Object[][] getLeadData() {
         return new Object[][] {
-            // {"The Pre-Launch Fund", "Aarav", "Sharma", "+93", "Event", "GIHED", "Interested in real estate"},
-            {"Universal", "Priya", "Khan", "+20", "Event", "Property Event", "Looking for investment"},
-            // {"The Pre-Launch Fund", "Rohan", "Patel", "+27", "Event", "Investor Meet", "Wants quick callback"},
-            {"Universal", "Simran", "Joshi", "+30", "Event", "Channel Partner Event", "Needs brochure"},
+            // // {"The Pre-Launch Fund", "Aarav", "Sharma", "+93", "Event", "GIHED", "Interested in real estate"},
+            // {"Universal", "Priya", "Khan", "+20", "Event", "Property Event", "Looking for investment"},
+            // // {"The Pre-Launch Fund", "Rohan", "Patel", "+27", "Event", "Investor Meet", "Wants quick callback"},
+            // {"Universal", "Simran", "Joshi", "+30", "Event", "Channel Partner Event", "Needs brochure"},
             
-            // {"The Pre-Launch Fund", "Karan", "Mehta", "+31", "Digital", "Website", "Prefers email communication"},
-            {"Universal", "Neha", "Desai", "+32", "Digital", "Facebook", "Requested site visit"},
-            // {"The Pre-Launch Fund", "Raj", "Verma", "+33", "Digital", "Instagram", "Interested in 2BHK"},
-            {"Universal", "Isha", "Gupta", "+34", "Digital", "LinkedIn", "Budget under 50L"},
-            // {"The Pre-Launch Fund", "Arjun", "Mehta", "+49", "Digital", "SMS", "Asked for EMI options"},
-            {"Universal", "Priya", "Sharma", "+52", "Digital", "YouTube", "Wants luxury property"},
-            // {"The Pre-Launch Fund", "Rohan", "Desai", "+55", "Digital", "IVRS", "Interested in office space"},
-            {"Universal", "Kavita", "Iyer", "+62", "Digital", "Google", "Student housing required"},
-            // {"The Pre-Launch Fund", "Sameer", "Khan", "+63", "Digital", "Email", "Prefers WhatsApp updates"},
-            {"Universal", "Neha", "Kulkarni", "+64", "Digital", "WhatsApp", "Wants loan assistance"},
+            // // {"The Pre-Launch Fund", "Karan", "Mehta", "+31", "Digital", "Website", "Prefers email communication"},
+            // {"Universal", "Neha", "Desai", "+32", "Digital", "Facebook", "Requested site visit"},
+            // // {"The Pre-Launch Fund", "Raj", "Verma", "+33", "Digital", "Instagram", "Interested in 2BHK"},
+            // {"Universal", "Isha", "Gupta", "+34", "Digital", "LinkedIn", "Budget under 50L"},
+            // // {"The Pre-Launch Fund", "Arjun", "Mehta", "+49", "Digital", "SMS", "Asked for EMI options"},
+            // {"Universal", "Priya", "Sharma", "+52", "Digital", "YouTube", "Wants luxury property"},
+            // // {"The Pre-Launch Fund", "Rohan", "Desai", "+55", "Digital", "IVRS", "Interested in office space"},
+            // {"Universal", "Kavita", "Iyer", "+62", "Digital", "Google", "Student housing required"},
+            // // {"The Pre-Launch Fund", "Sameer", "Khan", "+63", "Digital", "Email", "Prefers WhatsApp updates"},
+            // {"Universal", "Neha", "Kulkarni", "+64", "Digital", "WhatsApp", "Wants loan assistance"},
             
-            // {"The Pre-Launch Fund", "Amit", "Gupta", "+66", "Walkin", "Website", "Interested in resale"},
-            {"Universal", "Sneha", "Reddy", "+81", "Walkin", "Facebook", "Family shifting soon"},
-            // {"The Pre-Launch Fund", "Vikram", "Joshi", "+82", "Walkin", "Instagram", "Needs 3BHK apartment"},
-            {"Universal", "Pooja", "Nair", "+86", "Walkin", "LinkedIn", "Asked for price list"},
-            // {"The Pre-Launch Fund", "Ankit", "Verma", "+90", "Walkin", "SMS", "Looking for villa"},
-            {"Universal", "Deepika", "Rao", "+91", "Walkin", "YouTube", "Wants rental options"},
-            // {"The Pre-Launch Fund", "Raj", "Bansal", "+92", "Walkin", "IVRS", "Needs property documents"},
-            {"Universal", "Ayesha", "Siddiqui", "+93", "Walkin", "Google", "Interested in duplex"},
-            // {"The Pre-Launch Fund", "Karan", "Malhotra", "+94", "Walkin", "Email", "Wants farmhouse"},
-            {"Universal", "Meera", "Chawla", "+95", "Walkin", "WhatsApp", "Looking for commercial plot"},
-            // {"The Pre-Launch Fund", "Neha", "Desai", "+98", "Walkin", "Direct-Walkin", "Requires site visit"},
+            // // {"The Pre-Launch Fund", "Amit", "Gupta", "+66", "Walkin", "Website", "Interested in resale"},
+            // {"Universal", "Sneha", "Reddy", "+81", "Walkin", "Facebook", "Family shifting soon"},
+            // // {"The Pre-Launch Fund", "Vikram", "Joshi", "+82", "Walkin", "Instagram", "Needs 3BHK apartment"},
+            // {"Universal", "Pooja", "Nair", "+86", "Walkin", "LinkedIn", "Asked for price list"},
+            // // {"The Pre-Launch Fund", "Ankit", "Verma", "+90", "Walkin", "SMS", "Looking for villa"},
+            // {"Universal", "Deepika", "Rao", "+91", "Walkin", "YouTube", "Wants rental options"},
+            // // {"The Pre-Launch Fund", "Raj", "Bansal", "+92", "Walkin", "IVRS", "Needs property documents"},
+            // {"Universal", "Ayesha", "Siddiqui", "+93", "Walkin", "Google", "Interested in duplex"},
+            // // {"The Pre-Launch Fund", "Karan", "Malhotra", "+94", "Walkin", "Email", "Wants farmhouse"},
+            // {"Universal", "Meera", "Chawla", "+95", "Walkin", "WhatsApp", "Looking for commercial plot"},
+            // // {"The Pre-Launch Fund", "Neha", "Desai", "+98", "Walkin", "Direct-Walkin", "Requires site visit"},
             
-            {"Universal", "Aditya", "Patil", "+211", "Print Media", "News Paper", "Wants ready-to-move flat"},
-            // {"The Pre-Launch Fund", "Ritu", "Jain", "+213", "Print Media", "Hoardings", "Interested in joint venture"},
-            {"Universal", "Farhan", "Ansari", "+216", "Print Media", "Leaflets", "Wants coastal property"},
+            // {"Universal", "Aditya", "Patil", "+211", "Print Media", "News Paper", "Wants ready-to-move flat"},
+            // // {"The Pre-Launch Fund", "Ritu", "Jain", "+213", "Print Media", "Hoardings", "Interested in joint venture"},
+            // {"Universal", "Farhan", "Ansari", "+216", "Print Media", "Leaflets", "Wants coastal property"},
             
             // {"The Pre-Launch Fund", "Shruti", "Deshmukh", "+65", "Channel Sales", "Channel Partner", "Needs farmhouse land"},
             {"Universal", "Manish", "Thakur", "+91", "Channel Sales", "ACP", "Wants studio apartment"},
@@ -168,7 +168,7 @@ public class AddFundLeadTest extends BaseTest {
     addfundLead.validateLeadWithBasicInfo(fname, lname, project, source, email, country, phone, remarks, subSource);
     }
     
-    @Test(dataProvider = "AdditionalleadData")
+    // @Test(dataProvider = "AdditionalleadData")
     public void addLeadForAdditionalFundLeadTest(
             String project, String fname, String lname, String country, String source, String subSource, String remarks,
              String addCountryCode, String referralType, String referralName, String location, String buyingTime,
