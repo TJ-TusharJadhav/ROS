@@ -5,63 +5,39 @@ import com.aventstack.extentreports.ExtentTest;
 import org.testng.*;
 import utils.ExtentManager;
 
-public class ExtentTestNGListener implements ITestListener, ISuiteListener {
+public class ExtentTestNGListener implements ITestListener {
 
-    private static ExtentReports extent;
-    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
-    private long suiteStartTime;
-
-    @Override
-    public void onStart(ISuite suite) {
-        extent = ExtentManager.getInstance();
-        suiteStartTime = System.currentTimeMillis();
-    }
-
-    @Override
-    public void onFinish(ISuite suite) {
-        long totalDuration = (System.currentTimeMillis() - suiteStartTime) / 1000;
-        long hours = totalDuration / 3600;
-        long minutes = (totalDuration % 3600) / 60;
-        long seconds = totalDuration % 60;
-
-        String durationFormatted =
-                (hours > 0 ? hours + " hr " : "") +
-                (minutes > 0 ? minutes + " min " : "") +
-                seconds + " sec";
-
-        extent.setSystemInfo("Total Duration of All Test Cases", durationFormatted);
-        extent.flush();
-
-        System.out.println("✅ Extent report generated successfully after suite finish.");
-    }
+    private static ThreadLocal<ExtentReports> extentThread = new ThreadLocal<>();
+    private static ThreadLocal<ExtentTest> testThread = new ThreadLocal<>();
 
     @Override
     public void onTestStart(ITestResult result) {
-        ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName());
-        test.set(extentTest);
+        String suiteName = result.getTestContext().getSuite().getName();
+        String className = result.getTestClass().getRealClass().getSimpleName();
+        String methodName = result.getMethod().getMethodName();
+
+        ExtentReports extent = ExtentManager.createInstance(suiteName, className, methodName);
+        extentThread.set(extent);
+
+        ExtentTest test = extent.createTest(className + " - " + methodName);
+        testThread.set(test);
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        test.get().pass("Test passed");
+        testThread.get().pass("✅ Test passed");
+        extentThread.get().flush();
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
-        test.get().fail(result.getThrowable());
+        testThread.get().fail(result.getThrowable());
+        extentThread.get().flush();
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        test.get().skip(result.getThrowable());
-    }
-
-    // Ensures report flush even when suite events don't fire (single-class runs)
-    @Override
-    public void onFinish(ITestContext context) {
-        if (extent != null) {
-            extent.flush();
-            System.out.println("⚙️ Extent report flushed at test context finish.");
-        }
+        testThread.get().skip(result.getThrowable());
+        extentThread.get().flush();
     }
 }
