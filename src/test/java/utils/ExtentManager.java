@@ -8,13 +8,13 @@ import java.util.Date;
 
 public class ExtentManager {
 
-    public static ExtentReports createInstance(String suiteName, String className, String methodName) {
+    public static ExtentReports createInstance( String className, String methodName) {
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         String today = java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ofPattern("dd-MM-yyyy"));
 
         String reportName = className + "_" + methodName + "_" + timeStamp + ".html";
         String localPath = "/Users/tusharjadhav/eclipse-workspace/playwright";
-        String reportPath = localPath + "/reports/" + today + "/" + suiteName + "/" + className + "/" + reportName;
+        String reportPath = localPath + "/reports/" + today + "/" + className + "/" + reportName;
 
         ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
         spark.config().setDocumentTitle("Automation Test Report");
