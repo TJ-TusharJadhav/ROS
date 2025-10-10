@@ -12,9 +12,8 @@ public class ExtentManager {
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         String today = java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ofPattern("dd-MM-yyyy"));
 
-        // Build report path
         String reportName = className + "_" + methodName + "_" + timeStamp + ".html";
-        String reportPath = System.getProperty("user.dir") + "/reports/" + today + "/" + className + "/" + reportName;
+        String reportPath = System.getProperty("user.dir") + "/reports/" + today + "/" + suiteName + "/" + className + "/" + reportName;
 
         ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
         spark.config().setDocumentTitle("Automation Test Report");
@@ -24,7 +23,6 @@ public class ExtentManager {
         ExtentReports extent = new ExtentReports();
         extent.attachReporter(spark);
 
-        // System Info
         extent.setSystemInfo("Company Name", "Shivalik Group");
         extent.setSystemInfo("Project Name", "ROS");
         extent.setSystemInfo("Tester Name", "Tushar Jadhav");
