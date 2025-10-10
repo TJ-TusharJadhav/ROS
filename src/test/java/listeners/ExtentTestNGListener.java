@@ -10,23 +10,23 @@ import java.util.Map;
 
 public class ExtentTestNGListener implements ITestListener {
 
-    // Cache reports per (class + method)
+    // Cache reports per class + method
     private static Map<String, ExtentReports> reportMap = new ConcurrentHashMap<>();
     private static ThreadLocal<ExtentTest> testThread = new ThreadLocal<>();
 
     @Override
     public void onTestStart(ITestResult result) {
-        String suiteName = result.getTestContext().getSuite().getName();
         String className = result.getTestClass().getRealClass().getSimpleName();
         String methodName = result.getMethod().getMethodName();
 
-        // Unique key for each test method
-        String key = suiteName + "_" + className + "_" + methodName;
+        // Unique key per test method
+        String key = className + "_" + methodName;
 
         // Create report only once per method
-        reportMap.putIfAbsent(key, ExtentManager.createInstance(suiteName, className, methodName));
+        reportMap.putIfAbsent(key, ExtentManager.createInstance(className, methodName));
 
         ExtentReports extent = reportMap.get(key);
+
         ExtentTest test = extent.createTest(methodName + " - DataSet: " + getDataSetLabel(result));
         testThread.set(test);
     }
@@ -34,7 +34,7 @@ public class ExtentTestNGListener implements ITestListener {
     private String getDataSetLabel(ITestResult result) {
         Object[] params = result.getParameters();
         if (params == null || params.length == 0) return "Default";
-        return String.join("_", 
+        return String.join("_",
             java.util.Arrays.stream(params)
                 .map(String::valueOf)
                 .toArray(String[]::new)
@@ -60,11 +60,22 @@ public class ExtentTestNGListener implements ITestListener {
     }
 
     private void flushReport(ITestResult result) {
-        String suiteName = result.getTestContext().getSuite().getName();
-        String className = result.getTestClass().getRealClass().getSimpleName();
-        String methodName = result.getMethod().getMethodName();
+    String className = result.getTestClass().getRealClass().getSimpleName();
+    String methodName = result.getMethod().getMethodName();
+    String key = className + "_" + methodName;
 
-        String key = suiteName + "_" + className + "_" + methodName;
-        reportMap.get(key).flush();
-    }
+    // Calculate duration in seconds
+    long durationMillis = result.getEndMillis() - result.getStartMillis();
+    long seconds = durationMillis / 1000;
+    long minutes = seconds / 60;
+    seconds = seconds % 60;
+    String formattedDuration = minutes + " min " + seconds + " sec";
+
+    // Add test duration to system info (one-time per report)
+    ExtentReports extent = reportMap.get(key);
+    extent.setSystemInfo("Test Duration", formattedDuration);
+
+    reportMap.get(key).flush();
+}
+
 }

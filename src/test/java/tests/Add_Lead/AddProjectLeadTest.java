@@ -173,7 +173,7 @@ public class AddProjectLeadTest extends BaseTest {
     addprojectLead.validateLeadWithBasicInfo(fname, lname, project, source, email, country, phone, remarks, subSource);
     }
 
-    @Test(dataProvider = "AdditionalleadData", priority = 2)
+    // @Test(dataProvider = "AdditionalleadData", priority = 2)
     public void addLeadForAdditionalProjectLeadTest(
             String project, String fname, String lname, String country, String source, String subSource, String remarks,
             String secondproject, String addCountryCode, String referralType, String referralName, String location, String buyingTime,

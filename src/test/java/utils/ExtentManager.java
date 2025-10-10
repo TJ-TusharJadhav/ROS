@@ -8,12 +8,13 @@ import java.util.Date;
 
 public class ExtentManager {
 
-    public static ExtentReports createInstance(String suiteName, String className, String methodName) {
+    public static ExtentReports createInstance(String className, String methodName) {
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         String today = java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ofPattern("dd-MM-yyyy"));
 
-        String reportName = className + "_" + methodName + "_" + timeStamp + ".html";
-        String reportPath = System.getProperty("user.dir") + "/reports/" + today + "/" + suiteName + "/" + className + "/" + reportName;
+        // Report path: /reports/<date>/<class>/<class>_<method>_<timestamp>.html
+        String reportName = methodName + "_" + timeStamp + ".html";
+        String reportPath = System.getProperty("user.dir") + "/reports/" + today + "/" + className + "/" + reportName;
 
         ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
         spark.config().setDocumentTitle("Automation Test Report");
@@ -23,6 +24,7 @@ public class ExtentManager {
         ExtentReports extent = new ExtentReports();
         extent.attachReporter(spark);
 
+        // System Info
         extent.setSystemInfo("Company Name", "Shivalik Group");
         extent.setSystemInfo("Project Name", "ROS");
         extent.setSystemInfo("Tester Name", "Tushar Jadhav");
