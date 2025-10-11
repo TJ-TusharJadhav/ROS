@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import base.BaseTest;
 import listeners.ExtentTestNGListener;
+import utils.CountryCodeMapper;
 import utils.PhoneNumber;
 import utils.ScreenshotUtil;
 @Listeners(ExtentTestNGListener.class)
@@ -166,8 +167,13 @@ public class AddProjectLeadTest extends BaseTest {
     
     @Test(dataProvider = "leadData", priority = 1)
     public void addLeadForBasicProjectLead(String project, String fname, String lname, String country, String source, String subSource, String remarks) throws InterruptedException {
-    phone = PhoneNumber.generateUniquePhoneNumber();
-    System.out.println("Project lead Phone Number: "+phone);
+    String countryCode = CountryCodeMapper.getCountryCode(country);
+
+    // Generate phone number based on country code
+    String phone = PhoneNumber.generateUniquePhoneNumber(countryCode);
+
+    System.out.println("Fund lead Phone Number (" + countryCode + "): " + phone);
+
     String email = fname + lname + "@yopmail.com";
     addprojectLead.addLeadWithBasic(project, fname, lname, country, phone, email, source, subSource, remarks);
     addprojectLead.validateLeadWithBasicInfo(fname, lname, project, source, email, country, phone, remarks, subSource);
@@ -179,10 +185,15 @@ public class AddProjectLeadTest extends BaseTest {
             String secondproject, String addCountryCode, String referralType, String referralName, String location, String buyingTime,
             String priority, String budget, String area, String projectCat, String unitType, String leadType) throws InterruptedException {
        
-        phone = PhoneNumber.generateUniquePhoneNumber();
-        System.out.println("Project lead Phone Number: "+phone);
-        String additionalPhone = PhoneNumber.generateUniquePhoneNumber();
-        String email = fname + lname + "@yopmail.com";
+        String countryCode = CountryCodeMapper.getCountryCode(country);
+
+    // Generate phone number based on country code
+    String phone = PhoneNumber.generateUniquePhoneNumber(countryCode);
+    String additionalPhone = PhoneNumber.generateUniquePhoneNumber(countryCode);
+
+    System.out.println("Fund lead Phone Number (" + countryCode + "): " + phone);
+
+    String email = fname + lname + "@yopmail.com";
 
         addprojectLead.addLeadWithAdditional(
             project, fname, lname, country, phone, email, source, subSource, remarks,

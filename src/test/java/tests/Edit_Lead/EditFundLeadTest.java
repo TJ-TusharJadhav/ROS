@@ -99,7 +99,7 @@ public Object[][] AdditionalleadData() throws Exception {
              String addCountryCode, String referralType, String referralName, String location, String buyingTime,
             String priority, String budget, String area, String projectCat, String unitType, String leadType) throws InterruptedException {
        
-        String additionalPhone = PhoneNumber.generateUniquePhoneNumber();
+        String additionalPhone = PhoneNumber.generateUniquePhoneNumber(addCountryCode);
         String email = fname + lname + "@yopmail.com";
 
         editfundLead.editLeadWithAdditional(

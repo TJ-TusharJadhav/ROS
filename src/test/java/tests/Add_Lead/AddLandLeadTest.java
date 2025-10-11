@@ -20,7 +20,7 @@ public class AddLandLeadTest extends BaseTest{
 	@BeforeMethod
 	public void beforemethod() throws InterruptedException {
 		addLandLead.OpenAddLandLeadForm();
-		phone = PhoneNumber.generateUniquePhoneNumber();
+		// phone = PhoneNumber.generateUniquePhoneNumber();
 		firstName = faker.name().firstName();
 	    LastName = faker.name().lastName();
 		

@@ -16,6 +16,7 @@ import com.opencsv.CSVReader;
 
 import base.BaseTest;
 import listeners.ExtentTestNGListener;
+import utils.CountryCodeMapper;
 import utils.PhoneNumber;
 import utils.ScreenshotUtil;
 
@@ -90,11 +91,14 @@ public class AddFurnitureLeadTest extends BaseTest {
                 String project, String fname, String lname, String country, 
                 String source, String subSource, String category, String subCategory, String remarks) throws InterruptedException {
 
-            phone = PhoneNumber.generateUniquePhoneNumber();
-            System.out.print("Project lead Phone Number: "+phone);
-            String email = fname + lname + "@shivalikgroup.com";
-            
-            System.out.println(phone);
+            String countryCode = CountryCodeMapper.getCountryCode(country);
+
+    // Generate phone number based on country code
+    String phone = PhoneNumber.generateUniquePhoneNumber(countryCode);
+
+    System.out.println("Fund lead Phone Number (" + countryCode + "): " + phone);
+
+    String email = fname + lname + "@yopmail.com";
 
             addFurnitureLead.addLeadWithBasic(
             		project, fname, lname, country, phone, email, source, subSource, category, subCategory, remarks
@@ -113,11 +117,14 @@ public class AddFurnitureLeadTest extends BaseTest {
         String area, String CompanyName, String EstimatedQuantity, String ProjectTimeline
     ) throws InterruptedException {
        
-        phone = PhoneNumber.generateUniquePhoneNumber(); 
-        System.out.print("Project lead Phone Number: "+phone);
-        String email = fname + lname + "@shivalikgroup.com"; 
-        
-        System.out.println(phone);
+        String countryCode = CountryCodeMapper.getCountryCode(country);
+
+    // Generate phone number based on country code
+    String phone = PhoneNumber.generateUniquePhoneNumber(countryCode);
+
+    System.out.println("Fund lead Phone Number (" + countryCode + "): " + phone);
+
+    String email = fname + lname + "@yopmail.com";
 
         addFurnitureLead.addLeadWithAdditional(
             project, fname, lname, country, phone, email, source, subSource, category, subCategory, remarks,
