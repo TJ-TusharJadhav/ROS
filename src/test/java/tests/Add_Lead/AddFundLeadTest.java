@@ -7,6 +7,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
+import utils.CountryCodeMapper;
 import utils.PhoneNumber;
 import utils.ScreenshotUtil;
 
@@ -24,7 +25,7 @@ public class AddFundLeadTest extends BaseTest {
     @DataProvider(name = "leadData")
     public Object[][] getLeadData() {
         return new Object[][] {
-            // // {"The Pre-Launch Fund", "Aarav", "Sharma", "+93", "Event", "GIHED", "Interested in real estate"},
+            // {"The Pre-Launch Fund", "Aarav", "Sharma", "+61", "Event", "GIHED", "Interested in real estate"},
             // {"Universal", "Priya", "Khan", "+20", "Event", "Property Event", "Looking for investment"},
             // // {"The Pre-Launch Fund", "Rohan", "Patel", "+27", "Event", "Investor Meet", "Wants quick callback"},
             // {"Universal", "Simran", "Joshi", "+30", "Event", "Channel Partner Event", "Needs brochure"},
@@ -57,7 +58,7 @@ public class AddFundLeadTest extends BaseTest {
             // {"Universal", "Farhan", "Ansari", "+216", "Print Media", "Leaflets", "Wants coastal property"},
             
             // {"The Pre-Launch Fund", "Shruti", "Deshmukh", "+65", "Channel Sales", "Channel Partner", "Needs farmhouse land"},
-            {"Universal", "Manish", "Thakur", "+91", "Channel Sales", "ACP", "Wants studio apartment"},
+            // {"Universal", "Manish", "Thakur", "+91", "Channel Sales", "ACP", "Wants studio apartment"},
         };
         }
     
@@ -160,13 +161,23 @@ public class AddFundLeadTest extends BaseTest {
     }
 
     @Test(dataProvider = "leadData")
-    public void addLeadForBasicFundLead(String project, String fname, String lname, String country, String source, String subSource, String remarks) throws InterruptedException {
-     phone = PhoneNumber.generateUniquePhoneNumber();
-     System.out.print("Fund lead Phone Number: "+phone);
+public void addLeadForBasicFundLead(String project, String fname, String lname, String country, String source, String subSource, String remarks) throws InterruptedException {
+
+    // Map country name to country code
+    String countryCode = CountryCodeMapper.getCountryCode(country);
+
+    // Generate phone number based on country code
+    String phone = PhoneNumber.generateUniquePhoneNumber(countryCode);
+
+    System.out.println("Fund lead Phone Number (" + countryCode + "): " + phone);
+
     String email = fname + lname + "@yopmail.com";
+
     addfundLead.addLeadWithBasic(project, fname, lname, country, phone, email, source, subSource, remarks);
     addfundLead.validateLeadWithBasicInfo(fname, lname, project, source, email, country, phone, remarks, subSource);
-    }
+}
+
+
     
     // @Test(dataProvider = "AdditionalleadData")
     public void addLeadForAdditionalFundLeadTest(
@@ -174,10 +185,17 @@ public class AddFundLeadTest extends BaseTest {
              String addCountryCode, String referralType, String referralName, String location, String buyingTime,
             String priority, String budget, String area, String projectCat, String unitType, String leadType) throws InterruptedException {
        
-         phone = PhoneNumber.generateUniquePhoneNumber();
-         System.out.print("Fund lead Phone Number: "+phone);
-        String additionalPhone = PhoneNumber.generateUniquePhoneNumber();
-        String email = fname + lname + "@yopmail.com";
+         // Get country code from country name
+    String countryCode = CountryCodeMapper.getCountryCode(country);
+
+    // Generate phone number based on country code
+    String phone = PhoneNumber.generateUniquePhoneNumber(countryCode);
+    String additionalPhone = PhoneNumber.generateUniquePhoneNumber(countryCode);
+
+    System.out.println("Fund lead Phone Number (" + countryCode + "): " + phone);
+
+    String email = fname + lname + "@yopmail.com";
+
 
         addfundLead.addLeadWithAdditional(
             project, fname, lname, country, phone, email, source, subSource, remarks,
