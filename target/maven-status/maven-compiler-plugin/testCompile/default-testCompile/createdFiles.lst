@@ -1,5 +1,6 @@
 playwright/Login.class
 tests/Add_Lead/AddFurnitureLeadTest.class
+utils/CountryCodeMapper.class
 utils/RetryAnalyzer.class
 utils/ExtentManager.class
 tests/Follow_Ups/AddFurnitureFollowUpsForTest.class
@@ -16,6 +17,7 @@ tests/Add_Lead/AddLandLeadTest.class
 tests/Follow_Ups/AddProjectFollowUpTest.class
 playwright/AddLeadFromGoogleSheet.class
 base/BaseTest.class
+playwright/GetCountryNameList.class
 pages/EditProjectLeadPage.class
 pages/FundFollowUpsPage.class
 saveOTP/UseAuthState.class

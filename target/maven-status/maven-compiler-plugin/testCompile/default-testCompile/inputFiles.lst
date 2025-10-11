@@ -13,6 +13,7 @@
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/playwright/Add100leadForProject.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/playwright/AddLeadFromGoogleSheet.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/playwright/EventRegistrationTest.java
+/Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/playwright/GetCountryNameList.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/playwright/Login.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/playwright/SampleTest.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/saveOTP/SaveAuthState.java
@@ -27,6 +28,7 @@
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/tests/Follow_Ups/AddFurnitureFollowUpsForTest.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/tests/Follow_Ups/AddProjectFollowUpTest.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/utils/ConfigManager.java
+/Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/utils/CountryCodeMapper.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/utils/ExtentManager.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/utils/PhoneNumber.java
 /Users/tusharjadhav/eclipse-workspace/playwright/src/test/java/utils/RetryAnalyzer.java

@@ -24,6 +24,7 @@ public class BaseTest {
 
     // Page Objects
     protected AddFundLeadPage addfundLead;
+    protected AddCPLeadPage addCPLead;
     protected AddProjectLeadPage addprojectLead;
     protected LoginPage login;
     protected EditProjectLeadPage editProjectLead;
@@ -78,6 +79,7 @@ public class BaseTest {
         // Initialize page objects
         login = new LoginPage(page);
         addfundLead = new AddFundLeadPage(page);
+        addCPLead = new AddCPLeadPage(page);
         addprojectLead = new AddProjectLeadPage(page);
         editProjectLead = new EditProjectLeadPage(page);
         editfundLead = new EditFundLeadPage(page);
