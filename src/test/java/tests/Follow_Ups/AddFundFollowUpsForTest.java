@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import base.BaseTest;
 import listeners.ExtentTestNGListener;
+import utils.RetryAnalyzer;
 import utils.ScreenshotUtil;
 @Listeners(ExtentTestNGListener.class)
 
@@ -94,20 +95,20 @@ public class AddFundFollowUpsForTest extends BaseTest {
 
 	 
 
-	    @Test(dataProvider = "followup",priority = 1)
+	    @Test(dataProvider = "followup",priority = 1,retryAnalyzer = RetryAnalyzer.class)
 	    public void addFollowUpTestforBlockStage(String stage, String subStage, String remark, String expectedFilter) throws InterruptedException, ParseException {
 	    	FundFollowUps.addFollowUP(stage, subStage, remark, expectedFilter);
 	    }
-	    @Test(dataProvider = "with_out_chile_Stage",priority = 2)
+	    @Test(dataProvider = "with_out_chile_Stage",priority = 2,retryAnalyzer = RetryAnalyzer.class)
 	    public void addFollowUpTestforLostStageWithoutChieldstage(String stage, String subStage, String remark, String expectedFilter) throws InterruptedException {
 	    	FundFollowUps.addfollowUPWithOutChildStage(stage, subStage, remark, expectedFilter);
 	    }
 	    
-	    @Test(dataProvider = "with_Child_Stage_followup", priority = 3)
+	    @Test(dataProvider = "with_Child_Stage_followup", priority = 3,retryAnalyzer = RetryAnalyzer.class)
 	    public void addFollowUpforLOstStage(String stage, String subStage, String childStage, String remark, String expectedFilter) throws InterruptedException {
 	    	FundFollowUps.addFollowUpForLostStage(stage, subStage, childStage, remark, expectedFilter);
 	    }
-//	    @Test(priority = 4)
+	    // @Test(priority = 4,retryAnalyzer = RetryAnalyzer.class)
 	    public void addFollowUpTestWithTextfield() throws InterruptedException {
 	    	FundFollowUps.addFollowUpForLostStageWithTextField("Lost", "Others (Mention)","Not Respoend","Enter Customer Reason", "Remark", "Lost Lead");
 	    }

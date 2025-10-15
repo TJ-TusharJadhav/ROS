@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import base.BaseTest;
 import listeners.ExtentTestNGListener;
+import utils.RetryAnalyzer;
 import utils.ScreenshotUtil;
 @Listeners(ExtentTestNGListener.class)
 
@@ -114,22 +115,22 @@ public class AddFurnitureFollowUpsForTest extends BaseTest {
 	        	};
 	 }
 
-	    @Test(dataProvider = "followUpData", priority = 1)
+	    @Test(dataProvider = "followUpData", priority = 1,retryAnalyzer = RetryAnalyzer.class)
 	    public void addFollowUpTest(String stage, String subStage, String remark, String expectedFilter) throws InterruptedException, ParseException {
 	    	FurnitureFollowUps.addFollowUP(stage, subStage, remark, expectedFilter);
 	    }
 	    
-	    @Test(dataProvider = "with_out_chile_Stage",priority = 2)
+	    @Test(dataProvider = "with_out_chile_Stage",priority = 2,retryAnalyzer = RetryAnalyzer.class)
 	    public void addFollowUpTestforLostStageWithoutChieldstage(String stage, String subStage, String remark, String expectedFilter) throws InterruptedException {
 	    	FurnitureFollowUps.addfollowUPWithOutChildStage(stage, subStage, remark, expectedFilter);
 	    }
 	    
-	    @Test(dataProvider = "with_Child_Stage_followup", priority = 3)
+	    @Test(dataProvider = "with_Child_Stage_followup", priority = 3,retryAnalyzer = RetryAnalyzer.class)
 	    public void addFollowUpforLOstStage(String stage, String subStage, String childStage, String remark, String expectedFilter) throws InterruptedException {
 	    	FurnitureFollowUps.addFollowUpForLostStage(stage, subStage, childStage, remark, expectedFilter);
 	    }
 
-	    @Test(dataProvider = "DealClosed",priority = 4)
+	    @Test(dataProvider = "DealClosed",priority = 4,retryAnalyzer = RetryAnalyzer.class)
 	    public void addFollowUpTestforBlockStage(String stage, String subStage, String remark, String expectedFilter) throws InterruptedException {
 	    	FurnitureFollowUps.addfollowUPWithOutChildStage(stage, subStage, remark, expectedFilter);
 	    }

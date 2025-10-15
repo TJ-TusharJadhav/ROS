@@ -8,25 +8,47 @@ import utils.ExtentManager;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
 
-public class ExtentTestNGListener implements ITestListener {
+public class ExtentTestNGListener implements ITestListener, ISuiteListener {
 
-    // Cache reports per class + method
     private static Map<String, ExtentReports> reportMap = new ConcurrentHashMap<>();
     private static ThreadLocal<ExtentTest> testThread = new ThreadLocal<>();
+
+    private static long suiteStartTime;
+    private static long suiteEndTime;
+
+    @Override
+    public void onStart(ISuite suite) {
+        suiteStartTime = System.currentTimeMillis();
+    }
+
+    @Override
+    public void onFinish(ISuite suite) {
+        suiteEndTime = System.currentTimeMillis();
+
+        long totalDurationMillis = suiteEndTime - suiteStartTime;
+        long hours = (totalDurationMillis / (1000 * 60 * 60)) % 24;
+        long minutes = (totalDurationMillis / (1000 * 60)) % 60;
+        long seconds = (totalDurationMillis / 1000) % 60;
+
+        String formattedDuration = String.format("%02dh %02dm %02ds", hours, minutes, seconds);
+
+        // Add total duration to all reports
+        for (ExtentReports extent : reportMap.values()) {
+            extent.setSystemInfo("Total Test Duration", formattedDuration);
+            extent.flush();
+        }
+    }
 
     @Override
     public void onTestStart(ITestResult result) {
         String className = result.getTestClass().getRealClass().getSimpleName();
         String methodName = result.getMethod().getMethodName();
 
-        // Unique key per test method
         String key = className + "_" + methodName;
 
-        // Create report only once per method
         reportMap.putIfAbsent(key, ExtentManager.createInstance(className, methodName));
 
         ExtentReports extent = reportMap.get(key);
-
         ExtentTest test = extent.createTest(methodName + " - DataSet: " + getDataSetLabel(result));
         testThread.set(test);
     }
@@ -35,9 +57,9 @@ public class ExtentTestNGListener implements ITestListener {
         Object[] params = result.getParameters();
         if (params == null || params.length == 0) return "Default";
         return String.join("_",
-            java.util.Arrays.stream(params)
-                .map(String::valueOf)
-                .toArray(String[]::new)
+                java.util.Arrays.stream(params)
+                        .map(String::valueOf)
+                        .toArray(String[]::new)
         );
     }
 
@@ -60,22 +82,11 @@ public class ExtentTestNGListener implements ITestListener {
     }
 
     private void flushReport(ITestResult result) {
-    String className = result.getTestClass().getRealClass().getSimpleName();
-    String methodName = result.getMethod().getMethodName();
-    String key = className + "_" + methodName;
+        String className = result.getTestClass().getRealClass().getSimpleName();
+        String methodName = result.getMethod().getMethodName();
+        String key = className + "_" + methodName;
 
-    // Calculate duration in seconds
-    long durationMillis = result.getEndMillis() - result.getStartMillis();
-    long seconds = durationMillis / 1000;
-    long minutes = seconds / 60;
-    seconds = seconds % 60;
-    String formattedDuration = minutes + " min " + seconds + " sec";
-
-    // Add test duration to system info (one-time per report)
-    ExtentReports extent = reportMap.get(key);
-    extent.setSystemInfo("Test Duration", formattedDuration);
-
-    reportMap.get(key).flush();
-}
-
+        ExtentReports extent = reportMap.get(key);
+        extent.flush();
+    }
 }

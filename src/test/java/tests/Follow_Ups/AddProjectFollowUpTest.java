@@ -10,6 +10,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
+import utils.RetryAnalyzer;
 import utils.ScreenshotUtil;
 @Listeners(listeners.ExtentTestNGListener.class)
 
@@ -118,31 +119,31 @@ public class AddProjectFollowUpTest extends BaseTest {
 	        };
 	 }
 
-	    @Test(dataProvider = "followUpData", priority = 1)
+	    @Test(dataProvider = "followUpData", priority = 1,retryAnalyzer = RetryAnalyzer.class)
 	    public void addFollowUpTest(String stage, String subStage, String remark, String expectedFilter) throws InterruptedException, ParseException {
 	    	projectFollowUp.addfollowUP(stage, subStage, remark, expectedFilter);
 	    }
 
-	    @Test(dataProvider = "lostfollowupdatawithoutchileStage",priority = 4)
+	    @Test(dataProvider = "lostfollowupdatawithoutchileStage",priority = 4,retryAnalyzer = RetryAnalyzer.class)
 	    public void addFollowUpTestforLostStageWithoutChieldstage(String stage, String subStage, String remark, String expectedFilter) throws InterruptedException {
 	    	projectFollowUp.addfollowUPWithOutChiledstage(stage, subStage, remark, expectedFilter);
 	    }
-	    @Test(dataProvider = "blockdata",priority = 2)
+	    @Test(dataProvider = "blockdata",priority = 2,retryAnalyzer = RetryAnalyzer.class)
 	    public void addFollowUpTestforBlockStage(String stage, String subStage, String remark, String expectedFilter) throws InterruptedException {
 	    	projectFollowUp.addfollowUPWithOutChiledstage(stage, subStage, remark, expectedFilter);
 	    }
 
-	    @Test(priority = 3)
+	    @Test(priority = 3,retryAnalyzer = RetryAnalyzer.class)
 	    public void addFollowUpTestforBookStagewithUnitNumber() throws InterruptedException {
 	    	projectFollowUp.addFollowUpForunitnumber("Booked", "Select Unit Number", "123", "Remark Test", "Booked");
 	    }
 	    
-	    @Test(dataProvider = "lostfollowup",priority = 5)
+	    @Test(dataProvider = "lostfollowup",priority = 5,retryAnalyzer = RetryAnalyzer.class)
 	    public void addFollowUpforLOstStage(String stage, String subStage, String childStage, String remark, String expectedFilter) throws InterruptedException {
 	    	projectFollowUp.addFollowUpForLostStage(stage, subStage, childStage, remark, expectedFilter);
 	    }
 	    
-	    @Test(priority = 6)
+	    @Test(priority = 6,retryAnalyzer = RetryAnalyzer.class)
 	    public void addFollowUpTestforBlockStagewithUnitNumber() throws InterruptedException {
 	    	projectFollowUp.addFollowUpForunitnumber("Block", "Select Unit Number", "123", "Remark Test", "Active Lead");
 	    }

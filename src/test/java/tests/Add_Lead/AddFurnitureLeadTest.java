@@ -18,8 +18,8 @@ import base.BaseTest;
 import listeners.ExtentTestNGListener;
 import utils.CountryCodeMapper;
 import utils.PhoneNumber;
+import utils.RetryAnalyzer;
 import utils.ScreenshotUtil;
-
 @Listeners(ExtentTestNGListener.class)
 public class AddFurnitureLeadTest extends BaseTest {
 	
@@ -86,7 +86,7 @@ public class AddFurnitureLeadTest extends BaseTest {
         return getLeadAdditionalDataFromGoogleSheet();
     }
 
-        @Test(dataProvider = "leadData", priority = 1)
+        @Test(dataProvider = "leadData", priority = 1,retryAnalyzer = RetryAnalyzer.class)
         public void addLeadForBasicFurnitureLead(
                 String project, String fname, String lname, String country, 
                 String source, String subSource, String category, String subCategory, String remarks) throws InterruptedException {
@@ -108,7 +108,7 @@ public class AddFurnitureLeadTest extends BaseTest {
             );
         }
     
-    @Test(dataProvider = "AdditionalleadData", priority = 2)
+    @Test(dataProvider = "AdditionalleadData", priority = 2,retryAnalyzer = RetryAnalyzer.class)
     public void addLeadForAdditionalFurnitureLeadTest(
         String project, String fname, String lname, String country, String source,
         String subSource, String category, String subCategory, String remarks,
