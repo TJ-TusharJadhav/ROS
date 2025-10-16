@@ -131,9 +131,9 @@ public class AddFundLeadPage {
         assert phoneNumber.equals(expectedPhonenumber) 
             : "Phone number mismatch. Expected: "+ expectedPhonenumber + ", Got: " + phoneNumber;
         assert actualStatus.equals("New Inquiry") 
-            : "Phone number mismatch. Expected: "+ "New Inquiry" + ", Got: " + actualStatus;
+            : "Stage mismatch. Expected: "+ "New Inquiry" + ", Got: " + actualStatus;
         assert actualLeadOwner.equals(ExpectedLeadOwner) 
-            : "Phone number mismatch. Expected: "+ ExpectedLeadOwner + ", Got: " + actualLeadOwner;
+            : "lead Owner mismatch. Expected: "+ ExpectedLeadOwner + ", Got: " + actualLeadOwner;
     
     System.out.println("Lead saved successfully with Name, Project, and Source validated!");
         

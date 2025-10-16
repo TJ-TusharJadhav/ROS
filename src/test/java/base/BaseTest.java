@@ -3,17 +3,12 @@ package base;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-
 import com.github.javafaker.Faker;
 import com.microsoft.playwright.*;
-
-import listeners.ExtentTestNGListener;
 import pages.*;
 import utils.ConfigManager;
-import utils.ExtentManager;
 
 public class BaseTest {
     protected Playwright playwright;

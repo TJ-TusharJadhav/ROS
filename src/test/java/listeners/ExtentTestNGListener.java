@@ -8,11 +8,38 @@ import utils.ExtentManager;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
 
-public class ExtentTestNGListener implements ITestListener {
+public class ExtentTestNGListener implements ITestListener, ISuiteListener {
 
     // Cache reports per class + method
     private static Map<String, ExtentReports> reportMap = new ConcurrentHashMap<>();
     private static ThreadLocal<ExtentTest> testThread = new ThreadLocal<>();
+
+    // Track total execution duration
+    private static long suiteStartTime = 0;
+    private static long suiteEndTime = 0;
+
+    @Override
+    public void onStart(ISuite suite) {
+        suiteStartTime = System.currentTimeMillis();
+    }
+
+    @Override
+    public void onFinish(ISuite suite) {
+        suiteEndTime = System.currentTimeMillis();
+
+        // Calculate total suite duration
+        long durationMillis = suiteEndTime - suiteStartTime;
+        long seconds = durationMillis / 1000;
+        long minutes = seconds / 60;
+        seconds = seconds % 60;
+        String formattedDuration = minutes + " min " + seconds + " sec";
+
+        // Assuming one report per test (class + method)
+        for (ExtentReports extent : reportMap.values()) {
+            extent.setSystemInfo("Total Execution Duration", formattedDuration);
+            extent.flush();
+        }
+    }
 
     @Override
     public void onTestStart(ITestResult result) {
@@ -26,7 +53,6 @@ public class ExtentTestNGListener implements ITestListener {
         reportMap.putIfAbsent(key, ExtentManager.createInstance(className, methodName));
 
         ExtentReports extent = reportMap.get(key);
-
         ExtentTest test = extent.createTest(methodName + " - DataSet: " + getDataSetLabel(result));
         testThread.set(test);
     }
@@ -35,9 +61,9 @@ public class ExtentTestNGListener implements ITestListener {
         Object[] params = result.getParameters();
         if (params == null || params.length == 0) return "Default";
         return String.join("_",
-            java.util.Arrays.stream(params)
-                .map(String::valueOf)
-                .toArray(String[]::new)
+                java.util.Arrays.stream(params)
+                        .map(String::valueOf)
+                        .toArray(String[]::new)
         );
     }
 
@@ -60,22 +86,13 @@ public class ExtentTestNGListener implements ITestListener {
     }
 
     private void flushReport(ITestResult result) {
-    String className = result.getTestClass().getRealClass().getSimpleName();
-    String methodName = result.getMethod().getMethodName();
-    String key = className + "_" + methodName;
+        String className = result.getTestClass().getRealClass().getSimpleName();
+        String methodName = result.getMethod().getMethodName();
+        String key = className + "_" + methodName;
 
-    // Calculate duration in seconds
-    long durationMillis = result.getEndMillis() - result.getStartMillis();
-    long seconds = durationMillis / 1000;
-    long minutes = seconds / 60;
-    seconds = seconds % 60;
-    String formattedDuration = minutes + " min " + seconds + " sec";
-
-    // Add test duration to system info (one-time per report)
-    ExtentReports extent = reportMap.get(key);
-    extent.setSystemInfo("Test Duration", formattedDuration);
-
-    reportMap.get(key).flush();
-}
-
+        ExtentReports extent = reportMap.get(key);
+        if (extent != null) {
+            extent.flush();
+        }
+    }
 }

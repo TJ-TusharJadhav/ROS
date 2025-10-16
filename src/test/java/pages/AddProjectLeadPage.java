@@ -75,6 +75,175 @@ public class AddProjectLeadPage {
     public AddProjectLeadPage(Page page) {
         this.page = page;
     }
+    // --- Add lead method ---
+    public void addLeadWithBasic(String projectName, String fname, String lname, String country,
+                        String phone, String mail, String source, String subSource, String note) throws InterruptedException {
+    	
+    	addLeadBasic(projectName, fname, lname, country, phone, source, subSource, mail, note);
+        page.click(submitBtn);
+        Thread.sleep(1000);
+        page.click("//div[contains(text(), 'New Lead')]");
+        
+    }
+    // --- Validation method ---
+    public void validateLeadWithBasicInfo(
+    		String expectedFirstName, String expectedLastName, String expectedProject, 
+    		String expectedSource,String expectedEmail, String expectedCountryCode, 
+    		String expectedPhonenumber, String expectedRemark,String expectedSubSource) throws InterruptedException {
+    	Thread.sleep(3000); 
+    	Locator checkNewLeadCard = page.locator("(//div[@aria-label='View details for " + expectedFirstName + "'])[1]");
+        
+        if (checkNewLeadCard.count() > 0) {
+            checkNewLeadCard.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+            Thread.sleep(500);
+            checkNewLeadCard.click();
+        } else {
+            page.click("//div[contains(text(),'Re-Inquiry')]");
+            page.click("//div[contains(text(),'New Lead')]");
+            checkNewLeadCard.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+            checkNewLeadCard.click();
+        }
+    	String ExpectedLeadOwner = page.textContent(SigIn_Name).trim();
+    	
+    	String status = "(//div[@role='button' and contains(@aria-label,'View details for "+expectedFirstName+"')]//span[contains(@class,'rounded-full')])[1]";
+    	String leadOwner = "(//div[@role='button' and contains(@aria-label,'View details for "+expectedFirstName+"')]//span[contains(@class,'rounded-full')])[2]";
+    	
+        
+    	String actualFullName = page.textContent(fullNameText).trim();
+        String actualProject = page.textContent(projectNameText).trim();
+        String actualSource = page.textContent(sourceText).trim();
+        String actualPhone = page.textContent(fullDetailsText).trim();
+        String phonePart = actualPhone.replace("Mobile no -", "").trim();
+       
+
+    // Split into country code and number
+    String[] parts = phonePart.split(" ", 2); 
+    String countryCode = parts[0]; // +91
+    String phoneNumber = parts[1]; // 1234567867
+    
+    String actualStatus = page.textContent(status).trim();
+    String actualLeadOwner = page.textContent(leadOwner).trim();
+    
+
+        assert actualFullName.equals(expectedFirstName + " " + expectedLastName) 
+            : "Full name mismatch. Expected: " + expectedFirstName + " " + expectedLastName + ", Got: " + actualFullName;
+        assert actualProject.equals(expectedProject) 
+            : "Project mismatch. Expected: " + expectedProject + ", Got: " + actualProject;
+        assert actualSource.equals(expectedSource) 
+            : "Source mismatch. Expected: " + expectedSource + ", Got: " + actualSource;
+        assert countryCode.equals(expectedCountryCode) 
+            : "Country code mismatch. Expected: "+ expectedCountryCode + ", Got: " + countryCode;
+        assert phoneNumber.equals(expectedPhonenumber) 
+            : "Phone number mismatch. Expected: "+ expectedPhonenumber + ", Got: " + phoneNumber;
+        
+        assert actualStatus.equals("New Inquiry") 
+        : "Stage mismatch. Expected: "+ "New Inquiry" + ", Got: " + actualStatus;
+        
+        assert actualLeadOwner.equals(ExpectedLeadOwner) 
+        : "Lead owner mismatch. Expected: "+ ExpectedLeadOwner + ", Got: " + actualLeadOwner;
+        
+        System.out.println("Lead saved successfully with Name, Project, Source and Mobile number validated!");
+        
+
+        
+//        Lead details on history 
+        Thread.sleep(500);
+        page.click(fullDetailsText);
+       
+      
+        Locator verifyButton = page.locator("//span[text()='Create']");
+        if (verifyButton.count() > 0) {
+            verifyButton.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+            verifyButton.click();
+        } else {
+            System.out.println("Verify button not found, reloading page...");
+            page.waitForSelector("div.cursor-pointer.flex.items-center.justify-end");
+	        page.click("div.cursor-pointer.flex.items-center.justify-end");
+            page.click("//div[contains(text(),'Re-Inquiry')]");
+            page.click("//div[contains(text(),'New Lead')]");
+            page.click(fullDetailsText);
+            verifyButton.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+            verifyButton.click();
+        }
+        Thread.sleep(500);
+        
+        String actualProjectNameinHistory =page.textContent(projectnameinhirstory).trim();
+        String actualFirstName =page.textContent(FirstName).trim();
+        String actualLastName =page.textContent(LastName).trim();
+        String actualemail =page.textContent(Email).trim();
+        String actualCountryCode =page.textContent(CountryCode).trim();
+        String actualPhoneNumber = page.textContent(PhoneNumber).trim();
+        String actualRemark = page.textContent(comments).trim();
+        String actualSource1 = page.textContent(sources).trim();
+        String actualSubSource = page.textContent(SubSources).trim();
+        
+        assert actualProjectNameinHistory.equals(expectedProject) 
+        : "Full name mismatch. Expected: " + expectedProject + ", Got: " + actualProjectNameinHistory;
+        assert actualFirstName.equals(expectedFirstName) 
+        : "Full name mismatch. Expected: " + expectedFirstName + ", Got: " + actualFirstName;
+        assert actualLastName.equals(expectedLastName) 
+        : "Full name mismatch. Expected: " + expectedLastName + ", Got: " + actualLastName;
+        assert actualemail.equals(expectedEmail) 
+        : "Full name mismatch. Expected: " + expectedEmail + ", Got: " + actualemail;
+        assert actualCountryCode.equals(expectedCountryCode) 
+        : "Full name mismatch. Expected: " + expectedCountryCode + ", Got: " + actualCountryCode;
+        assert actualPhoneNumber.equals(expectedPhonenumber) 
+        : "Full name mismatch. Expected: " + expectedPhonenumber + ", Got: " + actualPhoneNumber;
+        assert actualRemark.equals(expectedRemark) 
+        : "Full name mismatch. Expected: " + expectedRemark + ", Got: " + actualRemark;
+        assert actualSource1.equals(expectedSource) 
+        : "Full name mismatch. Expected: " + expectedSource + ", Got: " + actualSource1;
+        assert actualSubSource.equals(expectedSubSource) 
+        : "Full name mismatch. Expected: " + expectedSubSource + ", Got: " + actualSubSource;
+        
+        }
+
+    public void addLeadWithAdditional(String projectName, String fname, String lname, String country,
+            String phone, String mail, String source, String subSource, String note,
+            String secondryProject, String AdditionalCountrycode, String AdditionalPhone, 
+    		                          String ReferralType,String ReferralName, String Location, 
+    		                          String BuyingTime, String Priority, String Budget, 
+    		                          String Area, String ProjectCategory, String UnitType, 
+    		                          String LeadType) throws InterruptedException {
+    	
+    	addLeadBasic(projectName, fname, lname, country, phone, source, subSource, mail, note);
+        page.click("text=Basic Lead Form Details");
+        Thread.sleep(500);
+    	page.click("text=Additional Form Details");
+    	page.fill(SecondaryProjectDropDown, secondryProject);
+        Thread.sleep(500);
+        page.keyboard().press("Enter");
+        page.click(additionalcountryCode);
+        page.fill(searchCountryCode, AdditionalCountrycode);
+        Thread.sleep(500);
+        page.click(clickSearchedFirstOption);
+        page.fill(alternateMobileNumber, AdditionalPhone);
+//        referral Type and name is pending 
+        page.selectOption(referralType, new SelectOption().setLabel(ReferralType));
+        Thread.sleep(500);
+        page.click(referralNameField);
+        Thread.sleep(1000);
+        page.fill(referralNamesearchBar, ReferralName);
+        Locator verifyButton = page.locator("//li[@role='option']");
+        verifyButton.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+        page.waitForCondition(() -> verifyButton.isVisible());
+        verifyButton.click();
+//        page.click(clickSearchedFirstOption);
+        page.fill(location, Location);
+        page.click("//input[@value='"+BuyingTime+"']");
+      page.selectOption(priority, new SelectOption().setLabel(Priority));
+        page.selectOption(budget, new SelectOption().setLabel(Budget));
+        page.fill(areaRequired, Area);
+        page.selectOption(leadCategory, new SelectOption().setLabel(ProjectCategory));
+        page.selectOption(unitType, new SelectOption().setLabel(UnitType));
+        page.selectOption(leadType, new SelectOption().setLabel(LeadType));
+        page.click(submitBtn);
+       Thread.sleep(1000);
+        page.click("//div[contains(text(), 'New Lead')]");
+        
+    }
+
+    // Validate lead data
     public void validateLeadWithAdditionalInfo(
     		String expectedFirstName, String expectedLastName, String expectedMainProject, 
     		String expectedSource,String expectedEmail, String expectedCountryCode, 
@@ -245,174 +414,8 @@ public class AddProjectLeadPage {
         : "Full name mismatch. Expected: " + expectedecondaryProject + ", Got: " + actualsecondaryProject;
         
         }
-    public void addLeadWithAdditional(String projectName, String fname, String lname, String country,
-            String phone, String mail, String source, String subSource, String note,
-            String secondryProject, String AdditionalCountrycode, String AdditionalPhone, 
-    		                          String ReferralType,String ReferralName, String Location, 
-    		                          String BuyingTime, String Priority, String Budget, 
-    		                          String Area, String ProjectCategory, String UnitType, 
-    		                          String LeadType) throws InterruptedException {
-    	
-    	addLeadBasic(projectName, fname, lname, country, phone, source, subSource, mail, note);
-        page.click("text=Basic Lead Form Details");
-        Thread.sleep(500);
-    	page.click("text=Additional Form Details");
-    	page.fill(SecondaryProjectDropDown, secondryProject);
-        Thread.sleep(500);
-        page.keyboard().press("Enter");
-        page.click(additionalcountryCode);
-        page.fill(searchCountryCode, AdditionalCountrycode);
-        Thread.sleep(500);
-        page.click(clickSearchedFirstOption);
-        page.fill(alternateMobileNumber, AdditionalPhone);
-//        referral Type and name is pending 
-        page.selectOption(referralType, new SelectOption().setLabel(ReferralType));
-        Thread.sleep(500);
-        page.click(referralNameField);
-        Thread.sleep(1000);
-        page.fill(referralNamesearchBar, ReferralName);
-        Locator verifyButton = page.locator("//li[@role='option']");
-        verifyButton.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
-        page.waitForCondition(() -> verifyButton.isVisible());
-        verifyButton.click();
-//        page.click(clickSearchedFirstOption);
-        page.fill(location, Location);
-        page.click("//input[@value='"+BuyingTime+"']");
-      page.selectOption(priority, new SelectOption().setLabel(Priority));
-        page.selectOption(budget, new SelectOption().setLabel(Budget));
-        page.fill(areaRequired, Area);
-        page.selectOption(leadCategory, new SelectOption().setLabel(ProjectCategory));
-        page.selectOption(unitType, new SelectOption().setLabel(UnitType));
-        page.selectOption(leadType, new SelectOption().setLabel(LeadType));
-        page.click(submitBtn);
-//        Thread.sleep(1000);
-//        page.reload();
-//        page.click(followupMenu);
-//        Thread.sleep(1500);
-        page.click("//div[contains(text(), 'New Lead')]");
-        
-    }
-
-    public void addLeadWithBasic(String projectName, String fname, String lname, String country,
-                        String phone, String mail, String source, String subSource, String note) throws InterruptedException {
-    	
-    	addLeadBasic(projectName, fname, lname, country, phone, source, subSource, mail, note);
-        page.click(submitBtn);
-        page.click("//div[contains(text(), 'New Lead')]");
-        
-    }
-    // --- Validation method ---
-    public void validateLeadWithBasicInfo(
-    		String expectedFirstName, String expectedLastName, String expectedProject, 
-    		String expectedSource,String expectedEmail, String expectedCountryCode, 
-    		String expectedPhonenumber, String expectedRemark,String expectedSubSource) throws InterruptedException {
-    	Thread.sleep(3000); 
-    	Locator checkNewLeadCard = page.locator("(//div[@aria-label='View details for " + expectedFirstName + "'])[1]");
-        
-        if (checkNewLeadCard.count() > 0) {
-            checkNewLeadCard.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
-            Thread.sleep(500);
-            checkNewLeadCard.click();
-        } else {
-            page.click("//div[contains(text(),'Re-Inquiry')]");
-            page.click("//div[contains(text(),'New Lead')]");
-            checkNewLeadCard.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
-            checkNewLeadCard.click();
-        }
-    	String ExpectedLeadOwner = page.textContent(SigIn_Name).trim();
-    	
-    	String status = "(//div[@role='button' and contains(@aria-label,'View details for "+expectedFirstName+"')]//span[contains(@class,'rounded-full')])[1]";
-    	String leadOwner = "(//div[@role='button' and contains(@aria-label,'View details for "+expectedFirstName+"')]//span[contains(@class,'rounded-full')])[2]";
-    	
-        
-    	String actualFullName = page.textContent(fullNameText).trim();
-        String actualProject = page.textContent(projectNameText).trim();
-        String actualSource = page.textContent(sourceText).trim();
-        String actualPhone = page.textContent(fullDetailsText).trim();
-        String phonePart = actualPhone.replace("Mobile no -", "").trim();
-       
-
-    // Split into country code and number
-    String[] parts = phonePart.split(" ", 2); 
-    String countryCode = parts[0]; // +91
-    String phoneNumber = parts[1]; // 1234567867
     
-    String actualStatus = page.textContent(status).trim();
-    String actualLeadOwner = page.textContent(leadOwner).trim();
     
-
-        assert actualFullName.equals(expectedFirstName + " " + expectedLastName) 
-            : "Full name mismatch. Expected: " + expectedFirstName + " " + expectedLastName + ", Got: " + actualFullName;
-        assert actualProject.equals(expectedProject) 
-            : "Project mismatch. Expected: " + expectedProject + ", Got: " + actualProject;
-        assert actualSource.equals(expectedSource) 
-            : "Source mismatch. Expected: " + expectedSource + ", Got: " + actualSource;
-        assert countryCode.equals(expectedCountryCode) 
-            : "Country code mismatch. Expected: "+ expectedCountryCode + ", Got: " + countryCode;
-        assert phoneNumber.equals(expectedPhonenumber) 
-            : "Phone number mismatch. Expected: "+ expectedPhonenumber + ", Got: " + phoneNumber;
-        
-        assert actualStatus.equals("New Inquiry") 
-        : "Phone number mismatch. Expected: "+ "New Inquiry" + ", Got: " + actualStatus;
-        
-        assert actualLeadOwner.equals(ExpectedLeadOwner) 
-        : "Phone number mismatch. Expected: "+ ExpectedLeadOwner + ", Got: " + actualLeadOwner;
-        
-        System.out.println("Lead saved successfully with Name, Project, Source and Mobile number validated!");
-        
-
-        
-//        Lead details on history 
-        Thread.sleep(500);
-        page.click(fullDetailsText);
-       
-      
-        Locator verifyButton = page.locator("//span[text()='Create']");
-        if (verifyButton.count() > 0) {
-            verifyButton.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
-            verifyButton.click();
-        } else {
-            System.out.println("Verify button not found, reloading page...");
-            page.waitForSelector("div.cursor-pointer.flex.items-center.justify-end");
-	        page.click("div.cursor-pointer.flex.items-center.justify-end");
-            page.click("//div[contains(text(),'Re-Inquiry')]");
-            page.click("//div[contains(text(),'New Lead')]");
-            page.click(fullDetailsText);
-            verifyButton.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
-            verifyButton.click();
-        }
-        Thread.sleep(500);
-        
-        String actualProjectNameinHistory =page.textContent(projectnameinhirstory).trim();
-        String actualFirstName =page.textContent(FirstName).trim();
-        String actualLastName =page.textContent(LastName).trim();
-        String actualemail =page.textContent(Email).trim();
-        String actualCountryCode =page.textContent(CountryCode).trim();
-        String actualPhoneNumber = page.textContent(PhoneNumber).trim();
-        String actualRemark = page.textContent(comments).trim();
-        String actualSource1 = page.textContent(sources).trim();
-        String actualSubSource = page.textContent(SubSources).trim();
-        
-        assert actualProjectNameinHistory.equals(expectedProject) 
-        : "Full name mismatch. Expected: " + expectedProject + ", Got: " + actualProjectNameinHistory;
-        assert actualFirstName.equals(expectedFirstName) 
-        : "Full name mismatch. Expected: " + expectedFirstName + ", Got: " + actualFirstName;
-        assert actualLastName.equals(expectedLastName) 
-        : "Full name mismatch. Expected: " + expectedLastName + ", Got: " + actualLastName;
-        assert actualemail.equals(expectedEmail) 
-        : "Full name mismatch. Expected: " + expectedEmail + ", Got: " + actualemail;
-        assert actualCountryCode.equals(expectedCountryCode) 
-        : "Full name mismatch. Expected: " + expectedCountryCode + ", Got: " + actualCountryCode;
-        assert actualPhoneNumber.equals(expectedPhonenumber) 
-        : "Full name mismatch. Expected: " + expectedPhonenumber + ", Got: " + actualPhoneNumber;
-        assert actualRemark.equals(expectedRemark) 
-        : "Full name mismatch. Expected: " + expectedRemark + ", Got: " + actualRemark;
-        assert actualSource1.equals(expectedSource) 
-        : "Full name mismatch. Expected: " + expectedSource + ", Got: " + actualSource1;
-        assert actualSubSource.equals(expectedSubSource) 
-        : "Full name mismatch. Expected: " + expectedSubSource + ", Got: " + actualSubSource;
-        
-        }
     
     public void addLeadBasic(String projectName, String fname, String lname, String country, String phone, String source, String subSource, String mail, String note) throws InterruptedException {
     	page.click(followupMenu);

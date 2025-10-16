@@ -1,7 +1,6 @@
 package pages;
 
 import java.nio.file.Paths;
-
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.SelectOption;
@@ -59,7 +58,7 @@ public class AddLandLeadPage {
     private String BrokerNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[7]";
     private String BrokercountrycodeinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[8]";
     private String BrokerPhoneinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[9]";
-    private String LocationinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[10]";
+    // private String LocationinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[10]";
     private String LandTypeinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[11]";
     private String AreainHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[12]";
     private String AreaTypeinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[13]";
@@ -74,8 +73,8 @@ public class AddLandLeadPage {
     private String tpNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[22]";
     private String tpNoinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[23]";
     private String fpNumberinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[24]";
-    private String sourceNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[25]";
-    private String subSourceNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[26]";
+    // private String sourceNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[25]";
+    // private String subSourceNameinHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[26]";
     
     
     

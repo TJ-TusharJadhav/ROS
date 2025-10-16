@@ -57,7 +57,7 @@ public class AddFurnitureLeadPage {
     private String Priority = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[11]";
     private String Budget = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[12]";
     
-    private String projectCategory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[13]";
+    // private String projectCategory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[13]";
     private String area = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[14]";
     private String ReferralType = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[15]";
     private String referralName = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[16]";
@@ -65,7 +65,7 @@ public class AddFurnitureLeadPage {
     private String SubCategory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[20]";
     private String ProjectType = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[22]";
     private String sourceOfFinanceInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[23]";
-    private String dobInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[24]";
+    // private String dobInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[24]";
     private String companyNameInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[25]";    
     private String estimatedQuantityInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[26]";
     private String projectTimelineInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[27]";
@@ -76,7 +76,7 @@ public class AddFurnitureLeadPage {
     private String openAddLeadOptions = "//div[@class='css-13cymwt-control']";
     private String selectFurnitureOption = "//div[text()='Furniture']";
     private String SigIn_Name="(//p[@class='mantine-focus-auto m_b6d8b162 mantine-Text-root'])[1]";
-    private String burgerMenu = "//button[contains(@class,'mantine-Burger-root')]";
+    // private String burgerMenu = "//button[contains(@class,'mantine-Burger-root')]";
     
     public AddFurnitureLeadPage(Page page) {
         this.page = page;
@@ -312,7 +312,7 @@ page.click("//div[contains(text(), 'New Lead')]");
          String actualbuyingTime = page.textContent(buyingTime).trim();
          String actualpriority = page.textContent(Priority).trim();
          String actualbudget = page.textContent(Budget).trim();
-         String actualprojectCategory = page.textContent(projectCategory).trim();
+        //  String actualprojectCategory = page.textContent(projectCategory).trim();
          String actualareaLocation = page.textContent(area).trim();
          String actualreferralType = page.textContent(ReferralType).trim();
          String actualreferralName = page.textContent(referralName).trim();
@@ -320,7 +320,7 @@ page.click("//div[contains(text(), 'New Lead')]");
          String actualSubCategory = page.textContent(SubCategory).trim();
          String actualprojectType = page.textContent(ProjectType).trim();
          String actualsourceOfFinances = page.textContent(sourceOfFinanceInHistory).trim();
-         String actualdob = page.textContent(dobInHistory).trim();
+        //  String actualdob = page.textContent(dobInHistory).trim();
          String actualcompanyName = page.textContent(companyNameInHistory).trim();
          String actualestimatedQuantity = page.textContent(estimatedQuantityInHistory).trim();
          String actualprojectTimeline = page.textContent(projectTimelineInHistory).trim();

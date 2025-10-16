@@ -12,7 +12,6 @@ public class ExtentManager {
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         String today = java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ofPattern("dd-MM-yyyy"));
 
-        // Report path: /reports/<date>/<class>/<class>_<method>_<timestamp>.html
         String reportName = methodName + "_" + timeStamp + ".html";
         String reportPath = System.getProperty("user.dir") + "/reports/" + today + "/" + className + "/" + reportName;
 
