@@ -1,14 +1,14 @@
 package pages;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
+import java.util.Map;
+
 import org.testng.asserts.SoftAssert;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitForSelectorState;
+
+import utils.DateTimeUtil;
 
 public class FurnitureFollowUpsPage {
     private Page page;
@@ -25,20 +25,12 @@ public class FurnitureFollowUpsPage {
     private String DateTimeInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[2]";
     private String ChildStageInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[5]";
 
-//    private String datetime = LocalDateTime.now().plusMinutes(10).format(DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm a"));
-    private String Enterdatetime = "09/10/2025 10:30 PM";
-    private String Verifydatetime = "Oct 6, 2025, 10:30 PM";
+Map<String, String> dateTimeMap = DateTimeUtil.getFormattedDateTimePlus20Mins();
+	private String Enterdatetime = dateTimeMap.get("Enterdatetime");
+	private String Verifydatetime = dateTimeMap.get("Verifydatetime");
     
     public FurnitureFollowUpsPage(Page page) {
         this.page = page;
-    }
-
-    /** Helper to get formatted date */
-    private String formatDate(String datetime) throws ParseException {
-        SimpleDateFormat originalFormat = new SimpleDateFormat("dd/MM/yyyy hh:mm a");
-        SimpleDateFormat targetFormat = new SimpleDateFormat("MMM d, yyyy, hh:mm a");
-        Date date = originalFormat.parse(datetime);
-        return targetFormat.format(date);
     }
 
     /** Common close button logic */
@@ -117,10 +109,6 @@ public class FurnitureFollowUpsPage {
         
         softAssert.assertEquals(actualDateTime, Verifydatetime,
                 "FollowUp date and time mismatch. Expected: " + Verifydatetime + ", Got: " + actualDateTime);
-
-        
-//        softAssert.assertEquals(actualDateTime, formatDate(datetime), "DateTime mismatch");
-
         System.out.println("Validation done from History");
         closeHistoryPopup();
         softAssert.assertAll();

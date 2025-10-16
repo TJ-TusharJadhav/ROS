@@ -1,14 +1,15 @@
 package pages;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.Map;
 
 import org.testng.asserts.SoftAssert;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitForSelectorState;
+
+import utils.DateTimeUtil;
 
 public class FundFollowUpsPage {
     private Page page;
@@ -26,20 +27,12 @@ public class FundFollowUpsPage {
     private String DateTimeInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[7]";
     private String ChildStageInHistory = "(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[10]";
 
-//    private String datetime = LocalDateTime.now().plusMinutes(10).format(DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm a"));
-    private String Enterdatetime = "09/10/2025 10:30 PM";
-    private String verifydatetime = "Oct 9, 2025, 10:30 PM";
+Map<String, String> dateTimeMap = DateTimeUtil.getFormattedDateTimePlus20Mins();
+	private String Enterdatetime = dateTimeMap.get("Enterdatetime");
+	private String Verifydatetime = dateTimeMap.get("Verifydatetime");
     
     public FundFollowUpsPage(Page page) {
         this.page = page;
-    }
-
-    /** Helper to get formatted date */
-    private String formatDate(String datetime) throws ParseException {
-        SimpleDateFormat originalFormat = new SimpleDateFormat("dd/MM/yyyy hh:mm a");
-        SimpleDateFormat targetFormat = new SimpleDateFormat("MMM d, yyyy, hh:mm a");
-        Date date = originalFormat.parse(datetime);
-        return targetFormat.format(date);
     }
 
     /** Common close button logic */
@@ -114,10 +107,7 @@ public class FundFollowUpsPage {
         softAssert.assertEquals(actualComments, Remark, "Remark mismatch");
         softAssert.assertEquals(actualSubStage, SubStage, "SubStage mismatch");
         
-        softAssert.assertEquals(actualDateTime, verifydatetime,"FollowUp date and time mismatch. Expected: " + verifydatetime + ", Got: " + actualDateTime);
-
-        
-//        softAssert.assertEquals(actualDateTime, formatDate(datetime), "DateTime mismatch");
+        softAssert.assertEquals(actualDateTime, Verifydatetime,"FollowUp date and time mismatch. Expected: " + Verifydatetime + ", Got: " + actualDateTime);
 
         System.out.println("Validation done from History");
         closeHistoryPopup();
@@ -227,14 +217,13 @@ public class FundFollowUpsPage {
         softAssert.assertAll();
     }
     /** Adds Follow Up for lost stage (with child stage) */
-    public void addFollowUpForLostStageWithTextField(String Stage, String SubStage,String message,String ChildStage, String Remark, String ExpectedFilter)
+    public void addFollowUpForLostStageWithTextField(String Stage, String SubStage,String ChildStage, String Remark, String ExpectedFilter)
             throws InterruptedException {
 
         actualPhone = page.textContent(fullDetailsText).trim();
         page.click("button:has-text('Add Lead Follow up')");
         page.click("button:has-text('" + Stage + "')");
         page.click("button:has-text('" + SubStage + "')");
-        page.fill(EnterLostResion, message);
         page.click("button:has-text('" + ChildStage + "')");
         page.fill(remark, Remark);
 
@@ -271,6 +260,46 @@ public class FundFollowUpsPage {
         softAssert.assertEquals(actualSubStage, SubStage, "SubStage mismatch");
         softAssert.assertEquals(actualChildStage, ChildStage, "Child stage mismatch");
 
+        closeHistoryPopup();
+        softAssert.assertAll();
+    }
+     public void addFollowUpForCommitted(String Stage, String Remark, String ExpectedFilter)
+            throws InterruptedException {
+
+        actualPhone = page.textContent(fullDetailsText).trim();
+        page.click("button:has-text('Add Lead Follow up')");
+        page.click("button:has-text('" + Stage + "')");
+        page.fill(remark, Remark);
+
+        Locator submitButton = page.locator(submit);
+        while (submitButton.isVisible()) {
+            if (submitButton.isEnabled()) submitButton.click();
+            page.waitForTimeout(2000);
+        }
+
+        page.click("//div[contains(text(), '" + ExpectedFilter + "')]");
+        Thread.sleep(500);
+
+        String phonePart = actualPhone.replace("Mobile no -", "").trim().split(" ", 2)[1];
+        page.fill("//input[@placeholder='Search Leads by Name or Mobile No.']", phonePart);
+        Thread.sleep(1000);
+
+        Locator fullDetails = page.locator(fullDetailsText);
+        fullDetails.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+        fullDetails.click();
+        Thread.sleep(1000);
+
+        Locator addFollowupBtn = page.locator("(//span[contains(text(), 'Add-Followup')])[1]");
+        addFollowupBtn.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+        addFollowupBtn.click();
+        
+        String actualStage =page.textContent(StageInHistory).trim();
+        String actualComments =page.textContent(CommentsInHistory).trim();
+        
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(actualStage, Stage, "Stage mismatch");
+        softAssert.assertEquals(actualComments, Remark, "Remark mismatch");
+        
         closeHistoryPopup();
         softAssert.assertAll();
     }

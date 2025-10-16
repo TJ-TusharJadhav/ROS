@@ -107,9 +107,13 @@ public class AddFundFollowUpsForTest extends BaseTest {
 	    public void addFollowUpforLOstStage(String stage, String subStage, String childStage, String remark, String expectedFilter) throws InterruptedException {
 	    	FundFollowUps.addFollowUpForLostStage(stage, subStage, childStage, remark, expectedFilter);
 	    }
-//	    @Test(priority = 4)
+	    @Test(priority = 4)
 	    public void addFollowUpTestWithTextfield() throws InterruptedException {
-	    	FundFollowUps.addFollowUpForLostStageWithTextField("Lost", "Others (Mention)","Not Respoend","Enter Customer Reason", "Remark", "Lost Lead");
+	    	FundFollowUps.addFollowUpForLostStageWithTextField("Lost", "Others (Mention)","Enter Customer Reason", "Remark", "Lost Lead");
+	    }
+		@Test(priority = 5)
+	    public void addFollowUpForCommitted() throws InterruptedException {
+	    	FundFollowUps.addFollowUpForCommitted("Committed",  "Remark", "Committed");
 	    }
 
 

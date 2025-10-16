@@ -1,16 +1,12 @@
 package pages;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import org.testng.asserts.SoftAssert;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
-import java.util.Date;
+
+import java.util.Map;
 import java.text.ParseException;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitForSelectorState;
+import utils.DateTimeUtil;
 
 public class ProjectFollowUpPage {
 	private Page page;
@@ -19,24 +15,23 @@ public class ProjectFollowUpPage {
 	private String fullDetailsText = "(//p[@class='text-gray-500 mb-3 text-base break-words'])[1]";
 	private String dateField = "//input[@class='MuiPickersInputBase-input MuiPickersOutlinedInput-input css-1ftw2zb']";
 	
-//	private String datetime = LocalDateTime.now().plusMinutes(10).format(DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm a"));
-	private String Enterdatetime = "09/10/2025 10:30 PM";
-	private String Verifydatetime = "Oct 9, 2025, 10:30 PM";
+
+    Map<String, String> dateTimeMap = DateTimeUtil.getFormattedDateTimePlus20Mins();
+	private String Enterdatetime = dateTimeMap.get("Enterdatetime");
+	private String Verifydatetime = dateTimeMap.get("Verifydatetime");
+
+
+
     public ProjectFollowUpPage(Page page) {
         this.page = page;
     }
     
-    /** Helper to get formatted date */
-    private String formatDate(String datetime) throws ParseException {
-        SimpleDateFormat originalFormat = new SimpleDateFormat("dd/MM/yyyy hh:mm a");
-        SimpleDateFormat targetFormat = new SimpleDateFormat("MMM d, yyyy, hh:mm a");
-        Date date = originalFormat.parse(datetime);
-        return targetFormat.format(date);
-    }
     
     public void addfollowUP(String Stage, String SubStage, String Remark, String ExpectedFilter) throws InterruptedException, ParseException {
     	actualPhone = page.textContent(fullDetailsText).trim();
         System.out.println("actualPhone: "+actualPhone);
+        System.out.println("Enterdatetime: "+Enterdatetime);
+        System.out.println("Verifydatetime: "+Verifydatetime); 
     	page.waitForSelector("button:has-text('Add Lead Follow up')", 
     			new Page.WaitForSelectorOptions().setState(WaitForSelectorState.VISIBLE));
     	page.click("button:has-text('Add Lead Follow up')");
@@ -118,9 +113,6 @@ public class ProjectFollowUpPage {
              "Sub Stage mismatch. Expected: " + SubStage + ", Got: " + ActualSubStage);
      softAssert.assertEquals(ActualDateTime, Verifydatetime,
              "FollowUp date and time mismatch. Expected: " + Verifydatetime + ", Got: " + ActualDateTime);
-
-//     softAssert.assertEquals(ActualDateTime, formatDate(datetime),
-//             "FollowUp date and time mismatch. Expected: " + formatDate(datetime) + ", Got: " + ActualDateTime);
 
      System.out.println("Validation is done from History");
 
@@ -257,15 +249,6 @@ public class ProjectFollowUpPage {
         page.click("button:has-text('" + Stage + "')");
         page.click("button:has-text('" + SubStage + "')");
         page.click("button:has-text('" + ChildStage + "')");
-        // page.click("//td[@data-date='" + today + "']");
-
-        // Select Time
-//        Locator verifyButton = page.locator("input[type='time']");
-//        verifyButton.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
-//        // page.fill("input[type='time']", time);
-//        page.click("//button[@aria-label='Confirm Time Selection']");
-
-        // Add remark
         page.fill("#remarks", Remark);
 
         // Submit
@@ -320,23 +303,7 @@ public class ProjectFollowUpPage {
         String ActualStage = page.textContent("(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[6]").trim();
         String ActualComments = page.textContent("(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[8]").trim();
         String ActualSubStage = page.textContent("(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[9]").trim();
-//        String ActualDateTime = page.textContent("(//p[@class='font-medium text-xs sm:text-sm break-words whitespace-normal'])[7]").trim();
 
-
-     // Combine into LocalDateTime
-        // LocalDate datePart = LocalDate.parse(today, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        // LocalTime timePart = LocalTime.parse(time, DateTimeFormatter.ofPattern("HH:mm"));
-        // LocalDateTime dateTime = LocalDateTime.of(datePart, timePart);
-
-        // Format to desired output
-//        DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("MMM d, yyyy, h:mm a", Locale.ENGLISH);
-        // String ExpectedDateTime = dateTime.format(outputFormatter);
-        // System.out.println("Expected Date Time: "+ExpectedDateTime);
-
-        
-//       
-
-     // Inside your test method
      SoftAssert softAssert = new SoftAssert();
 
      softAssert.assertEquals(ActualStage, Stage,
@@ -347,11 +314,6 @@ public class ProjectFollowUpPage {
              "Sub Stage mismatch. Expected: " + SubStage + ", Got: " + ActualSubStage);
      softAssert.assertEquals(ActualChildStage, ChildStage,
              "Sub Stage mismatch. Expected: " + ChildStage + ", Got: " + ActualChildStage);
-     
-    //  softAssert.assertEquals(ActualDateTime, ExpectedDateTime,
-    //          "FollowUp date and time mismatch. Expected: " + ExpectedDateTime + ", Got: " + ActualDateTime);
-//        softAssert.assertEquals(ActualDateTime, "Oct 4, 2025, 10:30 PM",
-//             "FollowUp date and time mismatch. Expected: " + "Oct 4, 2025, 10:30 PM" + ", Got: " + ActualDateTime);
 
      System.out.println("Validation is done from History");
 
