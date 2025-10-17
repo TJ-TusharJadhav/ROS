@@ -29,6 +29,7 @@ public class BaseTest {
     protected LoginPage login;
     protected EditProjectLeadPage editProjectLead;
     protected EditFundLeadPage editfundLead;
+    protected EditFurnitureLeadPage editFurnitureLead;
     protected ProjectFollowUpPage projectFollowUp;
     protected FurnitureFollowUpsPage FurnitureFollowUps;
     protected FundFollowUpsPage FundFollowUps;
@@ -41,7 +42,7 @@ public class BaseTest {
         System.out.println("Running tests on environment: " + environment);
 
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(
+        browser = playwright.firefox().launch(
                 new BrowserType.LaunchOptions().setHeadless(false));
 
         BrowserContext context;
@@ -83,6 +84,7 @@ public class BaseTest {
         addprojectLead = new AddProjectLeadPage(page);
         editProjectLead = new EditProjectLeadPage(page);
         editfundLead = new EditFundLeadPage(page);
+        editFurnitureLead = new EditFurnitureLeadPage(page);
         projectFollowUp = new ProjectFollowUpPage(page);
         FurnitureFollowUps = new FurnitureFollowUpsPage(page);
         FundFollowUps = new FundFollowUpsPage(page);
