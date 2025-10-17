@@ -12,10 +12,12 @@
             <!-- Add Follow Up -->
             <class name="tests.Follow_Ups.AddProjectFollowUpTest"/>
             <class name="tests.Follow_Ups.AddFurnitureFollowUpsForTest"/>
+            <class name="tests.Follow_Ups.AddFundFollowUpsForTest"/>
             
             <!-- Edit Lead -->
             <class name="tests.Edit_Lead.EditProjectLeadTest"/>
             <class name="tests.Edit_Lead.EditFundLeadTest"/>
+            <class name="tests.Edit_Lead.EditFurnitureLeadTest"/>
         </classes>
     </test>
 </suite>
