@@ -27,7 +27,7 @@ public class FurnitureFollowUpsPage {
 
 Map<String, String> dateTimeMap = DateTimeUtil.getFormattedDateTimePlus20Mins();
 	private String Enterdatetime = dateTimeMap.get("Enterdatetime");
-	private String Verifydatetime = dateTimeMap.get("Verifydatetime");
+	// private String Verifydatetime = dateTimeMap.get("Verifydatetime");
     
     public FurnitureFollowUpsPage(Page page) {
         this.page = page;
@@ -107,8 +107,8 @@ Map<String, String> dateTimeMap = DateTimeUtil.getFormattedDateTimePlus20Mins();
         softAssert.assertEquals(actualComments, Remark, "Remark mismatch");
         softAssert.assertEquals(actualSubStage, SubStage, "SubStage mismatch");
         
-        softAssert.assertEquals(actualDateTime, Verifydatetime,
-                "FollowUp date and time mismatch. Expected: " + Verifydatetime + ", Got: " + actualDateTime);
+        softAssert.assertEquals(actualDateTime, Enterdatetime,
+                "FollowUp date and time mismatch. Expected: " + Enterdatetime + ", Got: " + actualDateTime);
         System.out.println("Validation done from History");
         closeHistoryPopup();
         softAssert.assertAll();

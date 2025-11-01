@@ -22,7 +22,7 @@ public class EditProjectLeadPage {
     private String additionalcountryCode = "(//div[@aria-label='Select Country Code'])[2]";
     private String alternateMobileNumber = "#alternateMobileNumber";
     private String referralType = "#referralType";
-    private String referralNameField = "//input[@placeholder='Referral Name *']";
+    private String referralNameField = "referralName";
     private String referralNamesearchBar = "//input[@placeholder='Search Referral']";
     private String location = "#location";
     private String priority = "#priority";

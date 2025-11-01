@@ -108,9 +108,9 @@ public class AddFurnitureFollowUpsForTest extends BaseTest {
 
 	        return new Object[][] {
 	        	{"Deal Closed", "Invoice Generated", "Shared updated brochure", "Deal Done"},
-//	        	{"Deal Closed", "Advance Received", "User impressed with interiors", "Deal Done"},
-//	        	{"Deal Closed", "Delivery Scheduled", "Unit options shared with client", "Deal Done"},
-//	        	{"Deal Closed", "Delivered & Installed", "Unit 3B-405 blocked temporarily", "Deal Done"},
+	        	{"Deal Closed", "Advance Received", "User impressed with interiors", "Deal Done"},
+	        	{"Deal Closed", "Delivery Scheduled", "Unit options shared with client", "Deal Done"},
+	        	{"Deal Closed", "Delivered & Installed", "Unit 3B-405 blocked temporarily", "Deal Done"},
 	        	};
 	 }
 

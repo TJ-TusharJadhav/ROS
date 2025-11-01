@@ -44,16 +44,12 @@ public class ExtentTestNGListener implements ITestListener, ISuiteListener {
     @Override
     public void onTestStart(ITestResult result) {
         String className = result.getTestClass().getRealClass().getSimpleName();
-        String methodName = result.getMethod().getMethodName();
-
-        // Unique key per test method
-        String key = className + "_" + methodName;
 
         // Create report only once per method
-        reportMap.putIfAbsent(key, ExtentManager.createInstance(className, methodName));
+        reportMap.putIfAbsent(className, ExtentManager.createInstance(className));
 
-        ExtentReports extent = reportMap.get(key);
-        ExtentTest test = extent.createTest(methodName + " - DataSet: " + getDataSetLabel(result));
+        ExtentReports extent = reportMap.get(className);
+        ExtentTest test = extent.createTest(" - DataSet: " + getDataSetLabel(result));
         testThread.set(test);
     }
 
@@ -87,10 +83,8 @@ public class ExtentTestNGListener implements ITestListener, ISuiteListener {
 
     private void flushReport(ITestResult result) {
         String className = result.getTestClass().getRealClass().getSimpleName();
-        String methodName = result.getMethod().getMethodName();
-        String key = className + "_" + methodName;
 
-        ExtentReports extent = reportMap.get(key);
+        ExtentReports extent = reportMap.get(className);
         if (extent != null) {
             extent.flush();
         }

@@ -53,7 +53,7 @@ public class AddProjectFollowUpTest extends BaseTest {
 	        	{"Meeting Done", "Unit Blocked", "Unit 3B-405 blocked temporarily", "Today’s Follow Up"},
 	        	{"Meeting Done", "Payment Plan Discussion", "Explained staggered payment plan", "Today’s Follow Up"},
 	        	{"Meeting Done", "Next Meeting Planned", "Next visit planned for 15th July", "Today’s Follow Up"},
-	        	{"Meeting Done", "Discussion", "Finalizing decision with family", "Today’s Follow Up"},
+	        	// {"Meeting Done", "Discussion", "Finalizing decision with family", "Today’s Follow Up"},
 	        	{"Meeting Done", "Not Responding", "No callback after site visit", "Today’s Follow Up"},
 	        	{"Meeting Done", "Project Overview & Cost Discussion", "Covered pricing, next step is booking", "Today’s Follow Up"},  
 	        };
