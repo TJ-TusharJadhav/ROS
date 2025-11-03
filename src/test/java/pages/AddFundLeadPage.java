@@ -297,6 +297,7 @@ page.click("//div[contains(text(), 'New Lead')]");
 //        Lead details on history 
         Thread.sleep(500);
         page.click(fullDetailsText);
+        Thread.sleep(500);
         Locator verifyButton = page.locator("//span[text()='Create']");
 
         if (verifyButton.count() > 0) {
