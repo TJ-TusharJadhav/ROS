@@ -103,7 +103,7 @@ public Object[][] AdditionalleadData() throws Exception {
 
     String email = fname + lname + "@yopmail.com";
 
-        editFurnitureLead.addLeadWithAdditional(
+        editFurnitureLead.EditLeadWithAdditional(
             fname, lname, email, category, subCategory, remarks,
             referralType, referralName,
             priority, budget, ProjectType, buyingTime, Finance, BOD, area,CompanyName,EstimatedQuantity,ProjectTimeline

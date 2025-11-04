@@ -84,6 +84,8 @@ public class EditFurnitureLeadPage {
     	EditLeadBasic( fname, lname, mail, Category, subCategory, note);
         page.click(submitBtn);
         Thread.sleep(2000);
+        page.click("//div[contains(text(), 'Re-Inquiry')]");
+        Thread.sleep(2000);
         page.click("//div[contains(text(), 'New Lead')]");
     }
     public void validateLeadWithGeneratedData(
@@ -152,7 +154,7 @@ public class EditFurnitureLeadPage {
         
      }
 
-    public void addLeadWithAdditional( String fname, String lname,
+    public void EditLeadWithAdditional( String fname, String lname,
              String mail,  String Category,String Subcategory, String note,
             String ReferralType,String ReferralName, String Priority1, String Budget, String ProjectType, String BuyingTime,
     		String Finance, String DOB, String Area, String CompanyName, String EstimatedQuantity, String ProjectTimeline) throws InterruptedException {
@@ -188,6 +190,8 @@ page.fill(estimatedQuantity, EstimatedQuantity);
 page.fill(projectTimeline, ProjectTimeline);
 page.click(submitBtn);
 Thread.sleep(1000);
+page.click("//div[contains(text(), 'Re-Inquiry')]");
+Thread.sleep(2000);
 page.click("//div[contains(text(), 'New Lead')]");
 
 }
