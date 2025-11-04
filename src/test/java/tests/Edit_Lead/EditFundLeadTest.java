@@ -88,8 +88,7 @@ public Object[][] AdditionalleadData() throws Exception {
     
        
 
-    // @Test(dataProvider = "leadData",retryAnalyzer = RetryAnalyzer.class)
-	@Test(dataProvider = "leadData")
+    @Test(dataProvider = "leadData",retryAnalyzer = RetryAnalyzer.class)
     public void addLeadForBasicFundLead(String project, String fname, String lname, String remarks) throws InterruptedException {
     String email = fname + lname + "@yopmail.com";
     editfundLead.editLeadWithBasic(project, fname, lname, email, remarks);
