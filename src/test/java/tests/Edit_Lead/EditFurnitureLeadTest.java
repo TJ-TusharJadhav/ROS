@@ -87,15 +87,15 @@ public Object[][] AdditionalleadData() throws Exception {
        
 
     @Test(dataProvider = "leadData",retryAnalyzer = RetryAnalyzer.class)
-    public void addLeadForBasicFundLead(String fname, String lname, String Category, String subCategory,String remarks) throws InterruptedException {
+    public void EditLeadForBasicFundLead(String fname, String lname, String Category, String subCategory,String remarks) throws InterruptedException {
     String email = fname + lname + "@yopmail.com";
     editFurnitureLead.EditLeadWithBasic( fname, lname, email,  Category, subCategory,remarks);
     editFurnitureLead.validateLeadWithGeneratedData(fname, lname, email, remarks, Category, subCategory);
     }
     
     @Test(dataProvider = "AdditionalleadData", priority = 2)
-    public void addLeadForAdditionalFurnitureLeadTest(
-         String fname, String lname, String category, String subCategory, String remarks,
+    public void EditLeadForAdditionalFurnitureLeadTest(
+        String fname, String lname, String category, String subCategory, String remarks,
         String referralType, String referralName, String priority, String budget,
         String ProjectType, String buyingTime, String Finance, String BOD,
         String area, String CompanyName, String EstimatedQuantity, String ProjectTimeline

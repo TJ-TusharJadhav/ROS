@@ -63,7 +63,7 @@ public class AddCPLeadTest extends BaseTest {
     /* -------------------- ✅ TEST CASES -------------------- */
 
     @Test(dataProvider = "add_Individual_CPLead_With_Non_Registered", priority = 1)
-    public void addIndividualNonRegistered(
+    public void add_and_Validate_Individual_Non_Registered(
             String fname, String lname, String country, String address,
             String tier, String channelRole, String radio) throws InterruptedException {
 
@@ -73,13 +73,13 @@ public class AddCPLeadTest extends BaseTest {
 
         String email = fname + lname + "@yopmail.com";
 
-        addCPLead.add_Individual_CPLead_With_Non_Registered(
+        addCPLead.add_and_Validate_Individual_CPLead_With_Non_Registered(
                 fname, lname, country, phone, email, address, tier, channelRole
         );
     }
 
     @Test(dataProvider = "add_Company_CPLead_With_Non_Registered", priority = 2)
-    public void addCompanyNonRegistered(
+    public void add_and_Validate_CompanyNonRegistered(
             String fname, String lname, String country, String address, String tier,
             String channelRole, String radio, String company) throws InterruptedException {
 
@@ -89,8 +89,23 @@ public class AddCPLeadTest extends BaseTest {
 
         String email = fname + lname + "@yopmail.com";
 
-        addCPLead.add_Company_CPLead_With_Non_Registered(
+        addCPLead.add_and_Validate_Company_CPLead_With_Non_Registered(
                 fname, lname, country, phone, email, address, tier, channelRole, company
+        );
+    }
+    @Test(dataProvider = "add_Company_CPLead_With_Registered", priority = 3)
+    public void add_Individual_CompanyRegistered(
+            String fname, String lname, String country, String address, String tier,
+            String channelRole, String path,String date, String companyName) throws InterruptedException {
+
+        String countryCode = CountryCodeMapper.getCountryCode(country);
+        phone = PhoneNumber.generateUniquePhoneNumber(countryCode);
+        System.out.println("Fund lead Phone Number (" + countryCode + "): " + phone);
+
+        String email = fname + lname + "@yopmail.com";
+
+        addCPLead.add_Individual_Company_CPLead_With_Registered(
+                fname, lname, country, phone, email, address, tier, channelRole, companyName, path, date
         );
     }
 
@@ -110,19 +125,5 @@ public class AddCPLeadTest extends BaseTest {
         );
     }
 
-    @Test(dataProvider = "add_Company_CPLead_With_Registered", priority = 3)
-    public void addCompanyRegistered(
-            String fname, String lname, String country, String address, String tier,
-            String channelRole, String path,String date, String companyName) throws InterruptedException {
-
-        String countryCode = CountryCodeMapper.getCountryCode(country);
-        phone = PhoneNumber.generateUniquePhoneNumber(countryCode);
-        System.out.println("Fund lead Phone Number (" + countryCode + "): " + phone);
-
-        String email = fname + lname + "@yopmail.com";
-
-        addCPLead.add_Company_CPLead_With_Registered(
-                fname, lname, country, phone, email, address, tier, channelRole, companyName, path, date
-        );
-    }
+    
 }

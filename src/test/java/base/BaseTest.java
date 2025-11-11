@@ -35,6 +35,7 @@ public class BaseTest {
     protected FundFollowUpsPage FundFollowUps;
     protected AddLandLeadPage addLandLead;
     protected AddFurnitureLeadPage addFurnitureLead;
+    protected AddUserPage adduser;
     protected Faker faker;
 
     @BeforeSuite
@@ -90,6 +91,7 @@ public class BaseTest {
         FundFollowUps = new FundFollowUpsPage(page);
         addLandLead = new AddLandLeadPage(page);
         addFurnitureLead = new AddFurnitureLeadPage(page);
+        adduser = new AddUserPage(page);
         faker = new Faker();
     }
 

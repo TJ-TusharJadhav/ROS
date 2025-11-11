@@ -5,15 +5,12 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import com.opencsv.CSVReader;
-
 import base.BaseTest;
 import listeners.ExtentTestNGListener;
 import utils.PhoneNumber;
@@ -89,14 +86,14 @@ public Object[][] AdditionalleadData() throws Exception {
        
 
     @Test(dataProvider = "leadData",retryAnalyzer = RetryAnalyzer.class)
-    public void addLeadForBasicFundLead(String project, String fname, String lname, String remarks) throws InterruptedException {
+    public void EditLeadForBasicFundLead(String project, String fname, String lname, String remarks) throws InterruptedException {
     String email = fname + lname + "@yopmail.com";
     editfundLead.editLeadWithBasic(project, fname, lname, email, remarks);
     editfundLead.validateLeadWithBasicInfo(fname, lname, project, email, remarks);
     }
     
     @Test(dataProvider = "AdditionalleadData",retryAnalyzer = RetryAnalyzer.class)
-    public void addLeadForAdditionalFundLeadTest(
+    public void EditLeadForAdditionalFundLeadTest(
             String project, String fname, String lname,  String remarks,
              String addCountryCode, String referralType, String referralName, String location, String buyingTime,
             String priority, String budget, String area, String projectCat, String unitType, String leadType) throws InterruptedException {

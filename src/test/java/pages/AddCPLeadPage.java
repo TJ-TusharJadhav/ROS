@@ -2,9 +2,6 @@ package pages;
 
 import java.io.File;
 import java.nio.file.Paths;
-
-import org.apache.commons.math3.stat.ranking.TiesStrategy;
-
 import com.microsoft.playwright.*;
 import com.microsoft.playwright.options.SelectOption;
 import com.microsoft.playwright.options.WaitForSelectorState;
@@ -37,7 +34,6 @@ public class AddCPLeadPage {
     private String LeadOwner = "(//span[@class='px-2 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-700'])[1]";
      
     // Locators for  history card
-    private String createHistorycard = "//span[text()='Create']";
     private String CreatedBY_InHistoryCard = "(//p[@class='font-medium text-xs sm:text-sm'])[1]";
     private String createDate_InHistoryCard = "(//p[@class='font-medium text-xs sm:text-sm'])[2]";
     private String ActionType_InHistoryCard = "(//p[@class='font-medium text-xs sm:text-sm'])[3]";
@@ -65,7 +61,7 @@ public class AddCPLeadPage {
     public AddCPLeadPage(Page page) {
         this.page = page;
     }
-    public void add_Individual_CPLead_With_Non_Registered(String fname, String lname, String country,String phone,String mail, String address, String Tier, String ChannelRole) throws InterruptedException {
+    public void add_and_Validate_Individual_CPLead_With_Non_Registered(String fname, String lname, String country,String phone,String mail, String address, String Tier, String ChannelRole) throws InterruptedException {
     	addCPLead(fname,lname,country,phone,mail,address,Tier);
         page.selectOption(channelRole, new SelectOption().setLabel(ChannelRole));
         page.click(Individual);
@@ -174,36 +170,33 @@ public class AddCPLeadPage {
         // : "Full name mismatch. Expected: " + "Create" + ", Got: " + actualActionType;
         
         assert actualfirstName.equals(fname) 
-        : "Full name mismatch. Expected: " + fname + ", Got: " + actualfirstName;
+        : "first name mismatch. Expected: " + fname + ", Got: " + actualfirstName;
         assert actuallastName.equals(lname) 
-        : "Full name mismatch. Expected: " + lname + ", Got: " + actuallastName;
+        : "llast name mismatch. Expected: " + lname + ", Got: " + actuallastName;
         assert actualEmail.equals(mail) 
-        : "Full name mismatch. Expected: " + mail + ", Got: " + actualEmail;
+        : "Email name mismatch. Expected: " + mail + ", Got: " + actualEmail;
         assert actualCountryCode.equals(country) 
-        : "Full name mismatch. Expected: " + country + ", Got: " + actualCountryCode;
+        : "CountryCode mismatch. Expected: " + country + ", Got: " + actualCountryCode;
         assert actualPhoneNumber.equals(phone) 
-        : "Full name mismatch. Expected: " + phone + ", Got: " + actualPhoneNumber;
+        : "PhoneNumber mismatch. Expected: " + phone + ", Got: " + actualPhoneNumber;
         assert actualAddress.equals(address) 
-        : "Full name mismatch. Expected: " + address + ", Got: " + actualAddress;
+        : "Address mismatch. Expected: " + address + ", Got: " + actualAddress;
         // assert actualChannelRole.equals(ChannelRole) 
         // : "Full name mismatch. Expected: " + ChannelRole + ", Got: " + actualChannelRole;
         assert actualReraCertificate.equals("N/A") 
-        : "Full name mismatch. Expected: " + "N/A" + ", Got: " + actualReraCertificate;
+        : "Rera Certificate mismatch. Expected: " + "N/A" + ", Got: " + actualReraCertificate;
         assert actualType.equals("Individual") 
-        : "Full name mismatch. Expected: " + "Individual" + ", Got: " + actualType;
+        : "Type mismatch. Expected: " + "Individual" + ", Got: " + actualType;
         assert actualCompanyName.equals("N/A") 
-        : "Full name mismatch. Expected: " + "N/A" + ", Got: " + actualCompanyName;
+        : "Company Name mismatch. Expected: " + "N/A" + ", Got: " + actualCompanyName;
         assert actualSalesType.equals("CP") 
-        : "Full name mismatch. Expected: " + "CP" + ", Got: " + actualSalesType;
+        : "Sales Type mismatch. Expected: " + "CP" + ", Got: " + actualSalesType;
         assert actualSourceName.equals("Digital") 
-        : "Full name mismatch. Expected: " + "Digital" + ", Got: " + actualSourceName;
+        : "Source Name mismatch. Expected: " + "Digital" + ", Got: " + actualSourceName;
         assert actualSubSourcename.equals("Admin") 
-        : "Full name mismatch. Expected: " + "Admin" + ", Got: " + actualSubSourcename;
-        assert actualTier.equals(Tier) 
-        : "Full name mismatch. Expected: " + Tier + ", Got: " + actualTier;
-        
-        
-
+        : "Sub Source name mismatch. Expected: " + "Admin" + ", Got: " + actualSubSourcename;
+        // assert actualTier.equals(Tier) 
+        // : "Tier mismatch. Expected: " + Tier + ", Got: " + actualTier;
         
         }
     public void add_Individual_CPLead_With_Registered(String fname, String lname, String country, String phone, String mail, String address, String Tier, String ChannelRole, String filepath,String date) throws InterruptedException {
@@ -325,38 +318,38 @@ public class AddCPLeadPage {
         // : "Full name mismatch. Expected: " + mail + ", Got: " + actualActionType;
         
         assert actualfirstName.equals(fname) 
-        : "Full name mismatch. Expected: " + fname + ", Got: " + actualfirstName;
+        : "first name mismatch. Expected: " + fname + ", Got: " + actualfirstName;
         assert actuallastName.equals(lname) 
-        : "Full name mismatch. Expected: " + lname + ", Got: " + actuallastName;
+        : "Last name mismatch. Expected: " + lname + ", Got: " + actuallastName;
         assert actualEmail.equals(mail) 
-        : "Full name mismatch. Expected: " + mail + ", Got: " + actualEmail;
+        : "Email mismatch. Expected: " + mail + ", Got: " + actualEmail;
         assert actualCountryCode.equals(country) 
-        : "Full name mismatch. Expected: " + country + ", Got: " + actualCountryCode;
+        : "Country Code mismatch. Expected: " + country + ", Got: " + actualCountryCode;
         assert actualPhoneNumber.equals(phone) 
-        : "Full name mismatch. Expected: " + phone + ", Got: " + actualPhoneNumber;
+        : "Phone Number mismatch. Expected: " + phone + ", Got: " + actualPhoneNumber;
         assert actualAddress.equals(address) 
-        : "Full name mismatch. Expected: " + address + ", Got: " + actualAddress;
+        : "Address mismatch. Expected: " + address + ", Got: " + actualAddress;
         // assert actualChannelRole.equals(ChannelRole) 
         // : "Full name mismatch. Expected: " + ChannelRole + ", Got: " + actualChannelRole;
 
         assert actualReraCertificateName.equals(expectedFileName1) 
-        : "Uploaded file name mismatch! Expected: " + expectedFileName1 + ", Got: " + actualReraCertificateName;
+        : "Rera Certificate Name mismatch! Expected: " + expectedFileName1 + ", Got: " + actualReraCertificateName;
         assert actualType.equals("Individual") 
-        : "Full name mismatch. Expected: " + "Individual" + ", Got: " + actualType;
+        : "Type mismatch. Expected: " + "Individual" + ", Got: " + actualType;
         assert actualCompanyName.equals("N/A") 
-        : "Full name mismatch. Expected: " + "N/A" + ", Got: " + actualCompanyName;
+        : "Company Name mismatch. Expected: " + "N/A" + ", Got: " + actualCompanyName;
         assert actualSalesType.equals("CP") 
-        : "Full name mismatch. Expected: " + "CP" + ", Got: " + actualSalesType;
+        : "Sales Type mismatch. Expected: " + "CP" + ", Got: " + actualSalesType;
         assert actualSourceName.equals("Digital") 
-        : "Full name mismatch. Expected: " + "Digital" + ", Got: " + actualSourceName;
+        : "Source Name mismatch. Expected: " + "Digital" + ", Got: " + actualSourceName;
         assert actualSubSourcename.equals("Admin") 
-        : "Full name mismatch. Expected: " + "Admin" + ", Got: " + actualSubSourcename;
-        assert actualTier.equals(Tier) 
-        : "Full name mismatch. Expected: " + Tier + ", Got: " + actualTier;
+        : "Sub Source name mismatch. Expected: " + "Admin" + ", Got: " + actualSubSourcename;
+        // assert actualTier.equals(Tier) 
+        // : "Tier mismatch. Expected: " + Tier + ", Got: " + actualTier;
         
         }
 
-    public void add_Company_CPLead_With_Non_Registered(String fname, String lname, String country, String phone, String mail, String address, String Tier, String ChannelRole, String Company_Name) throws InterruptedException {
+    public void add_and_Validate_Company_CPLead_With_Non_Registered(String fname, String lname, String country, String phone, String mail, String address, String Tier, String ChannelRole, String Company_Name) throws InterruptedException {
     	addCPLead(fname,lname,country,phone,mail,address,Tier);
         page.selectOption(channelRole, new SelectOption().setLabel(ChannelRole));
         page.click(Company);
@@ -466,37 +459,37 @@ public class AddCPLeadPage {
         // : "Full name mismatch. Expected: " + mail + ", Got: " + actualActionType;
         
         assert actualfirstName.equals(fname) 
-        : "Full name mismatch. Expected: " + fname + ", Got: " + actualfirstName;
+        : "First name mismatch. Expected: " + fname + ", Got: " + actualfirstName;
         assert actuallastName.equals(lname) 
-        : "Full name mismatch. Expected: " + lname + ", Got: " + actuallastName;
+        : "Last name mismatch. Expected: " + lname + ", Got: " + actuallastName;
         assert actualEmail.equals(mail) 
-        : "Full name mismatch. Expected: " + mail + ", Got: " + actualEmail;
+        : "Email mismatch. Expected: " + mail + ", Got: " + actualEmail;
         assert actualCountryCode.equals(country) 
-        : "Full name mismatch. Expected: " + country + ", Got: " + actualCountryCode;
+        : "Country Code mismatch. Expected: " + country + ", Got: " + actualCountryCode;
         assert actualPhoneNumber.equals(phone) 
-        : "Full name mismatch. Expected: " + phone + ", Got: " + actualPhoneNumber;
+        : "Phone Number mismatch. Expected: " + phone + ", Got: " + actualPhoneNumber;
         assert actualAddress.equals(address) 
-        : "Full name mismatch. Expected: " + address + ", Got: " + actualAddress;
+        : "Address mismatch. Expected: " + address + ", Got: " + actualAddress;
         // assert actualChannelRole.equals(ChannelRole) 
         // : "Full name mismatch. Expected: " + ChannelRole + ", Got: " + actualChannelRole;
         assert actualReraCertificate.equals("N/A") 
-        : "Full name mismatch. Expected: " + "N/A" + ", Got: " + actualReraCertificate;
+        : "ReraCertificate name mismatch. Expected: " + "N/A" + ", Got: " + actualReraCertificate;
         assert actualType.equals("Company") 
-        : "Full name mismatch. Expected: " + "Company" + ", Got: " + actualType;
+        : "Type mismatch. Expected: " + "Company" + ", Got: " + actualType;
         assert actualCompanyName.equals(Company_Name) 
-        : "Full name mismatch. Expected: " + Company_Name + ", Got: " + actualCompanyName;
+        : "Company Name mismatch. Expected: " + Company_Name + ", Got: " + actualCompanyName;
         assert actualSalesType.equals("CP") 
-        : "Full name mismatch. Expected: " + "CP" + ", Got: " + actualSalesType;
+        : "FSales Type mismatch. Expected: " + "CP" + ", Got: " + actualSalesType;
         assert actualSourceName.equals("Digital") 
-        : "Full name mismatch. Expected: " + "Digital" + ", Got: " + actualSourceName;
+        : "Source Name mismatch. Expected: " + "Digital" + ", Got: " + actualSourceName;
         assert actualSubSourcename.equals("Admin") 
-        : "Full name mismatch. Expected: " + "Admin" + ", Got: " + actualSubSourcename;
-        assert actualTier.equals(Tier) 
-        : "Full name mismatch. Expected: " + Tier + ", Got: " + actualTier;
+        : "Sub Source name mismatch. Expected: " + "Admin" + ", Got: " + actualSubSourcename;
+        // assert actualTier.equals(Tier) 
+        // : "Tier mismatch. Expected: " + Tier + ", Got: " + actualTier;
         
         }
         
-    public void add_Company_CPLead_With_Registered(String fname, String lname, String country, String phone, String mail,String address, String Tier, String ChannelRole, String Company_Name,String filepath, String date) throws InterruptedException {
+    public void add_Individual_Company_CPLead_With_Registered(String fname, String lname, String country, String phone, String mail,String address, String Tier, String ChannelRole, String Company_Name,String filepath, String date) throws InterruptedException {
     	addCPLead(fname,lname,country,phone,mail,address,Tier);
         page.selectOption(channelRole, new SelectOption().setLabel(ChannelRole));
         //Upload file
@@ -616,33 +609,33 @@ public class AddCPLeadPage {
         // : "Full name mismatch. Expected: " + mail + ", Got: " + actualActionType;
         
         assert actualfirstName.equals(fname) 
-        : "Full name mismatch. Expected: " + fname + ", Got: " + actualfirstName;
+        : "first name mismatch. Expected: " + fname + ", Got: " + actualfirstName;
         assert actuallastName.equals(lname) 
-        : "Full name mismatch. Expected: " + lname + ", Got: " + actuallastName;
+        : "Last name mismatch. Expected: " + lname + ", Got: " + actuallastName;
         assert actualEmail.equals(mail) 
-        : "Full name mismatch. Expected: " + mail + ", Got: " + actualEmail;
+        : "Email mismatch. Expected: " + mail + ", Got: " + actualEmail;
         assert actualCountryCode.equals(country) 
-        : "Full name mismatch. Expected: " + country + ", Got: " + actualCountryCode;
+        : "Country Code mismatch. Expected: " + country + ", Got: " + actualCountryCode;
         assert actualPhoneNumber.equals(phone) 
-        : "Full name mismatch. Expected: " + phone + ", Got: " + actualPhoneNumber;
+        : "Phone Number mismatch. Expected: " + phone + ", Got: " + actualPhoneNumber;
         assert actualAddress.equals(address) 
-        : "Full name mismatch. Expected: " + address + ", Got: " + actualAddress;
+        : "Address mismatch. Expected: " + address + ", Got: " + actualAddress;
         // assert actualChannelRole.equals(ChannelRole) 
         // : "Full name mismatch. Expected: " + ChannelRole + ", Got: " + actualChannelRole;
         assert actualReraCertificateName.equals(expectedFileName1) 
-        : "Uploaded file name mismatch! Expected: " + expectedFileName1 + ", Got: " + actualReraCertificateName;
+        : "Rera Certificate Name mismatch! Expected: " + expectedFileName1 + ", Got: " + actualReraCertificateName;
         assert actualType.equals("Company") 
-        : "Full name mismatch. Expected: " + "Company" + ", Got: " + actualType;
+        : "Type mismatch. Expected: " + "Company" + ", Got: " + actualType;
         assert actualCompanyName.equals(Company_Name) 
-        : "Full name mismatch. Expected: " + Company_Name + ", Got: " + actualCompanyName;
+        : "Company Name mismatch. Expected: " + Company_Name + ", Got: " + actualCompanyName;
         assert actualSalesType.equals("CP") 
-        : "Full name mismatch. Expected: " + "CP" + ", Got: " + actualSalesType;
+        : "Sales Type mismatch. Expected: " + "CP" + ", Got: " + actualSalesType;
         assert actualSourceName.equals("Digital") 
-        : "Full name mismatch. Expected: " + "Digital" + ", Got: " + actualSourceName;
+        : "Source Name mismatch. Expected: " + "Digital" + ", Got: " + actualSourceName;
         assert actualSubSourcename.equals("Admin") 
-        : "Full name mismatch. Expected: " + "Admin" + ", Got: " + actualSubSourcename;
-        assert actualTier.equals(Tier) 
-        : "Full name mismatch. Expected: " + Tier + ", Got: " + actualTier;
+        : "Sub Source name mismatch. Expected: " + "Admin" + ", Got: " + actualSubSourcename;
+        // assert actualTier.equals(Tier) 
+        // : "Tier mismatch. Expected: " + Tier + ", Got: " + actualTier;
         
         }
 

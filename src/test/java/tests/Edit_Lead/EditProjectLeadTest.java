@@ -161,7 +161,7 @@ public class EditProjectLeadTest extends BaseTest {
     }
 
     @Test(dataProvider = "leadData",priority = 1,retryAnalyzer = RetryAnalyzer.class)
-    public void addLeadForBasicProjectLead(String project, String fname, String lname, String remarks) throws InterruptedException {
+    public void EditLeadForBasicProjectLead(String project, String fname, String lname, String remarks) throws InterruptedException {
     
     String email = fname + lname + "@yopmail.com";
     editProjectLead.EditLeadWithBasic(project, fname, lname, email, remarks);
@@ -169,7 +169,7 @@ public class EditProjectLeadTest extends BaseTest {
     }
 
     @Test(dataProvider = "AdditionalleadData",priority = 2,retryAnalyzer = RetryAnalyzer.class)
-    public void addLeadForAdditionalProjectLeadTest(
+    public void EditLeadForAdditionalProjectLeadTest(
             String project, String fname, String lname, String remarks,
             String secondproject, String addCountryCode, String referralType, String referralName, String location, String buyingTime,
             String priority, String budget, String area, String projectCat, String unitType, String leadType) throws InterruptedException {
