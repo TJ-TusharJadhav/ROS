@@ -17,8 +17,8 @@ public class people extends BaseTest{
 	}
     @Test
     public void Valid_add_user() throws InterruptedException{
-        String firstNmae ="Roshan";
-        String LastNmae ="Jadhav";
+        String firstNmae ="Mihir";
+        String LastNmae ="patel";
         String Country ="+91";
         String countryCode = CountryCodeMapper.getCountryCode(Country);
         String phone = PhoneNumber.generateUniquePhoneNumber(countryCode);
@@ -27,8 +27,8 @@ public class people extends BaseTest{
     }
     @Test
     public void Valid_add_user_1() throws InterruptedException{
-        String firstNmae ="kunsh";
-        String LastNmae ="Jadhav";
+        String firstNmae ="Kushang";
+        String LastNmae ="Patel";
         String Country ="+91";
         String countryCode = CountryCodeMapper.getCountryCode(Country);
         String phone = PhoneNumber.generateUniquePhoneNumber(countryCode);

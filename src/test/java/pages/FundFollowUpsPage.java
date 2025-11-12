@@ -37,7 +37,7 @@ Map<String, String> dateTimeMap = DateTimeUtil.getFormattedDateTimePlus20Mins();
 
     /** Common close button logic */
     private void closeHistoryPopup() {
-        Locator closeBtn = page.locator("(//button[@type='button'])[3]");
+        Locator closeBtn = page.locator("(//button[@type='button'])[4]");
         while (closeBtn.isVisible()) {
             if (closeBtn.isEnabled()) closeBtn.click();
             page.waitForTimeout(1000);
@@ -66,6 +66,7 @@ Map<String, String> dateTimeMap = DateTimeUtil.getFormattedDateTimePlus20Mins();
 
         Locator submitButton = page.locator(submit);
         while (submitButton.isVisible()) {
+            Thread.sleep(100);
             if (submitButton.isEnabled()) submitButton.click();
             page.waitForTimeout(2000);
         }
@@ -127,6 +128,7 @@ Map<String, String> dateTimeMap = DateTimeUtil.getFormattedDateTimePlus20Mins();
 
         Locator submitButton = page.locator(submit);
         while (submitButton.isVisible()) {
+            Thread.sleep(100);
             if (submitButton.isEnabled()) submitButton.click();
             page.waitForTimeout(2000);
         }
@@ -182,6 +184,7 @@ Map<String, String> dateTimeMap = DateTimeUtil.getFormattedDateTimePlus20Mins();
 
         Locator submitButton = page.locator(submit);
         while (submitButton.isVisible()) {
+            Thread.sleep(100);
             if (submitButton.isEnabled()) submitButton.click();
             page.waitForTimeout(2000);
         }
@@ -229,6 +232,7 @@ Map<String, String> dateTimeMap = DateTimeUtil.getFormattedDateTimePlus20Mins();
 
         Locator submitButton = page.locator(submit);
         while (submitButton.isVisible()) {
+            Thread.sleep(100);
             if (submitButton.isEnabled()) submitButton.click();
             page.waitForTimeout(2000);
         }
@@ -273,6 +277,7 @@ Map<String, String> dateTimeMap = DateTimeUtil.getFormattedDateTimePlus20Mins();
 
         Locator submitButton = page.locator(submit);
         while (submitButton.isVisible()) {
+            Thread.sleep(100);
             if (submitButton.isEnabled()) submitButton.click();
             page.waitForTimeout(2000);
         }

@@ -44,19 +44,20 @@ public class AddFundFollowUpsForTest extends BaseTest {
 
 	        	{"Qualified", "Shared Documents", "Sent project details to client", "Today’s Follow Up"},
 	        	{"Qualified", "Follow-up Scheduled", "Follow-up scheduled to discuss proposal", "Today’s Follow Up"},
-
-	        	{"Meeting Planned", "Shivalik House", "Meeting scheduled at Shivalik House", "Today’s Follow Up"},
+	        	
+				{"Meeting Planned", "Shivalik House", "Meeting scheduled at Shivalik House", "Today’s Follow Up"},
 	        	{"Meeting Planned", "Online", "Online meeting link shared with client", "Today’s Follow Up"},
 	        	{"Meeting Planned", "Client Office", "Meeting planned at client’s office", "Today’s Follow Up"},
-
+                
 	        	{"Meeting Done", "Attended", "Meeting completed successfully", "Today’s Follow Up"},
 	        	{"Meeting Done", "Not Attended", "Client missed the meeting, need to reschedule", "Today’s Follow Up"},
 
                 {"Outcome", "Follow-up Meeting", "Follow-up meeting scheduled for discussion", "Today’s Follow Up"},
 
-//	        	{"Qualified", "meeting planned", "Planned meeting to discuss investment options", "Today’s Follow Up"},
-//	        	{"Outcome", "committed", "Client committed to proceed", "Today’s Follow Up"},
+	        	//// {"Qualified", "meeting planned", "Planned meeting to discuss investment options", "Today’s Follow Up"},
+	        	//// {"Outcome", "committed", "Client committed to proceed", "Today’s Follow Up"},
 	        	
+				
 	        	
 };
 	 }

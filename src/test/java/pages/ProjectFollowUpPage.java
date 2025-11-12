@@ -117,7 +117,7 @@ public class ProjectFollowUpPage {
      System.out.println("Validation is done from History");
 
      // history close button logic
-     Locator closebtn = page.locator("(//button[@type='button'])[3]");
+     Locator closebtn = page.locator("(//button[@type='button'])[4]");
 
      // Keep clicking until the button is no longer visible
      while (closebtn.isVisible()) {
@@ -218,7 +218,7 @@ public class ProjectFollowUpPage {
      System.out.println("Validation is done from History");
 
      // history close button logic
-     Locator closebtn = page.locator("(//button[@type='button'])[3]");
+     Locator closebtn = page.locator("(//button[@type='button'])[4]");
 
      // Keep clicking until the button is no longer visible
      while (closebtn.isVisible()) {
@@ -318,7 +318,7 @@ public class ProjectFollowUpPage {
      System.out.println("Validation is done from History");
 
      // history close button logic
-     Locator closebtn = page.locator("(//button[@type='button'])[3]");
+     Locator closebtn = page.locator("(//button[@type='button'])[4]");
 
      // Keep clicking until the button is no longer visible
      while (closebtn.isVisible()) {
@@ -426,7 +426,7 @@ public class ProjectFollowUpPage {
      System.out.println("Validation is done from History");
 
      // history close button logic
-     Locator closebtn = page.locator("(//button[@type='button'])[3]");
+     Locator closebtn = page.locator("(//button[@type='button'])[4]");
 
      // Keep clicking until the button is no longer visible
      while (closebtn.isVisible()) {

@@ -53,7 +53,7 @@ public class AddUserPage {
         page.fill(phoneNumber, phone);
         page.fill(email, emailID);
         page.click(submitBtn);
-        Thread.sleep(500);
+        Thread.sleep(1000);
 
         // Wait until user card appears
         page.waitForSelector(userName, new Page.WaitForSelectorOptions().setState(WaitForSelectorState.VISIBLE));

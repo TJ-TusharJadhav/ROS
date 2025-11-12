@@ -13,9 +13,8 @@ import utils.RetryAnalyzer;
 import utils.ScreenshotUtil;
 @Listeners(ExtentTestNGListener.class)
 public class EditProjectLeadTest extends BaseTest {
-	
-	
-	public String phone;
+public String phone;
+
 	@AfterMethod
 		public void takeScreenshot(ITestResult result) throws InterruptedException {
 			ScreenshotUtil.capture(page, result, phone);
