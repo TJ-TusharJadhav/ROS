@@ -13,7 +13,7 @@ public class people extends BaseTest{
     public String phone;
     @AfterMethod
 	public void takeScreenshot(ITestResult result) throws InterruptedException {
-		ScreenshotUtil.capture(page, result, phone);
+		ScreenshotUtil.captureforCRM(page, result, phone);
 	}
     @Test
     public void Valid_add_user() throws InterruptedException{

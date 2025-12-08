@@ -36,6 +36,7 @@ public class BaseTest {
     protected AddLandLeadPage addLandLead;
     protected AddFurnitureLeadPage addFurnitureLead;
     protected AddUserPage adduser;
+    protected Designation_Department_BranchPage emp;
     protected Faker faker;
 
     @BeforeSuite
@@ -92,6 +93,7 @@ public class BaseTest {
         addLandLead = new AddLandLeadPage(page);
         addFurnitureLead = new AddFurnitureLeadPage(page);
         adduser = new AddUserPage(page);
+        emp = new Designation_Department_BranchPage(page);
         faker = new Faker();
     }
 

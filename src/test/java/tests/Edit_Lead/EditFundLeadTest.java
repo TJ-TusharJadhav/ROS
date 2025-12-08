@@ -23,7 +23,7 @@ public class EditFundLeadTest extends BaseTest {
 	public String phone;
 	@AfterMethod
 		public void takeScreenshot(ITestResult result) throws InterruptedException {
-			ScreenshotUtil.capture(page, result, phone);
+			ScreenshotUtil.captureforCRM(page, result, phone);
 		}
 public Object[][] getLeadBasicDataFromGoogleSheet() throws Exception {
 		

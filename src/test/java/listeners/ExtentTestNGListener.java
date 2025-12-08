@@ -24,22 +24,28 @@ public class ExtentTestNGListener implements ITestListener, ISuiteListener {
     }
 
     @Override
-    public void onFinish(ISuite suite) {
-        suiteEndTime = System.currentTimeMillis();
+public void onFinish(ISuite suite) {
+    suiteEndTime = System.currentTimeMillis();
 
-        // Calculate total suite duration
-        long durationMillis = suiteEndTime - suiteStartTime;
-        long seconds = durationMillis / 1000;
-        long minutes = seconds / 60;
-        seconds = seconds % 60;
-        String formattedDuration = minutes + " min " + seconds + " sec";
+    // Calculate total suite duration
+    long durationMillis = suiteEndTime - suiteStartTime;
+    
+    long seconds = durationMillis / 1000;
+    long minutes = seconds / 60;
+    long hours   = minutes / 60;
 
-        // Assuming one report per test (class + method)
-        for (ExtentReports extent : reportMap.values()) {
-            extent.setSystemInfo("Total Execution Duration", formattedDuration);
-            extent.flush();
-        }
+    minutes = minutes % 60;
+    seconds = seconds % 60;
+
+    String formattedDuration = hours + " Hr " + minutes + " min " + seconds + " sec";
+
+    // Update the report
+    for (ExtentReports extent : reportMap.values()) {
+        extent.setSystemInfo("Total Execution Duration", formattedDuration);
+        extent.flush();
     }
+}
+
 
     @Override
     public void onTestStart(ITestResult result) {

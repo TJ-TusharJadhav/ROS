@@ -19,7 +19,7 @@ public class AddCPLeadTest extends BaseTest {
     // 📸 Screenshot after each method
     @AfterMethod
     public void takeScreenshot(ITestResult result) throws InterruptedException {
-        ScreenshotUtil.capture(page, result, phone);
+        ScreenshotUtil.captureforCRM(page, result, phone);
     }
 
     /* -------------------- 🧪 DATA PROVIDERS -------------------- */
@@ -59,8 +59,6 @@ public class AddCPLeadTest extends BaseTest {
             {"Anya", "Gupta", "+91", "Mira Road", "Tier 3", "Experienced, RERA Certified", "src/test/java/Documents/propertyCard.pdf","12/08/2032", "Summit Infra"}
         };
     }
-
-    /* -------------------- ✅ TEST CASES -------------------- */
 
     @Test(dataProvider = "add_Individual_CPLead_With_Non_Registered", priority = 1)
     public void add_and_Validate_Individual_Non_Registered(

@@ -11,9 +11,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import com.opencsv.CSVReader;
-
 import base.BaseTest;
 import listeners.ExtentTestNGListener;
 import utils.RetryAnalyzer;
@@ -24,7 +22,7 @@ public class EditFurnitureLeadTest extends BaseTest {
 	public String phone;
 	@AfterMethod
 		public void takeScreenshot(ITestResult result) throws InterruptedException {
-			ScreenshotUtil.capture(page, result, phone);
+			ScreenshotUtil.captureforCRM(page, result, phone);
 		}
 public Object[][] getLeadBasicDataFromGoogleSheet() throws Exception {
 		

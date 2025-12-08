@@ -1,14 +1,12 @@
 package tests.Follow_Ups;
 
 import java.text.ParseException;
-
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import base.BaseTest;
 import utils.ScreenshotUtil;
 @Listeners(listeners.ExtentTestNGListener.class)
@@ -17,7 +15,7 @@ public class AddProjectFollowUpTest extends BaseTest {
 	public String phone;
 	@AfterMethod
 		public void takeScreenshot(ITestResult result) throws InterruptedException {
-			ScreenshotUtil.capture(page, result, phone);
+			ScreenshotUtil.captureforCRM(page, result, phone);
 		}
 	@BeforeClass
 	public void beforemethod() throws InterruptedException {
