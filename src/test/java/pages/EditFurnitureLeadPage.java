@@ -84,9 +84,9 @@ public class EditFurnitureLeadPage {
     	EditLeadBasic( fname, lname, mail, Category, subCategory, note);
         page.click(submitBtn);
         Thread.sleep(2000);
-        page.click("//div[contains(text(), 'Re-Inquiry')]");
-        Thread.sleep(2000);
-        page.click("//div[contains(text(), 'New Lead')]");
+        // page.click("//div[contains(text(), 'Re-Inquiry')]");
+        // Thread.sleep(2000);
+        // page.click("//div[contains(text(), 'New Lead')]");
     }
     public void validateLeadWithGeneratedData(
             String expectedFirstName, String expectedLastName ,
